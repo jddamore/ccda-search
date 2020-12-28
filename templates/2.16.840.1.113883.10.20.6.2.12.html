@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head>
+  <title>C-CDA Online</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron container-fluid">
+    <h1 class="display-3">
+      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong><a style="font-size: 0.3em;" href="../index.html">&nbsp;&nbsp;(back to home)</a>
+      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+    </h1>
+    <br>
+    <div style="font-size: 1.5em;">
+      <div>
+        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
+        Usage of this site requires an HL7 account, which is free!
+      </div>
+      <div>
+        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+      </div>
+    </div>
+    <br>
+    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
+      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
+      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
+      CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <h2 id="title">Text Observation <small class="text-muted">[2.16.840.1.113883.10.20.6.2.12] <a href="../pdfs/2.16.840.1.113883.10.20.6.2.12.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <hr>
+    <h4>
+      Description:
+    </h4>
+
+    <div id="description"><p>DICOM Template 2000 specifies that Imaging Report Elements of Value Type Text are contained in sections. The Imaging Report Elements are inferred from Basic Diagnostic Imaging Report Observations that consist of image references and measurements (linear, area, volume, and numeric). Text DICOM Imaging Report Elements in this context are mapped to CDA text observations that are section components and are related to the SOP Instance Observations (templateId 2.16.840.1.113883.10.20.6.2.8) or Quantity Measurement Observations (templateId 2.16.840.1.113883.10.20.6.2.14) by the SPRT (Support) act relationship.</p><p>A Text Observation is required if the findings in the section text are represented as inferred from SOP Instance Observations.</p></div>
+
+    <table class="table">
+      <thead>
+        <tr><th>Contained By:</th>
+        <th>Contains:</th>
+      </tr></thead>
+      <tbody>
+        <tr><td id="Contained_By"><a href="2.16.840.1.113883.10.20.22.1.5.html">Diagnostic Imaging Report (V3)</a><br></td>
+        <td id="Contains"><a href="2.16.840.1.113883.10.20.6.2.8.html">SOP Instance Observation</a><br><a href="2.16.840.1.113883.10.20.6.2.14.html">Quantity Measurement Observation</a><br></td>
+      </tr></tbody>
+    </table>
+    <h4>
+      Conformance Statements:
+    </h4>
+
+    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> Observation (CodeSystem: <b>HL7ActCode 2.16.840.1.113883.5.4</b><b> STATIC</b>)<b> (CONF:81-9288)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> Event (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b><b> STATIC</b>)<b> (CONF:81-9289)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:81-9290)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.6.2.12"</b><b> (CONF:81-10534)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:81-9291)</b>.</li>
+<li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>text</b><b> (CONF:81-9295)</b>.<ul><li>The text, if present, <b>SHOULD</b> contain zero or one [0..1] <b>reference</b><b> (CONF:81-15938)</b>.</li><ul><li>The reference, if present, <b>SHOULD</b> contain zero or one [0..1] <b>@value</b><b> (CONF:81-15939)</b>.</li><ul><li><p>This reference/@value SHALL begin with a '#' and SHALL point to its corresponding narrative (using the approach defined in CDA Release 2, section 4.3.5.1) (CONF:81-15940).</p></li></ul></ul></ul></li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>effectiveTime</b><b> (CONF:81-9294)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="ED"<b> (CONF:81-9292)</b>.</li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:81-9298)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SPRT"</b> Has Support (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b><b> STATIC</b>)<b> (CONF:81-9299)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  SOP Instance Observation<b> (identifier: 2.16.840.1.113883.10.20.6.2.8)</b><b> (CONF:81-15941)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:81-9301)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SPRT"</b> Has Support (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b><b> STATIC</b>)<b> (CONF:81-9302)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Quantity Measurement Observation<b> (identifier: 2.16.840.1.113883.10.20.6.2.14)</b><b> (CONF:81-15942)</b>.</li></ul></li>
+</ul>
+    <br>
+
+    <h4>
+      Guide Examples:
+    </h4>
+    <br>
+
+    <h4>
+      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
+    </h4>
+  </div>
+
+</body></html>

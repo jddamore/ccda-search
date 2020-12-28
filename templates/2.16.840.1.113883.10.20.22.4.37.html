@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head>
+  <title>C-CDA Online</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron container-fluid">
+    <h1 class="display-3">
+      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong><a style="font-size: 0.3em;" href="../index.html">&nbsp;&nbsp;(back to home)</a>
+      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+    </h1>
+    <br>
+    <div style="font-size: 1.5em;">
+      <div>
+        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
+        Usage of this site requires an HL7 account, which is free!
+      </div>
+      <div>
+        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+      </div>
+    </div>
+    <br>
+    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
+      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
+      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
+      CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <h2 id="title">Product Instance <small class="text-muted">[2.16.840.1.113883.10.20.22.4.37] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.37.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <hr>
+    <h4>
+      Description:
+    </h4>
+
+    <div id="description"><p>This clinical statement represents a particular device that was placed in a patient or used as part of a procedure or other act. This provides a record of the identifier and other details about the given product that was used. For example, it is important to have a record that indicates not just that a hip prostheses was placed in a patient but that it was a particular hip prostheses number with a unique identifier.</p><p>The FDA Amendments Act specifies the creation of a Unique Device Identification (UDI) System that requires the label of devices to bear a unique identifier that will standardize device identification and identify the device through distribution and use.</p><p>The FDA permits an issuing agency to designate that their Device Identifier (DI) + Production Identifier (PI) format qualifies as a UDI through a process of accreditation. Currently, there are three FDA-accredited issuing agencies that are allowed to call their format a UDI. These organizations are GS1, HIBCC, and ICCBBA. For additional information on technical formats that qualify as UDI from each of the issuing agencies see the UDI Appendix.</p><p>When communicating only the issuing agency device identifier (i.e., subcomponent of the UDI), the use of the issuing agency OID is appropriate. However, when communicating the unique device identifier (DI + PI), the FDA OID (2.16.840.1.113883.3.3719) must be used.When sending a UDI, populate the participantRole/id/@root with the FDA OID (2.16.840.1.113883.3.3719) and participantRole/id/@extension with the UDI.</p><p>When sending a DI, populate the participantRole/id/@root with the appropriate assigning agency OID and participantRole/id/@extension with the DI.The scopingEntity/id should correspond to FDA or the appropriate issuing agency.</p></div>
+
+    <table class="table">
+      <thead>
+        <tr><th>Contained By:</th>
+        <th>Contains:</th>
+      </tr></thead>
+      <tbody>
+        <tr><td id="Contained_By"><a href="2.16.840.1.113883.10.20.22.4.14.html">Procedure Activity Procedure (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.50.html">Non-Medicinal Supply Activity (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.43.html">Planned Supply (V2)</a><br></td>
+        <td id="Contains">none</td>
+      </tr></tbody>
+    </table>
+    <h4>
+      Conformance Statements:
+    </h4>
+
+    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"MANU"</b> Manufactured Product (CodeSystem: <b>HL7RoleClass 2.16.840.1.113883.5.110</b><b> STATIC</b>)<b> (CONF:81-7900)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:81-7901)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.37"</b><b> (CONF:81-10522)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:81-7902)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>playingDevice</b><b> (CONF:81-7903)</b>.<ul><li>This playingDevice <b>SHOULD</b> contain zero or one [0..1] <b>code</b><b> (CONF:81-16837)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>scopingEntity</b><b> (CONF:81-7905)</b>.<ul><li>This scopingEntity <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:81-7908)</b>.</li></ul></li>
+</ul>
+    <br>
+
+    <h4>
+      Guide Examples:
+    </h4>
+    <br>
+
+    <h4>
+      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
+    </h4>
+  </div>
+
+</body></html>

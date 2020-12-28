@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"><head>
+  <title>C-CDA Online</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron container-fluid">
+    <h1 class="display-3">
+      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong><a style="font-size: 0.3em;" href="../index.html">&nbsp;&nbsp;(back to home)</a>
+      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+    </h1>
+    <br>
+    <div style="font-size: 1.5em;">
+      <div>
+        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
+        Usage of this site requires an HL7 account, which is free!
+      </div>
+      <div>
+        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+      </div>
+    </div>
+    <br>
+    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
+      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
+      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
+      CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <h2 id="title">Longitudinal Care Wound Observation (V2) <small class="text-muted">[2.16.840.1.113883.10.20.22.4.114, release 2015-08-01] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.114.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <hr>
+    <h4>
+      Description:
+    </h4>
+
+    <div id="description"><p>This template represents acquired or surgical wounds and is not intended to encompass all wound types. The template applies to wounds such as pressure ulcers, surgical incisions, and deep tissue injury wounds. Information in this template may include information about the wound measurements characteristics.</p></div>
+
+    <table class="table">
+      <thead>
+        <tr><th>Contained By:</th>
+        <th>Contains:</th>
+      </tr></thead>
+      <tbody>
+        <tr><td id="Contained_By"><a href="2.16.840.1.113883.10.20.22.4.132.html">Health Concern Act (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.136.html">Risk Concern Act (V2)</a><br><a href="2.16.840.1.113883.10.20.2.10.html">Physical Exam Section (V3)</a><br></td>
+        <td id="Contains"><a href="2.16.840.1.113883.10.20.22.4.133.html">Wound Measurement Observation</a><br><a href="2.16.840.1.113883.10.20.22.4.134.html">Wound Characteristic</a><br><a href="2.16.840.1.113883.10.20.22.4.119.html">Author Participation</a><br><a href="2.16.840.1.113883.10.20.22.4.76.html">Number of Pressure Ulcers Observation (V3)</a><br><a href="2.16.840.1.113883.10.20.22.4.77.html">Highest Pressure Ulcer Stage</a><br></td>
+      </tr></tbody>
+    </table>
+    <h4>
+      Conformance Statements:
+    </h4>
+
+    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b>)<b> (CONF:1198-31012)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b>)<b> (CONF:1198-31013)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-32947)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.114"</b><b> (CONF:1198-29474)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32913)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1198-29476)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"ASSERTION"</b> assertion<b> (CONF:1198-29477)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.5.4"</b> (CodeSystem: <b>HL7ActCode 2.16.840.1.113883.5.4</b>)<b> (CONF:1198-31010)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CD", where the code <b>SHOULD</b> be selected from ValueSet Wound Type<b> 2.16.840.1.113883.1.11.20.2.6</b><b> DYNAMIC</b><b> (CONF:1198-29485)</b>.</li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>targetSiteCode</b>, which <b>SHOULD</b> be selected from ValueSet Body Site Value Set<b> 2.16.840.1.113883.3.88.12.3221.8.9</b><b> DYNAMIC</b><b> (CONF:1198-29488)</b> such that it<ul><li><b>MAY</b> contain zero or more [0..*] <b>qualifier</b><b> (CONF:1198-29490)</b>.</li><ul><li>The qualifier, if present, <b>SHALL</b> contain exactly one [1..1] <b>name</b><b> (CONF:1198-29491)</b>.</li><ul><li>This name <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"272741003"</b> laterality<b> (CONF:1198-29492)</b>.</li></ul><ul><li>This name <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.6.96"</b> (CodeSystem: <b>SNOMED CT 2.16.840.1.113883.6.96</b>)<b> (CONF:1198-31524)</b>.</li></ul></ul><ul><li>The qualifier, if present, <b>SHALL</b> contain exactly one [1..1] <b>value</b><b> (CONF:1198-29493)</b>.</li><ul><li>This value <b>SHALL</b> contain exactly one [1..1] <b>@code</b>, which <b>SHOULD</b> be selected from ValueSet TargetSite Qualifiers<b> 2.16.840.1.113883.11.20.9.37</b><b> DYNAMIC</b><b> (CONF:1198-29494)</b>.</li></ul></ul></ul></li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*]  Author Participation<b> (identifier: 2.16.840.1.113883.10.20.22.4.119)</b><b> (CONF:1198-31542)</b>.</li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-29495)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"COMP"</b> (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b><b> STATIC</b>)<b> (CONF:1198-29496)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Wound Measurement Observation<b> (identifier: 2.16.840.1.113883.10.20.22.4.133)</b><b> (CONF:1198-29497)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-29503)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"COMP"</b><b> (CONF:1198-29504)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Wound Characteristic<b> (identifier: 2.16.840.1.113883.10.20.22.4.134)</b><b> (CONF:1198-29505)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-31890)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"COMP"</b> Has component (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-31891)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Number of Pressure Ulcers Observation (V3)<b> (identifier: 2.16.840.1.113883.10.20.22.4.76)</b><b> (CONF:1198-31892)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>entryRelationship</b><b> (CONF:1198-31893)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"COMP"</b> Has component (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-31894)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Highest Pressure Ulcer Stage<b> (identifier: 2.16.840.1.113883.10.20.22.4.77)</b><b> (CONF:1198-31919)</b>.</li></ul></li>
+</ul>
+    <br>
+
+    <h4>
+      Guide Examples:
+    </h4>
+    <br>
+
+    <h4>
+      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
+    </h4>
+  </div>
+
+</body></html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en"><head>
+  <title>C-CDA Online</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron container-fluid">
+    <h1 class="display-3">
+      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong><a style="font-size: 0.3em;" href="../index.html">&nbsp;&nbsp;(back to home)</a>
+      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+    </h1>
+    <br>
+    <div style="font-size: 1.5em;">
+      <div>
+        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
+        Usage of this site requires an HL7 account, which is free!
+      </div>
+      <div>
+        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+      </div>
+    </div>
+    <br>
+    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
+      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
+      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
+      CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <h2 id="title">Chief Complaint and Reason for Visit Section <small class="text-muted">[2.16.840.1.113883.10.20.22.2.13] <a href="../pdfs/2.16.840.1.113883.10.20.22.2.13.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <hr>
+    <h4>
+      Description:
+    </h4>
+
+    <div id="description"><p>This section records the patient's chief complaint (the patient's own description) and/or the reason for the patient's visit (the provider's description of the reason for visit). Local policy determines whether the information is divided into two sections or recorded in one section serving both purposes.</p></div>
+
+    <table class="table">
+      <thead>
+        <tr><th>Contained By:</th>
+        <th>Contains:</th>
+      </tr></thead>
+      <tbody>
+        <tr><td id="Contained_By"><a href="2.16.840.1.113883.10.20.22.1.4.html">Consultation Note (V3)</a><br><a href="2.16.840.1.113883.10.20.22.1.8.html">Discharge Summary (V3)</a><br><a href="2.16.840.1.113883.10.20.22.1.3.html">History and Physical (V3)</a><br><a href="2.16.840.1.113883.10.20.22.1.6.html">Procedure Note (V3)</a><br></td>
+        <td id="Contains">none</td>
+      </tr></tbody>
+    </table>
+    <h4>
+      Conformance Statements:
+    </h4>
+
+    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:81-7840)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.2.13"</b><b> (CONF:81-10383)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:81-15449)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"46239-0"</b> Chief Complaint and Reason for Visit<b> (CONF:81-15450)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.6.1"</b> (CodeSystem: <b>LOINC 2.16.840.1.113883.6.1</b>)<b> (CONF:81-26473)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>title</b><b> (CONF:81-7842)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>text</b><b> (CONF:81-7843)</b>.</li>
+</ul>
+    <br>
+
+    <h4>
+      Guide Examples:
+    </h4>
+    <br>
+
+    <h4>
+      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
+    </h4>
+  </div>
+
+</body></html>

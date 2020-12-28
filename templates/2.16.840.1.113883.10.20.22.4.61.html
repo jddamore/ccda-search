@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"><head>
+  <title>C-CDA Online</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron container-fluid">
+    <h1 class="display-3">
+      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong><a style="font-size: 0.3em;" href="../index.html">&nbsp;&nbsp;(back to home)</a>
+      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+    </h1>
+    <br>
+    <div style="font-size: 1.5em;">
+      <div>
+        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
+        Usage of this site requires an HL7 account, which is free!
+      </div>
+      <div>
+        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+      </div>
+    </div>
+    <br>
+    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
+      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
+      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
+      CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <h2 id="title">Policy Activity (V3) <small class="text-muted">[2.16.840.1.113883.10.20.22.4.61, release 2015-08-01] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.61.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <hr>
+    <h4>
+      Description:
+    </h4>
+
+    <div id="description"><p>A policy activity represents the policy or program providing the coverage. The person for whom payment is being provided (i.e., the patient) is the covered party. The subscriber of the policy or program is represented as a participant that is the holder of the coverage. The payer is represented as the performer of the policy activity.</p></div>
+
+    <table class="table">
+      <thead>
+        <tr><th>Contained By:</th>
+        <th>Contains:</th>
+      </tr></thead>
+      <tbody>
+        <tr><td id="Contained_By"><a href="2.16.840.1.113883.10.20.22.4.60.html">Coverage Activity (V3)</a><br></td>
+        <td id="Contains"><a href="2.16.840.1.113883.10.20.22.5.2.html">US Realm Address (AD.US.FIELDED)</a><br></td>
+      </tr></tbody>
+    </table>
+    <h4>
+      Conformance Statements:
+    </h4>
+
+    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"ACT"</b> Act (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:1198-8898)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> Event (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b><b> STATIC</b>)<b> (CONF:1198-8899)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-8900)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.61"</b><b> (CONF:1198-10516)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32595)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-8901)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHOULD</b> be selected from ValueSet Health Insurance Type<b> 2.16.840.1.113883.3.88.12.3221.5.2</b><b> DYNAMIC</b><b> (CONF:1198-8903)</b>.<ul><li>This code <b>SHALL</b> contain at least one [1..*] <b>translation</b>, which <b>SHOULD</b> be selected from ValueSet Payer<b> 2.16.840.1.114222.4.11.3591</b><b> (CONF:1198-32852)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1198-8902)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> Completed (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b><b> STATIC</b>)<b> (CONF:1198-19109)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>performer</b><b> (CONF:1198-8906)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"PRF"</b> Performer (CodeSystem: <b>HL7ParticipationType 2.16.840.1.113883.5.90</b><b> STATIC</b>)<b> (CONF:1198-8907)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-16808)</b>.</li><ul><li>This templateId <b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.87"</b> Payer Performer<b> (CONF:1198-16809)</b>.</li></ul></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>assignedEntity</b><b> (CONF:1198-8908)</b>.</li><ul><li>This assignedEntity <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-8909)</b>.</li></ul><ul><li>This assignedEntity <b>SHOULD</b> contain zero or one [0..1] <b>code</b><b> (CONF:1198-8914)</b>.</li><ul><li>The code, if present, <b>SHALL</b> contain exactly one [1..1] <b>@code</b>, which <b>SHOULD</b> be selected from ValueSet Financially Responsible Party Type Value Set<b> 2.16.840.1.113883.1.11.10416</b><b> DYNAMIC</b><b> (CONF:1198-15992)</b>.</li></ul></ul><ul><li>This assignedEntity <b>MAY</b> contain zero or one [0..1]  US Realm Address (AD.US.FIELDED)<b> (identifier: 2.16.840.1.113883.10.20.22.5.2)</b><b> (CONF:1198-8910)</b>.</li></ul><ul><li>This assignedEntity <b>MAY</b> contain zero or more [0..*] <b>telecom</b><b> (CONF:1198-8911)</b>.</li></ul><ul><li>This assignedEntity <b>SHOULD</b> contain zero or one [0..1] <b>representedOrganization</b><b> (CONF:1198-8912)</b>.</li><ul><li>The representedOrganization, if present, <b>SHOULD</b> contain zero or one [0..1] <b>name</b><b> (CONF:1198-8913)</b>.</li></ul></ul></ul></li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*] <b>performer</b>=<b>"PRF"</b> Performer (CodeSystem: <b>HL7ParticipationType 2.16.840.1.113883.5.90</b><b> STATIC</b>)<b> (CONF:1198-8961)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-16810)</b>.</li><ul><li>This templateId <b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.88"</b> Guarantor Performer<b> (CONF:1198-16811)</b>.</li></ul></ul><ul><li><b>SHOULD</b> contain zero or one [0..1] <b>time</b><b> (CONF:1198-8963)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>assignedEntity</b><b> (CONF:1198-8962)</b>.</li><ul><li>This assignedEntity <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1198-8968)</b>.</li><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"GUAR"</b> Guarantor<b> (CONF:1198-16096)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.5.110"</b><b> (CONF:1198-32165)</b>.</li></ul></ul><ul><li>This assignedEntity <b>SHOULD</b> contain zero or one [0..1]  US Realm Address (AD.US.FIELDED)<b> (identifier: 2.16.840.1.113883.10.20.22.5.2)</b><b> (CONF:1198-8964)</b>.</li></ul><ul><li>This assignedEntity <b>SHOULD</b> contain zero or more [0..*] <b>telecom</b><b> (CONF:1198-8965)</b>.</li></ul><ul><li><p><strong>SHOULD</strong> include assignedEntity/assignedPerson/name AND/OR assignedEntity/representedOrganization/name (CONF:1198-8967).</p></li></ul></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>participant</b><b> (CONF:1198-8916)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"COV"</b> Coverage target (CodeSystem: <b>HL7ParticipationType 2.16.840.1.113883.5.90</b><b> STATIC</b>)<b> (CONF:1198-8917)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-16812)</b>.</li><ul><li>This templateId <b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.89"</b> Covered Party Participant<b> (CONF:1198-16814)</b>.</li></ul></ul><ul><li><b>SHOULD</b> contain zero or one [0..1] <b>time</b><b> (CONF:1198-8918)</b>.</li><ul><li>The time, if present, <b>SHOULD</b> contain zero or one [0..1] <b>low</b><b> (CONF:1198-8919)</b>.</li></ul><ul><li>The time, if present, <b>SHOULD</b> contain zero or one [0..1] <b>high</b><b> (CONF:1198-8920)</b>.</li></ul></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>participantRole</b><b> (CONF:1198-8921)</b>.</li><ul><li>This participantRole <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-8922)</b>.</li><ul><li><p>This id is a unique identifier for  the covered party member. Implementers <strong>SHOULD</strong> use the same GUID for each instance of a member identifier from the same health plan (CONF:1198-8984).</p></li></ul></ul><ul><li>This participantRole <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1198-8923)</b>.</li><ul><li>This code <b>SHOULD</b> contain zero or one [0..1] <b>@code</b>, which <b>SHOULD</b> be selected from ValueSet Coverage Role Type Value Set<b> 2.16.840.1.113883.1.11.18877</b><b> DYNAMIC</b><b> (CONF:1198-16078)</b>.</li></ul></ul><ul><li>This participantRole <b>SHOULD</b> contain zero or one [0..1] <b>addr</b><b> (CONF:1198-8956)</b>.</li><ul><li><p>The content of addr <strong>SHALL</strong> be a conformant US Realm Address (AD.US.FIELDED) (2.16.840.1.113883.10.20.22.5.2) (CONF:1198-10484).</p></li></ul></ul><ul><li>This participantRole <b>SHOULD</b> contain zero or one [0..1] <b>playingEntity</b><b> (CONF:1198-8932)</b>.</li><ul><li>The playingEntity, if present, <b>SHALL</b> contain at least one [1..*] <b>name</b><b> (CONF:1198-8930)</b>.</li></ul><ul><li>The playingEntity, if present, <b>SHALL</b> contain exactly one [1..1] <b>sdtc:birthTime</b><b> (CONF:1198-31344)</b>.</li><ul><li><p>The prefix sdtc: <strong>SHALL</strong> be bound to the namespace �urn:hl7-org:sdtc�. The use of the namespace provides a necessary extension to CDA R2 for the use of the birthTime element (CONF:1198-31345).</p></li></ul></ul></ul></ul></li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>participant</b><b> (CONF:1198-8934)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"HLD"</b> Holder (CodeSystem: <b>HL7ParticipationType 2.16.840.1.113883.5.90</b><b> STATIC</b>)<b> (CONF:1198-8935)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-16813)</b>.</li><ul><li>This templateId <b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.90"</b> Policy Holder Participant<b> (CONF:1198-16815)</b>.</li></ul></ul><ul><li><b>MAY</b> contain zero or one [0..1] <b>time</b><b> (CONF:1198-8938)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>participantRole</b><b> (CONF:1198-8936)</b>.</li><ul><li>This participantRole <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-8937)</b>.</li><ul><li><p>This id is a unique identifier for the subscriber of the coverage (CONF:1198-10120).</p></li></ul></ul><ul><li>This participantRole <b>SHOULD</b> contain zero or one [0..1] <b>addr</b><b> (CONF:1198-8925)</b>.</li><ul><li><p>The content of addr <strong>SHALL</strong> be a conformant US Realm Address (AD.US.FIELDED) (2.16.840.1.113883.10.20.22.5.2) (CONF:1198-10483).</p></li></ul></ul></ul><ul><li><p>When the Subscriber is the patient, the participant element describing the subscriber <strong>SHALL NOT</strong> be present. This information will be recorded instead in the data elements used to record member information (CONF:1198-17139).</p></li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>entryRelationship</b><b> (CONF:1198-8939)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b><b> STATIC</b>)<b> (CONF:1198-8940)</b>.</li></ul><ul><li><p>The target of a policy activity with act/entryRelationship/@typeCode="REFR" <strong>SHALL</strong> be an authorization activity (templateId 2.16.840.1.113883.10.20.1.19) <em>OR</em> an act, with act[@classCode="ACT"] and act[@moodCode="DEF"], representing a description of the coverage plan (CONF:1198-8942).</p></li></ul><ul><li><p>A description of the coverage plan <strong>SHALL</strong> contain one or more act/id, to represent the plan identifier, and an act/text with the name of the plan (CONF:1198-8943).</p></li></ul></li>
+</ul>
+    <br>
+
+    <h4>
+      Guide Examples:
+    </h4>
+    <br>
+
+    <h4>
+      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
+    </h4>
+  </div>
+
+</body></html>

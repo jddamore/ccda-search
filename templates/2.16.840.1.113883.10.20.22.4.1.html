@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head>
+  <title>C-CDA Online</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron container-fluid">
+    <h1 class="display-3">
+      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong><a style="font-size: 0.3em;" href="../index.html">&nbsp;&nbsp;(back to home)</a>
+      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+    </h1>
+    <br>
+    <div style="font-size: 1.5em;">
+      <div>
+        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
+        Usage of this site requires an HL7 account, which is free!
+      </div>
+      <div>
+        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+      </div>
+    </div>
+    <br>
+    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
+      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
+      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
+      CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <h2 id="title">Result Organizer (V3) <small class="text-muted">[2.16.840.1.113883.10.20.22.4.1, release 2015-08-01] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.1.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <hr>
+    <h4>
+      Description:
+    </h4>
+
+    <div id="description"><p>This template provides a mechanism for grouping result observations. It contains information applicable to all of the contained result observations. The Result Organizer code categorizes the contained results into one of several commonly accepted values (e.g., 'Hematology', 'Chemistry', 'Nuclear Medicine').</p><p>If any Result Observation within the organizer has a statusCode of "active", the Result Organizer must also have a statusCode of "active".</p></div>
+
+    <table class="table">
+      <thead>
+        <tr><th>Contained By:</th>
+        <th>Contains:</th>
+      </tr></thead>
+      <tbody>
+        <tr><td id="Contained_By"><a href="2.16.840.1.113883.10.20.22.4.132.html">Health Concern Act (V2)</a><br><a href="2.16.840.1.113883.10.20.22.2.3.html">Results Section (entries optional) (V3)</a><br><a href="2.16.840.1.113883.10.20.22.2.3.1.html">Results Section (entries required) (V3)</a><br><a href="2.16.840.1.113883.10.20.22.4.136.html">Risk Concern Act (V2)</a><br></td>
+        <td id="Contains"><a href="2.16.840.1.113883.10.20.22.4.2.html">Result Observation (V3)</a><br><a href="2.16.840.1.113883.10.20.22.4.119.html">Author Participation</a><br></td>
+      </tr></tbody>
+    </table>
+    <h4>
+      Conformance Statements:
+    </h4>
+
+    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b> (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:1198-7121)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> Event (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b><b> STATIC</b>)<b> (CONF:1198-7122)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-7126)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.1"</b><b> (CONF:1198-9134)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32588)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-7127)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1198-7128)</b>.<ul><li><p><strong>SHOULD</strong> be selected from LOINC (codeSystem 2.16.840.1.113883.6.1) <strong>OR</strong> SNOMED CT (codeSystem 2.16.840.1.113883.6.96), and <strong>MAY</strong> be selected from CPT-4 (codeSystem 2.16.840.1.113883.6.12) (CONF:1198-19218).</p></li></ul><ul><li><p>Laboratory results <strong>SHOULD</strong> be from LOINC (CodeSystem: 2.16.840.1.113883.6.1) or other constrained terminology named by the US Department of Health and Human Services Office of National Coordinator or other federal agency (CONF:1198-19219).</p></li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1198-7123)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>, which <b>SHALL</b> be selected from ValueSet Result Status<b> 2.16.840.1.113883.11.20.9.39</b><b> STATIC</b><b> (CONF:1198-14848)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>effectiveTime</b><b> (CONF:1198-31865)</b>.<br>Note: The effectiveTime is an interval that spans the effectiveTimes of the contained result observations. Because all contained result observations have a required time stamp, it is not required that this effectiveTime be populated.<ul><li>The effectiveTime, if present, <b>SHALL</b> contain exactly one [1..1] <b>low</b><b> (CONF:1198-32488)</b>.</li></ul><ul><li>The effectiveTime, if present, <b>SHALL</b> contain exactly one [1..1] <b>high</b><b> (CONF:1198-32489)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*]  Author Participation<b> (identifier: 2.16.840.1.113883.10.20.22.4.119)</b><b> (CONF:1198-31149)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>component</b><b> (CONF:1198-7124)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Result Observation (V3)<b> (identifier: 2.16.840.1.113883.10.20.22.4.2)</b><b> (CONF:1198-14850)</b>.</li></ul></li>
+</ul>
+    <br>
+
+    <h4>
+      Guide Examples:
+    </h4>
+    <br>
+
+    <h4>
+      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
+    </h4>
+  </div>
+
+</body></html>

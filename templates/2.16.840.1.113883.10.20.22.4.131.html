@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en"><head>
+  <title>C-CDA Online</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron container-fluid">
+    <h1 class="display-3">
+      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong><a style="font-size: 0.3em;" href="../index.html">&nbsp;&nbsp;(back to home)</a>
+      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+    </h1>
+    <br>
+    <div style="font-size: 1.5em;">
+      <div>
+        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
+        Usage of this site requires an HL7 account, which is free!
+      </div>
+      <div>
+        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+      </div>
+    </div>
+    <br>
+    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
+      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
+      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
+      CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <h2 id="title">Intervention Act (V2) <small class="text-muted">[2.16.840.1.113883.10.20.22.4.131, release 2015-08-01] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.131.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <hr>
+    <h4>
+      Description:
+    </h4>
+
+    <div id="description"><p>This template represents an Intervention Act. It is a wrapper for intervention-type activities considered to be parts of the same intervention. For example, an activity such as "elevate head of bed" combined with "provide humidified O2 per nasal cannula" may be the interventions performed for a health concern of "respiratory insufficiency" to achieve a goal of "pulse oximetry greater than 92%". These intervention activities may be newly described or derived from a variety of sources within an EHR.</p><p>Interventions are actions taken to increase the likelihood of achieving the patient's or providers' goals. An Intervention Act should contain a reference to a Goal Observation representing the reason for the intervention.</p><p>Intervention Acts can be related to each other, or to Planned Intervention Acts. (E.g., a Planned Intervention Act with moodCode of INT could be related to a series of Intervention Acts with moodCode of EVN, each having an effectiveTime containing the time of the intervention.)</p><p>All interventions referenced in an Intervention Act must have a moodCode of EVN, indicating that they have occurred.</p></div>
+
+    <table class="table">
+      <thead>
+        <tr><th>Contained By:</th>
+        <th>Contains:</th>
+      </tr></thead>
+      <tbody>
+        <tr><td id="Contained_By"><a href="2.16.840.1.113883.10.20.22.4.146.html">Planned Intervention Act (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.131.html">Intervention Act (V2)</a><br><a href="2.16.840.1.113883.10.20.21.2.3.html">Interventions Section (V3)</a><br></td>
+        <td id="Contains"><a href="2.16.840.1.113883.10.20.22.4.48.html">Advance Directive Observation (V3)</a><br><a href="2.16.840.1.113883.10.20.22.4.52.html">Immunization Activity (V3)</a><br><a href="2.16.840.1.113883.10.20.22.4.16.html">Medication Activity (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.12.html">Procedure Activity Act (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.131.html">Intervention Act (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.13.html">Procedure Activity Observation (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.14.html">Procedure Activity Procedure (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.49.html">Encounter Activity (V3)</a><br><a href="2.16.840.1.113883.10.20.22.4.20.html">Instruction (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.50.html">Non-Medicinal Supply Activity (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.122.html">Entry Reference</a><br><a href="2.16.840.1.113883.10.20.22.4.119.html">Author Participation</a><br><a href="2.16.840.1.113883.10.20.22.4.141.html">Handoff Communication Participants</a><br><a href="2.16.840.1.113883.10.20.22.4.115.html">External Document Reference</a><br><a href="2.16.840.1.113883.10.20.22.4.146.html">Planned Intervention Act (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.130.html">Nutrition Recommendation</a><br></td>
+      </tr></tbody>
+    </table>
+    <h4>
+      Conformance Statements:
+    </h4>
+
+    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"ACT"</b> (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b>)<b> (CONF:1198-30971)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> Event (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b><b> STATIC</b>)<b> (CONF:1198-30972)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-30973)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.131"</b><b> (CONF:1198-30974)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32916)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-30975)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1198-30976)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"362956003"</b> procedure / intervention (navigational concept)<b> (CONF:1198-30977)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.6.96"</b> (CodeSystem: <b>SNOMED CT 2.16.840.1.113883.6.96</b>)<b> (CONF:1198-30978)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1198-30979)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> Completed (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b><b> STATIC</b>)<b> (CONF:1198-32316)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>effectiveTime</b><b> (CONF:1198-31624)</b>.</li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*]  Author Participation<b> (identifier: 2.16.840.1.113883.10.20.22.4.119)</b><b> (CONF:1198-31552)</b>.</li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-30980)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-30981)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Advance Directive Observation (V3)<b> (identifier: 2.16.840.1.113883.10.20.22.4.48)</b><b> (CONF:1198-30982)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-30984)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-30985)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Immunization Activity (V3)<b> (identifier: 2.16.840.1.113883.10.20.22.4.52)</b><b> (CONF:1198-30986)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-30988)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-30989)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Medication Activity (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.16)</b><b> (CONF:1198-30990)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-30991)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-30992)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Procedure Activity Act (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.12)</b><b> (CONF:1198-30993)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-31154)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-31155)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Intervention Act (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.131)</b><b> (CONF:1198-32460)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-31164)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-31165)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Procedure Activity Observation (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.13)</b><b> (CONF:1198-31166)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-31168)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-31169)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Procedure Activity Procedure (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.14)</b><b> (CONF:1198-31170)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-31171)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-31172)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Encounter Activity (V3)<b> (identifier: 2.16.840.1.113883.10.20.22.4.49)</b><b> (CONF:1198-31173)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-31174)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-32956)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Instruction (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.20)</b><b> (CONF:1198-31176)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-31177)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-31178)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Non-Medicinal Supply Activity (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.50)</b><b> (CONF:1198-31179)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-31413)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Nutrition Recommendation<b> (identifier: 2.16.840.1.113883.10.20.22.4.130)</b><b> (CONF:1198-31414)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-31545)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-31554)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Entry Reference<b> (identifier: 2.16.840.1.113883.10.20.22.4.122)</b><b> (CONF:1198-31555)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-31621)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"RSON"</b> Has reason (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-31622)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Entry Reference<b> (identifier: 2.16.840.1.113883.10.20.22.4.122)</b><b> (CONF:1198-31623)</b>.</li></ul><ul><li><p>This entryReference template <strong>SHALL</strong> reference an instance of a Goal Observation template (CONF:1198-32459).</p></li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-32317)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-32318)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Handoff Communication Participants<b> (identifier: 2.16.840.1.113883.10.20.22.4.141)</b><b> (CONF:1198-32319)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1198-32914)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-32773)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Planned Intervention Act (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.146)</b><b> (CONF:1198-32915)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>reference</b><b> (CONF:1198-32760)</b>.<ul><li>The reference, if present, <b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1198-32761)</b>.</li></ul><ul><li>The reference, if present, <b>SHALL</b> contain exactly one [1..1]  External Document Reference<b> (identifier: 2.16.840.1.113883.10.20.22.4.115)</b><b> (CONF:1198-32762)</b>.</li></ul></li>
+</ul>
+    <br>
+
+    <h4>
+      Guide Examples:
+    </h4>
+    <br>
+
+    <h4>
+      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
+    </h4>
+  </div>
+
+</body></html>

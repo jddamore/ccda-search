@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="en"><head>
+  <title>C-CDA Online</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron container-fluid">
+    <h1 class="display-3">
+      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong><a style="font-size: 0.3em;" href="../index.html">&nbsp;&nbsp;(back to home)</a>
+      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+    </h1>
+    <br>
+    <div style="font-size: 1.5em;">
+      <div>
+        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
+        Usage of this site requires an HL7 account, which is free!
+      </div>
+      <div>
+        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+      </div>
+    </div>
+    <br>
+    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
+      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
+      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
+      CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <h2 id="title">Plan of Treatment Section (V2) <small class="text-muted">[2.16.840.1.113883.10.20.22.2.10, release 2014-06-09] <a href="../pdfs/2.16.840.1.113883.10.20.22.2.10.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <hr>
+    <h4>
+      Description:
+    </h4>
+
+    <div id="description"><p>This section, formerly known as "Plan of Care", contains data that define pending orders, interventions, encounters, services, and procedures for the patient. It is limited to prospective, unfulfilled, or incomplete orders and requests only. These are indicated by the @moodCode of the entries within this section. All active, incomplete, or pending orders, appointments, referrals, procedures, services, or any other pending event of clinical significance to the current care of the patient should be listed.Clinical reminders are placed here to provide prompts for disease prevention and management, patient safety, and healthcare quality improvements, including widely accepted performance measures.The plan may also indicate that patient education will be provided.When used in a document that includes a Goals Section, all the goals (whether narrative only, or structured Goal Observation entries) should be recorded in the Goals Section, rather than in the Plan of Treatment Section, to avoid confusion as to 'which/whose goals should be in which section?'When used in a document that does not include a Goals Section, the Plan of Treatment section may also contain information about care team members' goals, including the patient's values, beliefs, preferences, care expectations, and overarching care goals. Values may include the importance of quality of life over longevity. These values are taken into account when prioritizing all problems and their treatments. Beliefs may include comfort with dying or the refusal of blood transfusions because of the patient's religious convictions. Preferences may include liquid medicines over tablets, or treatment via secure email instead of in person. Care expectations may range from being treated only by female clinicians, to expecting all calls to be returned within 24 hours. Overarching goals described in this section are not tied to a specific condition, problem, health concern, or intervention. Examples of overarching goals could be to minimize pain or dependence on others, or to walk a daughter down the aisle for her marriage.</p></div>
+
+    <table class="table">
+      <thead>
+        <tr><th>Contained By:</th>
+        <th>Contains:</th>
+      </tr></thead>
+      <tbody>
+        <tr><td id="Contained_By"><a href="2.16.840.1.113883.10.20.22.1.4.html">Consultation Note (V3)</a><br><a href="2.16.840.1.113883.10.20.22.1.2.html">Continuity of Care Document (CCD) (V3)</a><br><a href="2.16.840.1.113883.10.20.22.1.8.html">Discharge Summary (V3)</a><br><a href="2.16.840.1.113883.10.20.22.1.3.html">History and Physical (V3)</a><br><a href="2.16.840.1.113883.10.20.22.1.13.html">Transfer Summary (V2)</a><br><a href="2.16.840.1.113883.10.20.22.1.14.html">Referral Note (V2)</a><br><a href="2.16.840.1.113883.10.20.22.1.9.html">Progress Note (V3)</a><br><a href="2.16.840.1.113883.10.20.22.1.6.html">Procedure Note (V3)</a><br><a href="2.16.840.1.113883.10.20.22.1.7.html">Operative Note (V3)</a><br></td>
+        <td id="Contains"><a href="2.16.840.1.113883.10.20.22.4.44.html">Planned Observation (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.20.html">Instruction (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.141.html">Handoff Communication Participants</a><br><a href="2.16.840.1.113883.10.20.22.4.40.html">Planned Encounter (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.39.html">Planned Act (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.41.html">Planned Procedure (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.42.html">Planned Medication Activity (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.43.html">Planned Supply (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.130.html">Nutrition Recommendation</a><br><a href="2.16.840.1.113883.10.20.22.4.120.html">Planned Immunization Activity</a><br><a href="2.16.840.1.113883.10.20.22.4.121.html">Goal Observation</a><br></td>
+      </tr></tbody>
+    </table>
+    <h4>
+      Conformance Statements:
+    </h4>
+
+    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1098-7723)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.2.10"</b><b> (CONF:1098-10435)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2014-06-09"</b><b> (CONF:1098-32501)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1098-14749)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"18776-5"</b> Plan of Treatment<b> (CONF:1098-14750)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.6.1"</b> (CodeSystem: <b>LOINC 2.16.840.1.113883.6.1</b>)<b> (CONF:1098-30813)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>title</b><b> (CONF:1098-16986)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>text</b><b> (CONF:1098-7725)</b>.</li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entry</b><b> (CONF:1098-7726)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Planned Observation (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.44)</b><b> (CONF:1098-14751)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entry</b><b> (CONF:1098-8805)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Planned Encounter (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.40)</b><b> (CONF:1098-30472)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entry</b><b> (CONF:1098-8807)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Planned Act (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.39)</b><b> (CONF:1098-30473)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entry</b><b> (CONF:1098-8809)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Planned Procedure (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.41)</b><b> (CONF:1098-30474)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entry</b><b> (CONF:1098-8811)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Planned Medication Activity (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.42)</b><b> (CONF:1098-30475)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entry</b><b> (CONF:1098-8813)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Planned Supply (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.43)</b><b> (CONF:1098-30476)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entry</b><b> (CONF:1098-14695)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Instruction (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.20)</b><b> (CONF:1098-31397)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entry</b><b> (CONF:1098-29621)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Handoff Communication Participants<b> (identifier: 2.16.840.1.113883.10.20.22.4.141)</b><b> (CONF:1098-30868)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entry</b><b> (CONF:1098-31841)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Nutrition Recommendation<b> (identifier: 2.16.840.1.113883.10.20.22.4.130)</b><b> (CONF:1098-31864)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entry</b><b> (CONF:1098-32353)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Planned Immunization Activity<b> (identifier: 2.16.840.1.113883.10.20.22.4.120)</b><b> (CONF:1098-32354)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entry</b><b> (CONF:1098-32887)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Goal Observation<b> (identifier: 2.16.840.1.113883.10.20.22.4.121)</b><b> (CONF:1098-32888)</b>.</li></ul></li>
+</ul>
+    <br>
+
+    <h4>
+      Guide Examples:
+    </h4>
+    <br>
+
+    <h4>
+      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
+    </h4>
+  </div>
+
+</body></html>

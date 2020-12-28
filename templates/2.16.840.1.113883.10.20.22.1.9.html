@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head>
+  <title>C-CDA Online</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron container-fluid">
+    <h1 class="display-3">
+      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong><a style="font-size: 0.3em;" href="../index.html">&nbsp;&nbsp;(back to home)</a>
+      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+    </h1>
+    <br>
+    <div style="font-size: 1.5em;">
+      <div>
+        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
+        Usage of this site requires an HL7 account, which is free!
+      </div>
+      <div>
+        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+      </div>
+    </div>
+    <br>
+    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
+      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
+      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
+      CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <h2 id="title">Progress Note (V3) <small class="text-muted">[2.16.840.1.113883.10.20.22.1.9, release 2015-08-01] <a href="../pdfs/2.16.840.1.113883.10.20.22.1.9.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <hr>
+    <h4>
+      Description:
+    </h4>
+
+    <div id="description"><p>This template represents a patient's clinical status during a hospitalization, outpatient visit, treatment with a LTPAC provider, or other healthcare encounter.</p><p>Taber's medical dictionary defines a Progress Note as 'An ongoing record of a patient's illness and treatment. Physicians, nurses, consultants, and therapists record their notes concerning the progress or lack of progress made by the patient between the time of the previous note and the most recent note.'</p><p>Mosby's medical dictionary defines a Progress Note as 'Notes made by a nurse, physician, social worker, physical therapist, and other health care professionals that describe the patient's condition and the treatment given or planned.'</p><p>A Progress Note is not a re-evaluation note. A Progress Note is not intended to be a Progress Report for Medicare. Medicare B Section 1833(e) defines the requirements of a Medicare Progress Report.</p></div>
+
+    <table class="table">
+      <thead>
+        <tr><th>Contained By:</th>
+        <th>Contains:</th>
+      </tr></thead>
+      <tbody>
+        <tr><td id="Contained_By">none</td>
+        <td id="Contains"><a href="2.16.840.1.113883.10.20.22.5.3.html">US Realm Date and Time (DT.US.FIELDED)</a><br><a href="2.16.840.1.113883.10.20.22.2.8.html">Assessment Section</a><br><a href="2.16.840.1.113883.10.20.22.2.10.html">Plan of Treatment Section (V2)</a><br><a href="2.16.840.1.113883.10.20.22.2.9.html">Assessment and Plan Section (V2)</a><br><a href="2.16.840.1.113883.10.20.22.2.6.html">Allergies and Intolerances Section (entries optional) (V3)</a><br><a href="1.3.6.1.4.1.19376.1.5.3.1.1.13.2.1.html">Chief Complaint Section</a><br><a href="2.16.840.1.113883.10.20.21.2.3.html">Interventions Section (V3)</a><br><a href="2.16.840.1.113883.10.20.22.2.45.html">Instructions Section (V2)</a><br><a href="2.16.840.1.113883.10.20.22.2.1.html">Medications Section (entries optional) (V2)</a><br><a href="2.16.840.1.113883.10.20.21.2.1.html">Objective Section</a><br><a href="2.16.840.1.113883.10.20.2.10.html">Physical Exam Section (V3)</a><br><a href="2.16.840.1.113883.10.20.22.2.5.html">Problem Section (entries optional) (V3)</a><br><a href="2.16.840.1.113883.10.20.22.2.3.html">Results Section (entries optional) (V3)</a><br><a href="1.3.6.1.4.1.19376.1.5.3.1.3.18.html">Review of Systems Section</a><br><a href="2.16.840.1.113883.10.20.21.2.2.html">Subjective Section</a><br><a href="2.16.840.1.113883.10.20.22.2.4.html">Vital Signs Section (entries optional) (V3)</a><br><a href="2.16.840.1.113883.10.20.22.2.57.html">Nutrition Section</a><br></td>
+      </tr></tbody>
+    </table>
+    <h4>
+      Conformance Statements:
+    </h4>
+
+    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-7588)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.1.9"</b><b> (CONF:1198-10052)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32521)</b>.</li></ul><ul><li><p>When asserting this templateId, all C-CDA 2.1 section and entry templates that had a previous version in C-CDA R1.1 <strong>SHALL</strong> include both the C-CDA 2.1 templateId and the C-CDA R1.1 templateId root without an extension. See C-CDA R2.1 Volume 1 - Design Considerations for additional detail (CONF:1198-32942).</p></li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1198-17189)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>, which <b>SHALL</b> be selected from ValueSet ProgressNoteDocumentTypeCode<b> 2.16.840.1.113883.11.20.8.1</b><b> DYNAMIC</b><b> (CONF:1198-17190)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>documentationOf</b><b> (CONF:1198-7603)</b>.<ul><li>The documentationOf, if present, <b>SHALL</b> contain exactly one [1..1] <b>serviceEvent</b><b> (CONF:1198-7604)</b>.</li><ul><li>This serviceEvent <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"PCPR"</b> Care Provision (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:1198-26420)</b>.</li></ul><ul><li>This serviceEvent <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-9480)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.21.3.1"</b><b> (CONF:1198-10068)</b>.</li></ul></ul><ul><li>This serviceEvent <b>SHOULD</b> contain zero or one [0..1]  US Realm Date and Time (DT.US.FIELDED)<b> (identifier: 2.16.840.1.113883.10.20.22.5.3)</b><b> (CONF:1198-9481)</b>.</li><ul><li><p>The serviceEvent/effectiveTime element <strong>SHOULD</strong> be present with effectiveTime/low element (CONF:1198-9482).</p></li></ul><ul><li><p>If a width element is not present, the serviceEvent <strong>SHALL</strong> include effectiveTime/high (CONF:1198-10066).</p></li></ul></ul></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>componentOf</b><b> (CONF:1198-7595)</b>.<ul><li>This componentOf <b>SHALL</b> contain exactly one [1..1] <b>encompassingEncounter</b><b> (CONF:1198-7596)</b>.</li><ul><li>This encompassingEncounter <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-7597)</b>.</li></ul><ul><li>This encompassingEncounter <b>SHALL</b> contain exactly one [1..1]  US Realm Date and Time (DT.US.FIELDED)<b> (identifier: 2.16.840.1.113883.10.20.22.5.3)</b><b> (CONF:1198-7598)</b>.</li><ul><li>This effectiveTime <b>SHALL</b> contain exactly one [1..1] <b>low</b><b> (CONF:1198-7599)</b>.</li></ul></ul><ul><li>This encompassingEncounter <b>SHALL</b> contain exactly one [1..1] <b>location</b><b> (CONF:1198-30879)</b>.</li><ul><li>This location <b>SHALL</b> contain exactly one [1..1] <b>healthCareFacility</b><b> (CONF:1198-30880)</b>.</li><ul><li>This healthCareFacility <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-30881)</b>.</li></ul></ul></ul></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>component</b><b> (CONF:1198-9591)</b>.<ul><li>This component <b>SHALL</b> contain exactly one [1..1] <b>structuredBody</b><b> (CONF:1198-30617)</b>.</li><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30618)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Assessment Section<b> (identifier: 2.16.840.1.113883.10.20.22.2.8)</b><b> (CONF:1198-30619)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30620)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Plan of Treatment Section (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.2.10)</b><b> (CONF:1198-30621)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30622)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Assessment and Plan Section (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.2.9)</b><b> (CONF:1198-30623)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30624)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Allergies and Intolerances Section (entries optional) (V3)<b> (identifier: 2.16.840.1.113883.10.20.22.2.6)</b><b> (CONF:1198-30625)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30626)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Chief Complaint Section<b> (identifier: 1.3.6.1.4.1.19376.1.5.3.1.1.13.2.1)</b><b> (CONF:1198-30627)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30628)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Interventions Section (V3)<b> (identifier: 2.16.840.1.113883.10.20.21.2.3)</b><b> (CONF:1198-30629)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30639)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Instructions Section (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.2.45)</b><b> (CONF:1198-31386)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30641)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Medications Section (entries optional) (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.2.1)</b><b> (CONF:1198-30642)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30643)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Objective Section<b> (identifier: 2.16.840.1.113883.10.20.21.2.1)</b><b> (CONF:1198-30644)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30645)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Physical Exam Section (V3)<b> (identifier: 2.16.840.1.113883.10.20.2.10)</b><b> (CONF:1198-30646)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30647)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Problem Section (entries optional) (V3)<b> (identifier: 2.16.840.1.113883.10.20.22.2.5)</b><b> (CONF:1198-30648)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30649)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Results Section (entries optional) (V3)<b> (identifier: 2.16.840.1.113883.10.20.22.2.3)</b><b> (CONF:1198-30650)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30651)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Review of Systems Section<b> (identifier: 1.3.6.1.4.1.19376.1.5.3.1.3.18)</b><b> (CONF:1198-30652)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30653)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Subjective Section<b> (identifier: 2.16.840.1.113883.10.20.21.2.2)</b><b> (CONF:1198-30654)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-30655)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Vital Signs Section (entries optional) (V3)<b> (identifier: 2.16.840.1.113883.10.20.22.2.4)</b><b> (CONF:1198-30656)</b>.</li></ul></ul><ul><li>This structuredBody <b>MAY</b> contain zero or one [0..1] <b>component</b><b> (CONF:1198-32626)</b> such that it</li><ul><li><b>SHALL</b> contain exactly one [1..1]  Nutrition Section<b> (identifier: 2.16.840.1.113883.10.20.22.2.57)</b><b> (CONF:1198-32627)</b>.</li></ul></ul><ul><li><p>This structuredBody <strong>SHALL</strong> contain an Assessment and Plan Section (V2) (2.16.840.1.113883.10.20.22.2.9), or an Assessment Section (2.16.840.1.113883.10.20.22.2.8) and a Plan of Treatment Section (V2) (2.16.840.1.113883.10.20.22.2.10) (CONF:1198-30657).</p></li></ul><ul><li><p>This structuredBody <strong>SHALL NOT</strong> contain an Assessment and Plan Section (V2) (2.16.840.1.113883.10.20.22.2.9) when either an Assessment Section (2.16.840.1.113883.10.20.22.2.8) or a Plan of Treatment Section (V2) (2.16.840.1.113883.10.20.22.2.10) is present (CONF:1198-30658).</p></li></ul></ul></li>
+</ul>
+    <br>
+
+    <h4>
+      Guide Examples:
+    </h4>
+    <br>
+
+    <h4>
+      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
+    </h4>
+  </div>
+
+</body></html>
