@@ -1,0 +1,24 @@
+{
+  "name": "C-CDA_Search",
+  "version": "0.0.1",
+  "description": "Repo for C-CDA on web and pieces of pdf",
+  "main": "index.html",
+  "author": {
+    "name": "Diameter Health, Inc.",
+    "email": "jdamore@diameterhealth.com"
+  },
+  "scripts": {
+    "start": "npx serve"
+  },
+  "engines": {
+    "node": "^8.9.1"
+  },
+  "dependencies": {
+    "serve": "^11.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jddamore/CCDA-search"
+  },
+  "snyk": true
+}
