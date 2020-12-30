@@ -8,12 +8,13 @@
     "email": "jdamore@diameterhealth.com"
   },
   "scripts": {
-    "start": "npx serve"
+    "start": "node app.js"
   },
   "engines": {
     "node": "^8.9.1"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "serve": "^11.3.2"
   },
   "repository": {
