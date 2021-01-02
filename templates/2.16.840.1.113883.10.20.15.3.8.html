@@ -13,29 +13,39 @@
 </head>
 
 <body>
-  <div class="jumbotron container-fluid">
-    <!-- this section is slightly different than homepage -->
-    <h1 class="display-3">
-      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online&nbsp;</strong><a style="font-size: 0.3em;" href="../index.html">(back to home)</a>
-      <img class="rounded float-right" style="max-width:10%" src="../img/hl7-logo.png">
-      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+  <div class="jumbotron container-fluid" style="padding-bottom:32px">
+    <h1 class="display-3 row">
+      <div class="col-8">
+        <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong>
+        <div class="lead"> 
+          A navigation website for the C-CDA 2.1 standard. <a href="../index.html">(back to home)</a>
+        </div>
+      </div>
+      <div class="col">
+        <img class="rounded float-right" style="max-width:50%" src="../img/cda.jpg">
+        <img class="rounded float-right" style="max-width:30%" src="../img/hl7-logo.png">
+      </div>
     </h1>
     <br>
-    <!-- this section is identical to homepage (index.html)-->
-    <div style="font-size: 1.5em;">
-      <div>
-        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
-        Usage of this site requires an HL7 account, which is free!
-      </div>
-      <div>
-        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+    <div class="row">
+      <div class="col">
+        This page is built off of the June 2019 Errata published PDF of C-CDA
+        2.1 and the C-CDA 2.1 Companion Guide. For the latest information on C-CDA, always refer to the
+        <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>. 
+        <!-- not needed on template pages
+          <p>The table below includes hyperlinks to all templates within C-CDA 2.1 Volume 2 and the Companion Guide
+          Appendices. For the narrative portion of these guides, click <a href="pdfs/CCDA_Volume_One.pdf">here for 
+            C-CDA 2.1 Volume 1</a> and <a href="pdfs/Companion_Guide.pdf">here for the Companion Guide</a>.</p>
+          -->
+          CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>.
+
       </div>
     </div>
-    <br>
-    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
-      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
-      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
-      <p>CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a></p>
+    <hr>
+    <div style="font-size: 1.5rem;">
+      <p>Usage of this site requires an HL7 account, which is free!</p>
+      Please <u><a class="btn btn-primary" href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">sign up 
+        <i class="fas fa-user-plus"></i></a></u> if do not have an account.
     </div>
   </div>
 
@@ -69,7 +79,7 @@
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:81-19153)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"ASSERTION"</b> Assertion<b> (CONF:81-19154)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.5.4"</b> (CodeSystem: <b>HL7ActCode 2.16.840.1.113883.5.4</b>)<b> (CONF:81-26505)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:81-455)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> Completed (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b><b> STATIC</b>)<b> (CONF:81-19110)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>effectiveTime</b><b> (CONF:81-2018)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CD", where the code <b>SHALL</b> be selected from ValueSet Extended Pregnancy Status<b> 2.16.840.1.113762.1.4.1099.24</b><b> DYNAMIC</b><b> (CONF:81-457)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CD", where the code <b>SHALL</b> be selected from ValueSet Extended Pregnancy Status<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.24/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1099.24</a></b><b> DYNAMIC</b><b> (CONF:81-457)</b>.</li>
 <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>entryRelationship</b><b> (CONF:81-458)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b><b> STATIC</b>)<b> (CONF:81-459)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Estimated Date of Delivery<b> (identifier: 2.16.840.1.113883.10.20.15.3.1)</b><b> (CONF:81-15584)</b>.</li></ul></li>
 </ul>
     <br>
@@ -80,9 +90,11 @@
 	<ul id="guide_examples"><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Pregnancy%20Observation_2.16.840.1.113883.10.20.15.3.8/Pregnancy%20Observation%20Example.xml"><i class="fab fa-github"></i>&nbsp;Pregnancy Observation Example</a></li></ul>
     <br>
 
-    <h4>
-      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
-    </h4>
+  <h4 id="cdasearch"></h4>
+  <ul id="cdasearch_examples">
+
+  </ul>
+
   </div>
 
 </body></html>

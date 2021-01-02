@@ -13,29 +13,39 @@
 </head>
 
 <body>
-  <div class="jumbotron container-fluid">
-    <!-- this section is slightly different than homepage -->
-    <h1 class="display-3">
-      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online&nbsp;</strong><a style="font-size: 0.3em;" href="../index.html">(back to home)</a>
-      <img class="rounded float-right" style="max-width:10%" src="../img/hl7-logo.png">
-      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+  <div class="jumbotron container-fluid" style="padding-bottom:32px">
+    <h1 class="display-3 row">
+      <div class="col-8">
+        <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong>
+        <div class="lead"> 
+          A navigation website for the C-CDA 2.1 standard. <a href="../index.html">(back to home)</a>
+        </div>
+      </div>
+      <div class="col">
+        <img class="rounded float-right" style="max-width:50%" src="../img/cda.jpg">
+        <img class="rounded float-right" style="max-width:30%" src="../img/hl7-logo.png">
+      </div>
     </h1>
     <br>
-    <!-- this section is identical to homepage (index.html)-->
-    <div style="font-size: 1.5em;">
-      <div>
-        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
-        Usage of this site requires an HL7 account, which is free!
-      </div>
-      <div>
-        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+    <div class="row">
+      <div class="col">
+        This page is built off of the June 2019 Errata published PDF of C-CDA
+        2.1 and the C-CDA 2.1 Companion Guide. For the latest information on C-CDA, always refer to the
+        <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>. 
+        <!-- not needed on template pages
+          <p>The table below includes hyperlinks to all templates within C-CDA 2.1 Volume 2 and the Companion Guide
+          Appendices. For the narrative portion of these guides, click <a href="pdfs/CCDA_Volume_One.pdf">here for 
+            C-CDA 2.1 Volume 1</a> and <a href="pdfs/Companion_Guide.pdf">here for the Companion Guide</a>.</p>
+          -->
+          CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>.
+
       </div>
     </div>
-    <br>
-    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
-      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
-      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
-      <p>CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a></p>
+    <hr>
+    <div style="font-size: 1.5rem;">
+      <p>Usage of this site requires an HL7 account, which is free!</p>
+      Please <u><a class="btn btn-primary" href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">sign up 
+        <i class="fas fa-user-plus"></i></a></u> if do not have an account.
     </div>
   </div>
 
@@ -66,7 +76,7 @@
     <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-7710)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.1.10"</b><b> (CONF:1198-10054)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32522)</b>.</li></ul><ul><li><p>When asserting this templateId, all C-CDA 2.1 section and entry templates that had a previous version in C-CDA R1.1 <strong>SHALL</strong> include both the C-CDA 2.1 templateId and the C-CDA R1.1 templateId root without an extension. See C-CDA R2.1 Volume 1 - Design Considerations for additional detail (CONF:1198-32944).</p></li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>recordTarget</b><b> (CONF:1198-31089)</b>.<ul><li>Such recordTargets <b>SHALL</b> contain exactly one [1..1] <b>patientRole</b><b> (CONF:1198-31090)</b>.</li><ul><li>This patientRole <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-31091)</b>.</li></ul></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>custodian</b><b> (CONF:1198-31096)</b>.<ul><li>This custodian <b>SHALL</b> contain exactly one [1..1] <b>assignedCustodian</b><b> (CONF:1198-31097)</b>.</li><ul><li>This assignedCustodian <b>SHALL</b> contain exactly one [1..1] <b>representedCustodianOrganization</b><b> (CONF:1198-31098)</b>.</li></ul></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>component</b><b> (CONF:1198-31085)</b>.<ul><li>This component <b>SHALL</b> contain exactly one [1..1] <b>nonXMLBody</b><b> (CONF:1198-31086)</b>.</li><ul><li>This nonXMLBody <b>SHALL</b> contain exactly one [1..1] <b>text</b><b> (CONF:1198-31087)</b>.</li><ul><li><p>If the text element does not contain a reference element with a value attribute, then it <strong>SHALL</strong> contain exactly one [1..1] @representation="B64" and exactly one [1..1] @mediaType (CONF:1198-7624).</p></li></ul><ul><li><p>The value of @mediaType, if present, <strong>SHALL</strong> be drawn from the value set 2.16.840.1.113883.11.20.7.1 SupportedFileFormats STATIC 2010-05-12 (CONF:1198-7623).</p></li></ul></ul></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>component</b><b> (CONF:1198-31085)</b>.<ul><li>This component <b>SHALL</b> contain exactly one [1..1] <b>nonXMLBody</b><b> (CONF:1198-31086)</b>.</li><ul><li>This nonXMLBody <b>SHALL</b> contain exactly one [1..1] <b>text</b><b> (CONF:1198-31087)</b>.</li><ul><li><p>If the text element does not contain a reference element with a value attribute, then it <strong>SHALL</strong> contain exactly one [1..1] @representation="B64" and exactly one [1..1] @mediaType (CONF:1198-7624).</p></li></ul><ul><li><p>The value of @mediaType, if present, <strong>SHALL</strong> be drawn from the value set <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.7.1/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.7.1 </a>SupportedFileFormats STATIC 2010-05-12 (CONF:1198-7623).</p></li></ul></ul></ul></li>
 </ul>
     <br>
 
@@ -76,9 +86,9 @@
 	<ul id="guide_examples"><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Unstructured%20Document%20(V3)_2.16.840.1.113883.10.20.22.1.10/nonXMLBody%20Example%20with%20Compressed%20Content.xml"><i class="fab fa-github"></i>&nbsp;nonXMLBody Example with Compressed Content</a></li><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Unstructured%20Document%20(V3)_2.16.840.1.113883.10.20.22.1.10/nonXMLBody%20Example%20with%20Embedded%20Content.xml"><i class="fab fa-github"></i>&nbsp;nonXMLBody Example with Embedded Content</a></li><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Unstructured%20Document%20(V3)_2.16.840.1.113883.10.20.22.1.10/nonXMLBody%20Example%20with%20Referenced%20Content.xml"><i class="fab fa-github"></i>&nbsp;nonXMLBody Example with Referenced Content</a></li></ul>
     <br>
 
-    <h4>
-      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
-    </h4>
+  <h4 id="cdasearch">CDA Search Examples</h4>
+  <ul id="cdasearch_examples"><li><a href="http://cdasearch.hl7.org/sections/Unstructured"><i class="fas fa-external-link-alt"></i> Unstructured</a></li></ul>
+
   </div>
 
 </body></html>

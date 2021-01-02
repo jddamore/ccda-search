@@ -13,29 +13,39 @@
 </head>
 
 <body>
-  <div class="jumbotron container-fluid">
-    <!-- this section is slightly different than homepage -->
-    <h1 class="display-3">
-      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online&nbsp;</strong><a style="font-size: 0.3em;" href="../index.html">(back to home)</a>
-      <img class="rounded float-right" style="max-width:10%" src="../img/hl7-logo.png">
-      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+  <div class="jumbotron container-fluid" style="padding-bottom:32px">
+    <h1 class="display-3 row">
+      <div class="col-8">
+        <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong>
+        <div class="lead"> 
+          A navigation website for the C-CDA 2.1 standard. <a href="../index.html">(back to home)</a>
+        </div>
+      </div>
+      <div class="col">
+        <img class="rounded float-right" style="max-width:50%" src="../img/cda.jpg">
+        <img class="rounded float-right" style="max-width:30%" src="../img/hl7-logo.png">
+      </div>
     </h1>
     <br>
-    <!-- this section is identical to homepage (index.html)-->
-    <div style="font-size: 1.5em;">
-      <div>
-        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
-        Usage of this site requires an HL7 account, which is free!
-      </div>
-      <div>
-        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+    <div class="row">
+      <div class="col">
+        This page is built off of the June 2019 Errata published PDF of C-CDA
+        2.1 and the C-CDA 2.1 Companion Guide. For the latest information on C-CDA, always refer to the
+        <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>. 
+        <!-- not needed on template pages
+          <p>The table below includes hyperlinks to all templates within C-CDA 2.1 Volume 2 and the Companion Guide
+          Appendices. For the narrative portion of these guides, click <a href="pdfs/CCDA_Volume_One.pdf">here for 
+            C-CDA 2.1 Volume 1</a> and <a href="pdfs/Companion_Guide.pdf">here for the Companion Guide</a>.</p>
+          -->
+          CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>.
+
       </div>
     </div>
-    <br>
-    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
-      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
-      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
-      <p>CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a></p>
+    <hr>
+    <div style="font-size: 1.5rem;">
+      <p>Usage of this site requires an HL7 account, which is free!</p>
+      Please <u><a class="btn btn-primary" href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">sign up 
+        <i class="fas fa-user-plus"></i></a></u> if do not have an account.
     </div>
   </div>
 
@@ -71,9 +81,9 @@
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1098-15947)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"ASSERTION"</b> Assertion<b> (CONF:1098-15948)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.5.4"</b> (CodeSystem: <b>HL7ActCode 2.16.840.1.113883.5.4</b>)<b> (CONF:1098-32153)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1098-19084)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> Completed (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b><b> STATIC</b>)<b> (CONF:1098-19085)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b> (CONF:1098-7387)</b>.<br>Note: If the allergy/intolerance is known to be resolved, but the date of resolution is not known, then the high element SHALL be present, and the nullFlavor attribute SHALL be set to 'UNK'. <ul><li>This effectiveTime <b>SHALL</b> contain exactly one [1..1] <b>low</b><b> (CONF:1098-31538)</b>.<br>Note: The effectiveTime/low (a.k.a. "onset date") asserts when the allergy/intolerance became biologically active.</li></ul><ul><li>This effectiveTime <b>MAY</b> contain zero or one [0..1] <b>high</b><b> (CONF:1098-31539)</b>.<br>Note: The effectiveTime/high (a.k.a. "resolution date") asserts when the allergy/intolerance became biologically resolved.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CD", where the code <b>SHALL</b> be selected from ValueSet Allergy and Intolerance Type<b> 2.16.840.1.113883.3.88.12.3221.6.2</b><b> DYNAMIC</b><b> (CONF:1098-7390)</b>.<br>Note: The consumable participant points to the precise allergen or substance of intolerance. Because the consumable and the reaction are more clinically relevant than a categorization of the allergy/adverse event type, many systems will simply assign a fixed value here (e.g., "allergy to substance"). </li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CD", where the code <b>SHALL</b> be selected from ValueSet Allergy and Intolerance Type<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.6.2/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.3221.6.2</a></b><b> DYNAMIC</b><b> (CONF:1098-7390)</b>.<br>Note: The consumable participant points to the precise allergen or substance of intolerance. Because the consumable and the reaction are more clinically relevant than a categorization of the allergy/adverse event type, many systems will simply assign a fixed value here (e.g., "allergy to substance"). </li>
 <li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*]  Author Participation<b> (identifier: 2.16.840.1.113883.10.20.22.4.119)</b><b> (CONF:1098-31143)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>participant</b><b> (CONF:1098-7402)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"CSM"</b> Consumable (CodeSystem: <b>HL7ParticipationType 2.16.840.1.113883.5.90</b><b> STATIC</b>)<b> (CONF:1098-7403)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>participantRole</b><b> (CONF:1098-7404)</b>.</li><ul><li>This participantRole <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"MANU"</b> Manufactured Product (CodeSystem: <b>HL7RoleClass 2.16.840.1.113883.5.110</b><b> STATIC</b>)<b> (CONF:1098-7405)</b>.</li></ul><ul><li>This participantRole <b>SHALL</b> contain exactly one [1..1] <b>playingEntity</b><b> (CONF:1098-7406)</b>.</li><ul><li>This playingEntity <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"MMAT"</b> Manufactured Material (CodeSystem: <b>HL7EntityClass 2.16.840.1.113883.5.41</b><b> STATIC</b>)<b> (CONF:1098-7407)</b>.</li></ul><ul><li>This playingEntity <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHALL</b> be selected from ValueSet Substance Reactant for Intolerance<b> 2.16.840.1.113762.1.4.1010.1</b><b> DYNAMIC</b><b> (CONF:1098-7419)</b>.</li></ul></ul></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>participant</b><b> (CONF:1098-7402)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"CSM"</b> Consumable (CodeSystem: <b>HL7ParticipationType 2.16.840.1.113883.5.90</b><b> STATIC</b>)<b> (CONF:1098-7403)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>participantRole</b><b> (CONF:1098-7404)</b>.</li><ul><li>This participantRole <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"MANU"</b> Manufactured Product (CodeSystem: <b>HL7RoleClass 2.16.840.1.113883.5.110</b><b> STATIC</b>)<b> (CONF:1098-7405)</b>.</li></ul><ul><li>This participantRole <b>SHALL</b> contain exactly one [1..1] <b>playingEntity</b><b> (CONF:1098-7406)</b>.</li><ul><li>This playingEntity <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"MMAT"</b> Manufactured Material (CodeSystem: <b>HL7EntityClass 2.16.840.1.113883.5.41</b><b> STATIC</b>)<b> (CONF:1098-7407)</b>.</li></ul><ul><li>This playingEntity <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHALL</b> be selected from ValueSet Substance Reactant for Intolerance<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.1/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1010.1</a></b><b> DYNAMIC</b><b> (CONF:1098-7419)</b>.</li></ul></ul></ul></li>
 <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>entryRelationship</b><b> (CONF:1098-32939)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SUBJ"</b> Has subject (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1098-32940)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@inversionInd</b>=<b>"true"</b> True<b> (CONF:1098-32941)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Allergy Status Observation<b> (identifier: 2.16.840.1.113883.10.20.22.4.28)</b><b> (CONF:1098-32942)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHOULD NOT</b> contain zero or one [0..1] <b>entryRelationship</b><b> (CONF:1098-9961)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SUBJ"</b> Has Subject (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b><b> STATIC</b>)<b> (CONF:1098-9962)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@inversionInd</b>=<b>"true"</b> True<b> (CONF:1098-9964)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Severity Observation (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.8)</b><b> (CONF:1098-15956)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1098-7447)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"MFST"</b> Is Manifestation of (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b><b> STATIC</b>)<b> (CONF:1098-7907)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@inversionInd</b>=<b>"true"</b> True<b> (CONF:1098-7449)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Reaction Observation (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.9)</b><b> (CONF:1098-15955)</b>.</li></ul></li>
@@ -87,9 +97,9 @@
 	<ul id="guide_examples"><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Allergy%20-%20Intolerance%20Observation%20(V2)_2.16.840.1.113883.10.20.22.4.7/Allergy%20-%20Intolerance%20Observation%20(V2)%20Example.xml"><i class="fab fa-github"></i>&nbsp;Allergy - Intolerance Observation (V2) ExampleAllergy Concern Act (V3)_2.16.840.1.113883.10.20.22.4.30</a></li></ul>
     <br>
 
-    <h4>
-      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
-    </h4>
+  <h4 id="cdasearch">CDA Search Examples</h4>
+  <ul id="cdasearch_examples"><li><a href="http://cdasearch.hl7.org/sections/Allergies"><i class="fas fa-external-link-alt"></i> Allergies</a></li></ul>
+
   </div>
 
 </body></html>

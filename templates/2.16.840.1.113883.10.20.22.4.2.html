@@ -13,29 +13,39 @@
 </head>
 
 <body>
-  <div class="jumbotron container-fluid">
-    <!-- this section is slightly different than homepage -->
-    <h1 class="display-3">
-      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online&nbsp;</strong><a style="font-size: 0.3em;" href="../index.html">(back to home)</a>
-      <img class="rounded float-right" style="max-width:10%" src="../img/hl7-logo.png">
-      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+  <div class="jumbotron container-fluid" style="padding-bottom:32px">
+    <h1 class="display-3 row">
+      <div class="col-8">
+        <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong>
+        <div class="lead"> 
+          A navigation website for the C-CDA 2.1 standard. <a href="../index.html">(back to home)</a>
+        </div>
+      </div>
+      <div class="col">
+        <img class="rounded float-right" style="max-width:50%" src="../img/cda.jpg">
+        <img class="rounded float-right" style="max-width:30%" src="../img/hl7-logo.png">
+      </div>
     </h1>
     <br>
-    <!-- this section is identical to homepage (index.html)-->
-    <div style="font-size: 1.5em;">
-      <div>
-        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
-        Usage of this site requires an HL7 account, which is free!
-      </div>
-      <div>
-        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+    <div class="row">
+      <div class="col">
+        This page is built off of the June 2019 Errata published PDF of C-CDA
+        2.1 and the C-CDA 2.1 Companion Guide. For the latest information on C-CDA, always refer to the
+        <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>. 
+        <!-- not needed on template pages
+          <p>The table below includes hyperlinks to all templates within C-CDA 2.1 Volume 2 and the Companion Guide
+          Appendices. For the narrative portion of these guides, click <a href="pdfs/CCDA_Volume_One.pdf">here for 
+            C-CDA 2.1 Volume 1</a> and <a href="pdfs/Companion_Guide.pdf">here for the Companion Guide</a>.</p>
+          -->
+          CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>.
+
       </div>
     </div>
-    <br>
-    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
-      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
-      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
-      <p>CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a></p>
+    <hr>
+    <div style="font-size: 1.5rem;">
+      <p>Usage of this site requires an HL7 account, which is free!</p>
+      Please <u><a class="btn btn-primary" href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">sign up 
+        <i class="fas fa-user-plus"></i></a></u> if do not have an account.
     </div>
   </div>
 
@@ -68,10 +78,10 @@
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-7136)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.2"</b><b> (CONF:1198-9138)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32575)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-7137)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHOULD</b> be selected from CodeSystem <b>LOINC (2.16.840.1.113883.6.1)</b><b> (CONF:1198-7133)</b>.<ul><li><p>This code <strong>SHOULD</strong> be a code from the LOINC that identifies the result observation. If an appropriate LOINC code does not exist, then the local code for this result <strong>SHALL</strong> be sent (CONF:1198-19212).</p></li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1198-7134)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>, which <b>SHALL</b> be selected from ValueSet Result Status<b> 2.16.840.1.113883.11.20.9.39</b><b> STATIC</b><b> (CONF:1198-14849)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1198-7134)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>, which <b>SHALL</b> be selected from ValueSet Result Status<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.39/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.39</a></b><b> STATIC</b><b> (CONF:1198-14849)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b> (CONF:1198-7140)</b>.<br>Note: Represents the biologically relevant time of the measurement (e.g., the time a blood pressure reading is obtained, the time the blood sample was obtained for a chemistry test).</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b><b> (CONF:1198-7143)</b>.<ul><li><p>If Observation/value is a physical quantity (<strong>xsi:type="PQ"</strong>), the unit of measure <strong>SHALL</strong> be selected from ValueSet UnitsOfMeasureCaseSensitive 2.16.840.1.113883.1.11.12839 <strong>DYNAMIC</strong> (CONF:1198-31484).</p></li></ul><ul><li><p>A coded or physical quantity value <strong>MAY</strong> contain zero or more [0..*] translations, which can be used to represent the original results as output by the lab (CONF:1198-31866).</p></li></ul><ul><li><p>If Observation/value is a CD (<strong>xsi:type="CD"</strong>) the value <strong>SHOULD</strong> be SNOMED-CT (CONF:1198-32610).</p></li></ul></li>
-<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*] <b>interpretationCode</b><b> (CONF:1198-7147)</b>.<ul><li>The interpretationCode, if present, <b>SHALL</b> contain exactly one [1..1] <b>@code</b>, which <b>SHALL</b> be selected from ValueSet Observation Interpretation (HL7)<b> 2.16.840.1.113883.1.11.78</b><b> DYNAMIC</b><b> (CONF:1198-32476)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b><b> (CONF:1198-7143)</b>.<ul><li><p>If Observation/value is a physical quantity (<strong>xsi:type="PQ"</strong>), the unit of measure <strong>SHALL</strong> be selected from ValueSet UnitsOfMeasureCaseSensitive <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.12839/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.12839 </a><strong>DYNAMIC</strong> (CONF:1198-31484).</p></li></ul><ul><li><p>A coded or physical quantity value <strong>MAY</strong> contain zero or more [0..*] translations, which can be used to represent the original results as output by the lab (CONF:1198-31866).</p></li></ul><ul><li><p>If Observation/value is a CD (<strong>xsi:type="CD"</strong>) the value <strong>SHOULD</strong> be SNOMED-CT (CONF:1198-32610).</p></li></ul></li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*] <b>interpretationCode</b><b> (CONF:1198-7147)</b>.<ul><li>The interpretationCode, if present, <b>SHALL</b> contain exactly one [1..1] <b>@code</b>, which <b>SHALL</b> be selected from ValueSet Observation Interpretation (HL7)<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.78/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.78</a></b><b> DYNAMIC</b><b> (CONF:1198-32476)</b>.</li></ul></li>
 <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>methodCode</b><b> (CONF:1198-7148)</b>.</li>
 <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>targetSiteCode</b><b> (CONF:1198-7153)</b>.</li>
 <li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*]  Author Participation<b> (identifier: 2.16.840.1.113883.10.20.22.4.119)</b><b> (CONF:1198-7149)</b>.</li>
@@ -85,9 +95,9 @@
 	<ul id="guide_examples"><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Result%20Observation%20(V3)_2.16.840.1.113883.10.20.22.4.2/Result%20Observation%20(V3)%20Example.xml"><i class="fab fa-github"></i>&nbsp;Result Observation (V3) Example</a></li></ul>
     <br>
 
-    <h4>
-      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
-    </h4>
+  <h4 id="cdasearch">CDA Search Examples</h4>
+  <ul id="cdasearch_examples"><li><a href="http://cdasearch.hl7.org/sections/Results"><i class="fas fa-external-link-alt"></i> Results</a></li></ul>
+
   </div>
 
 </body></html>

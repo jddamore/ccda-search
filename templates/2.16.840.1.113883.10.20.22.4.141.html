@@ -13,29 +13,39 @@
 </head>
 
 <body>
-  <div class="jumbotron container-fluid">
-    <!-- this section is slightly different than homepage -->
-    <h1 class="display-3">
-      <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online&nbsp;</strong><a style="font-size: 0.3em;" href="../index.html">(back to home)</a>
-      <img class="rounded float-right" style="max-width:10%" src="../img/hl7-logo.png">
-      <img class="rounded float-right" style="max-width:20%" src="../img/cda.jpg">
+  <div class="jumbotron container-fluid" style="padding-bottom:32px">
+    <h1 class="display-3 row">
+      <div class="col-8">
+        <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong>
+        <div class="lead"> 
+          A navigation website for the C-CDA 2.1 standard. <a href="../index.html">(back to home)</a>
+        </div>
+      </div>
+      <div class="col">
+        <img class="rounded float-right" style="max-width:50%" src="../img/cda.jpg">
+        <img class="rounded float-right" style="max-width:30%" src="../img/hl7-logo.png">
+      </div>
     </h1>
     <br>
-    <!-- this section is identical to homepage (index.html)-->
-    <div style="font-size: 1.5em;">
-      <div>
-        This is a simple website that allows navigation into multiple parts of the C-CDA standard.
-        Usage of this site requires an HL7 account, which is free!
-      </div>
-      <div>
-        Please sign up <u><a href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">here</a></u> if do not have an account.
+    <div class="row">
+      <div class="col">
+        This page is built off of the June 2019 Errata published PDF of C-CDA
+        2.1 and the C-CDA 2.1 Companion Guide. For the latest information on C-CDA, always refer to the
+        <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>. 
+        <!-- not needed on template pages
+          <p>The table below includes hyperlinks to all templates within C-CDA 2.1 Volume 2 and the Companion Guide
+          Appendices. For the narrative portion of these guides, click <a href="pdfs/CCDA_Volume_One.pdf">here for 
+            C-CDA 2.1 Volume 1</a> and <a href="pdfs/Companion_Guide.pdf">here for the Companion Guide</a>.</p>
+          -->
+          CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a>.
+
       </div>
     </div>
-    <br>
-    <div style="font-size: 1.0em;">This page is built off of the June 2019 Errata published PDF of C-CDA 2.1 (and
-      C-CDA Companion Guide) For the latest information on C-CDA, always refer to the  
-      <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> 
-      <p>CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level 7 (HL7)</a></p>
+    <hr>
+    <div style="font-size: 1.5rem;">
+      <p>Usage of this site requires an HL7 account, which is free!</p>
+      Please <u><a class="btn btn-primary" href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">sign up 
+        <i class="fas fa-user-plus"></i></a></u> if do not have an account.
     </div>
   </div>
 
@@ -70,7 +80,7 @@
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1098-31668)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> Completed (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b>)<b> (CONF:1098-31669)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b> (CONF:1098-31670)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain at least one [1..*]  Author Participation<b> (identifier: 2.16.840.1.113883.10.20.22.4.119)</b><b> (CONF:1098-31672)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>participant</b><b> (CONF:1098-31673)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"IRCP"</b> Information Recipient (CodeSystem: <b>HL7RoleClass 2.16.840.1.113883.5.110</b>)<b> (CONF:1098-31674)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>participantRole</b><b> (CONF:1098-31675)</b>.</li><ul><li>This participantRole <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1098-32422)</b>.</li></ul><ul><li>This participantRole <b>SHOULD</b> contain zero or one [0..1] <b>code</b>, which <b>SHOULD</b> be selected from ValueSet Healthcare Provider Taxonomy<b> 2.16.840.1.114222.4.11.1066</b><b> DYNAMIC</b><b> (CONF:1098-31676)</b>.</li></ul><ul><li>This participantRole <b>SHALL</b> contain at least one [1..*] <b>addr</b><b> (CONF:1098-32392)</b>.</li></ul><ul><li>This participantRole <b>MAY</b> contain zero or one [0..1] <b>playingEntity</b><b> (CONF:1098-32393)</b>.</li><ul><li>The playingEntity, if present, <b>SHALL</b> contain at least one [1..*] <b>name</b><b> (CONF:1098-32394)</b>.</li></ul></ul></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>participant</b><b> (CONF:1098-31673)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"IRCP"</b> Information Recipient (CodeSystem: <b>HL7RoleClass 2.16.840.1.113883.5.110</b>)<b> (CONF:1098-31674)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>participantRole</b><b> (CONF:1098-31675)</b>.</li><ul><li>This participantRole <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1098-32422)</b>.</li></ul><ul><li>This participantRole <b>SHOULD</b> contain zero or one [0..1] <b>code</b>, which <b>SHOULD</b> be selected from ValueSet Healthcare Provider Taxonomy<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.1066/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.114222.4.11.1066</a></b><b> DYNAMIC</b><b> (CONF:1098-31676)</b>.</li></ul><ul><li>This participantRole <b>SHALL</b> contain at least one [1..*] <b>addr</b><b> (CONF:1098-32392)</b>.</li></ul><ul><li>This participantRole <b>MAY</b> contain zero or one [0..1] <b>playingEntity</b><b> (CONF:1098-32393)</b>.</li><ul><li>The playingEntity, if present, <b>SHALL</b> contain at least one [1..*] <b>name</b><b> (CONF:1098-32394)</b>.</li></ul></ul></ul></li>
 </ul>
     <br>
 
@@ -80,9 +90,11 @@
 	<ul id="guide_examples"><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Handoff%20Communication%20Participants_2.16.840.1.113883.10.20.22.4.141/Handoff%20Communication%20Example.xml"><i class="fab fa-github"></i>&nbsp;Handoff Communication Example</a></li></ul>
     <br>
 
-    <h4>
-      <a href="https://cdasearch.hl7.org">CDA Search</a> Examples:
-    </h4>
+  <h4 id="cdasearch"></h4>
+  <ul id="cdasearch_examples">
+
+  </ul>
+
   </div>
 
 </body></html>
