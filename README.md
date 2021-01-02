@@ -18,6 +18,6 @@ Simple repository that posts the pieces of C-CDA on a website.
 
 3. Copy certificate files (key.pem and cert.pem) to `/certs` directory
 
-4. Start server: `npm run` 
-(you probably want to add to chron package on server restart)
+4. Start server: `npm start` 
+(may need `sudo`, you probably want to add to chron package on server restart)
 
