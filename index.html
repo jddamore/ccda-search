@@ -326,11 +326,9 @@
           {title: "Type", field: "template_type", width: 150},
         ],
       });
-      // takes care of back navigation
-      window.addEventListener("pageshow", () => {
-        updateFilter();
-      });
-    })
+      // need to set filter after page load to deal with back button form population
+      updateFilter();
+    });      
   </script>
 </head>
 
