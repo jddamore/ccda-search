@@ -51,7 +51,7 @@
 
   <div class="container-fluid">
 
-    <h2 id="title">Allergy Status Observation <small class="text-muted">[2.16.840.1.113883.10.20.22.4.28, release 2019-06-20] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.28.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <h2 id="title">Allergy Status Observation <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.28, release 2019-06-20, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.28.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
     <hr>
     <h4>
       Description:
@@ -72,13 +72,13 @@
     <h4>
       Conformance Statements:
     </h4>
-
+    <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
     <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> Observation (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:1198-7318)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> Event (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b><b> STATIC</b>)<b> (CONF:1198-7319)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-7317)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.28"</b><b> (CONF:1198-10490)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2019-06-20"</b><b> (CONF:1198-32962)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1198-7320)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"33999-4"</b> Status<b> (CONF:1198-19131)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.6.1"</b> (CodeSystem: <b>LOINC 2.16.840.1.113883.6.1</b>)<b> (CONF:1198-32155)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1198-7321)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> Completed (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b><b> STATIC</b>)<b> (CONF:1198-19087)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CE", where the code <b>SHALL</b> be selected from ValueSet Allergy Clinical Status<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.29/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1099.29</a></b><b> DYNAMIC</b><b> (CONF:1198-7322)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CE", where the code <b>SHALL</b> be selected from ValueSet Allergy Clinical Status<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.29/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1099.29</a></b><b> DYNAMIC</b><b> (CONF:1198-7322)</b>.</li>
 </ul>
     <br>
 

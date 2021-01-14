@@ -51,7 +51,7 @@
 
   <div class="container-fluid">
 
-    <h2 id="title">Nutrition Recommendation <small class="text-muted">[2.16.840.1.113883.10.20.22.4.130] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.130.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <h2 id="title">Nutrition Recommendation <small class="text-muted">[act, 2.16.840.1.113883.10.20.22.4.130, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.130.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
     <hr>
     <h4>
       Description:
@@ -72,11 +72,11 @@
     <h4>
       Conformance Statements:
     </h4>
-
+    <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
     <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"ACT"</b> act (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b>)<b> (CONF:1098-30385)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>, which <b>SHALL</b> be selected from ValueSet Planned moodCode (Act/Encounter/Procedure)<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.23/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.23</a></b><b> STATIC</b> 2014-09-01<b> (CONF:1098-30386)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>, which <b>SHALL</b> be selected from ValueSet Planned moodCode (Act/Encounter/Procedure)<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.23/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.23</a></b><b> STATIC</b> 2014-09-01<b> (CONF:1098-30386)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1098-30340)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.130"</b><b> (CONF:1098-30341)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHOULD</b> be selected from ValueSet Nutrition Recommendations<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20.2.9/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.20.2.9</a></b><b> DYNAMIC</b><b> (CONF:1098-30342)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHOULD</b> be selected from ValueSet Nutrition Recommendations<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.20.2.9/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.20.2.9</a></b><b> DYNAMIC</b><b> (CONF:1098-30342)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1098-31697)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"active"</b> Active (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b>)<b> (CONF:1098-31698)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>effectiveTime</b><b> (CONF:1098-31699)</b>.</li>
 <li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1098-32382)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1098-32928)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Planned Encounter (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.40)</b><b> (CONF:1098-32383)</b>.</li></ul></li>
@@ -91,7 +91,7 @@
     <h4>
       Guide Examples:
     </h4>
-	<ul id="guide_examples"><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Nutrition%20Recommendation_2.16.840.1.113883.10.20.22.4.130/Nutrition%20Recommendation%20Example.xml"><i class="fab fa-github"></i>&nbsp;Nutrition Recommendation Example</a></li></ul>
+	<ul id="guide_examples"><li><a href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Nutrition%20Recommendation_2.16.840.1.113883.10.20.22.4.130/Nutrition%20Recommendation%20Example.xml"><i class="fab fa-github"></i>&nbsp;Nutrition Recommendation Example</a></li></ul>
     <br>
 
   <h4 id="cdasearch"></h4>

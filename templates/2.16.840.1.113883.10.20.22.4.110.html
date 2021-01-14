@@ -51,7 +51,7 @@
 
   <div class="container-fluid">
 
-    <h2 id="title">Progress Toward Goal Observation <small class="text-muted">[2.16.840.1.113883.10.20.22.4.110] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.110.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <h2 id="title">Progress Toward Goal Observation <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.110, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.110.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
     <hr>
     <h4>
       Description:
@@ -72,21 +72,21 @@
     <h4>
       Conformance Statements:
     </h4>
-
+    <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
     <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b>)<b> (CONF:1098-31418)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b>)<b> (CONF:1098-31419)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1098-31420)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.110"</b><b> (CONF:1098-31421)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1098-31422)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1098-31423)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"ASSERTION"</b> Assertion<b> (CONF:1098-31424)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.5.4"</b> (CodeSystem: <b>HL7ActCode 2.16.840.1.113883.5.4</b>)<b> (CONF:1098-31425)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1098-31609)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b>)<b> (CONF:1098-31610)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CD", where the code <b>SHALL</b> be selected from ValueSet Goal Achievement<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.55/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.55</a></b><b> DYNAMIC</b><b> (CONF:1098-31426)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CD", where the code <b>SHALL</b> be selected from ValueSet Goal Achievement<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.55/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.55</a></b><b> DYNAMIC</b><b> (CONF:1098-31426)</b>.</li>
 </ul>
     <br>
 
     <h4>
       Guide Examples:
     </h4>
-	<ul id="guide_examples"><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Progress%20Toward%20Goal%20Observation_2.16.840.1.113883.10.20.22.4.110/Progress%20Toward%20Goal%20Observation%20Example.xml"><i class="fab fa-github"></i>&nbsp;Progress Toward Goal Observation Example</a></li></ul>
+	<ul id="guide_examples"><li><a href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Progress%20Toward%20Goal%20Observation_2.16.840.1.113883.10.20.22.4.110/Progress%20Toward%20Goal%20Observation%20Example.xml"><i class="fab fa-github"></i>&nbsp;Progress Toward Goal Observation Example</a></li></ul>
     <br>
 
   <h4 id="cdasearch"></h4>

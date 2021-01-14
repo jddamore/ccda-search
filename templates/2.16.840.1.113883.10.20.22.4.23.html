@@ -51,7 +51,7 @@
 
   <div class="container-fluid">
 
-    <h2 id="title">Medication Information (V2) <small class="text-muted">[2.16.840.1.113883.10.20.22.4.23, release 2014-06-09] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.23.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <h2 id="title">Medication Information (V2) <small class="text-muted">[manufacturedProduct, 2.16.840.1.113883.10.20.22.4.23, release 2014-06-09, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.23.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
     <hr>
     <h4>
       Description:
@@ -72,11 +72,11 @@
     <h4>
       Conformance Statements:
     </h4>
-
+    <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
     <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"MANU"</b> (CodeSystem: <b>HL7RoleClass 2.16.840.1.113883.5.110</b><b> STATIC</b>)<b> (CONF:1098-7408)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1098-7409)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.23"</b><b> (CONF:1098-10506)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2014-06-09"</b><b> (CONF:1098-32579)</b>.</li></ul></li>
 <li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>id</b><b> (CONF:1098-7410)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>manufacturedMaterial</b><b> (CONF:1098-7411)</b>.<br>Note: A medication should be recorded as a pre-coordinated ingredient + strength + dose form (e.g., �metoprolol 25mg tablet�, �amoxicillin 400mg/5mL suspension�) where possible. This includes RxNorm codes whose Term Type is SCD (semantic clinical drug), SBD (semantic brand drug), GPCK (generic pack), BPCK (brand pack).<ul><li>This manufacturedMaterial <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHALL</b> be selected from ValueSet Medication Clinical Drug<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1010.4</a></b><b> DYNAMIC</b><b> (CONF:1098-7412)</b>.</li><ul><li>This code <b>MAY</b> contain zero or more [0..*] <b>translation</b>, which <b>MAY</b> be selected from ValueSet Clinical Substance<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.2/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1010.2</a></b><b> DYNAMIC</b><b> (CONF:1098-31884)</b>.</li></ul></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>manufacturedMaterial</b><b> (CONF:1098-7411)</b>.<br>Note: A medication should be recorded as a pre-coordinated ingredient + strength + dose form (e.g., �metoprolol 25mg tablet�, �amoxicillin 400mg/5mL suspension�) where possible. This includes RxNorm codes whose Term Type is SCD (semantic clinical drug), SBD (semantic brand drug), GPCK (generic pack), BPCK (brand pack).<ul><li>This manufacturedMaterial <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHALL</b> be selected from ValueSet Medication Clinical Drug<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1010.4</a></b><b> DYNAMIC</b><b> (CONF:1098-7412)</b>.</li><ul><li>This code <b>MAY</b> contain zero or more [0..*] <b>translation</b>, which <b>MAY</b> be selected from ValueSet Clinical Substance<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.2/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1010.2</a></b><b> DYNAMIC</b><b> (CONF:1098-31884)</b>.</li></ul></ul></li>
 <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>manufacturerOrganization</b><b> (CONF:1098-7416)</b>.</li>
 </ul>
     <br>
@@ -84,7 +84,7 @@
     <h4>
       Guide Examples:
     </h4>
-	<ul id="guide_examples"><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Medication%20Information%20(V2)_2.16.840.1.113883.10.20.22.4.23/Medication%20Information%20(V2)%20Example.xml"><i class="fab fa-github"></i>&nbsp;Medication Information (V2) Example</a></li></ul>
+	<ul id="guide_examples"><li><a href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Medication%20Information%20(V2)_2.16.840.1.113883.10.20.22.4.23/Medication%20Information%20(V2)%20Example.xml"><i class="fab fa-github"></i>&nbsp;Medication Information (V2) Example</a></li></ul>
     <br>
 
   <h4 id="cdasearch">CDA Search Examples</h4>

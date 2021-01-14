@@ -51,7 +51,7 @@
 
   <div class="container-fluid">
 
-    <h2 id="title">Continuity of Care Document (CCD) (V3) <small class="text-muted">[2.16.840.1.113883.10.20.22.1.2, release 2015-08-01] <a href="../pdfs/2.16.840.1.113883.10.20.22.1.2.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <h2 id="title">Continuity of Care Document (CCD) (V3) <small class="text-muted">[ClinicalDocument, 2.16.840.1.113883.10.20.22.1.2, release 2015-08-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.1.2.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
     <hr>
     <h4>
       Description:
@@ -72,7 +72,7 @@
     <h4>
       Conformance Statements:
     </h4>
-
+    <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
     <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-8450)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.1.2"</b><b> (CONF:1198-10038)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32516)</b>.</li></ul><ul><li><p>When asserting this templateId, all C-CDA 2.1 section and entry templates that had a previous version in C-CDA R1.1 <strong>SHALL</strong> include both the C-CDA 2.1 templateId and the C-CDA R1.1 templateId root without an extension. See C-CDA R2.1 Volume 1 - Design Considerations for additional detail (CONF:1198-32936).</p></li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1198-17180)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"34133-9"</b> Summarization of Episode Note<b> (CONF:1198-17181)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.6.1"</b> (CodeSystem: <b>LOINC 2.16.840.1.113883.6.1</b>)<b> (CONF:1198-32138)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>author</b><b> (CONF:1198-9442)</b>.<ul><li>Such authors <b>SHALL</b> contain exactly one [1..1] <b>assignedAuthor</b><b> (CONF:1198-9443)</b>.</li><ul><li><p>Such assignedAuthors <strong>SHALL</strong> contain (exactly one [1..1] assignedPerson) or (exactly one [1..1] assignedAuthoringDevice and exactly one [1..1] representedOrganization) (CONF:1198-8456).</p></li></ul><ul><li><p>If assignedAuthor has an associated representedOrganization with no assignedPerson or assignedAuthoringDevice, then the value for �ClinicalDocument/author/assignedAuthor/id/@NullFlavor� <strong>SHALL</strong> be �NA� �Not applicable� 2.16.840.1.113883.5.1008 NullFlavor STATIC (CONF:1198-8457).</p></li></ul></ul></li>
@@ -84,7 +84,7 @@
     <h4>
       Guide Examples:
     </h4>
-	<ul id="guide_examples"><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Continuity%20of%20Care%20Document%20(CCD)%20(V3)_2.16.840.1.113883.10.20.22.1.2/CCD%20(V2)%20author%20Example.xml"><i class="fab fa-github"></i>&nbsp;CCD (V2) author Example</a></li><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Continuity%20of%20Care%20Document%20(CCD)%20(V3)_2.16.840.1.113883.10.20.22.1.2/CCD%20(V2)%20Performer%20Example.xml"><i class="fab fa-github"></i>&nbsp;CCD (V2) Performer Example</a></li><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Continuity%20of%20Care%20Document%20(CCD)%20(V3)_2.16.840.1.113883.10.20.22.1.2/CCD%20(V2)%20serviceEvent%20Example.xml"><i class="fab fa-github"></i>&nbsp;CCD (V2) serviceEvent Example</a></li></ul>
+	<ul id="guide_examples"><li><a href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Continuity%20of%20Care%20Document%20(CCD)%20(V3)_2.16.840.1.113883.10.20.22.1.2/CCD%20(V2)%20author%20Example.xml"><i class="fab fa-github"></i>&nbsp;CCD (V2) author Example</a></li><li><a href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Continuity%20of%20Care%20Document%20(CCD)%20(V3)_2.16.840.1.113883.10.20.22.1.2/CCD%20(V2)%20Performer%20Example.xml"><i class="fab fa-github"></i>&nbsp;CCD (V2) Performer Example</a></li><li><a href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Continuity%20of%20Care%20Document%20(CCD)%20(V3)_2.16.840.1.113883.10.20.22.1.2/CCD%20(V2)%20serviceEvent%20Example.xml"><i class="fab fa-github"></i>&nbsp;CCD (V2) serviceEvent Example</a></li></ul>
     <br>
 
   <h4 id="cdasearch"></h4>

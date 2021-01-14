@@ -51,7 +51,7 @@
 
   <div class="container-fluid">
 
-    <h2 id="title">Planned Observation (V2) <small class="text-muted">[2.16.840.1.113883.10.20.22.4.44, release 2014-06-09] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.44.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <h2 id="title">Planned Observation (V2) <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.44, release 2014-06-09, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.44.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
     <hr>
     <h4>
       Description:
@@ -72,9 +72,9 @@
     <h4>
       Conformance Statements:
     </h4>
-
+    <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
     <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:1098-8581)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>, which <b>SHALL</b> be selected from ValueSet Planned moodCode (Observation)<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.25/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.25</a></b><b> STATIC</b> 2011-09-30<b> (CONF:1098-8582)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>, which <b>SHALL</b> be selected from ValueSet Planned moodCode (Observation)<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.25/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.25</a></b><b> STATIC</b> 2011-09-30<b> (CONF:1098-8582)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1098-30451)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.44"</b><b> (CONF:1098-30452)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2014-06-09"</b><b> (CONF:1098-32555)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1098-8584)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHOULD</b> be selected from CodeSystem <b>LOINC (2.16.840.1.113883.6.1)</b><b> (CONF:1098-31030)</b>.</li>
@@ -82,7 +82,7 @@
 <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>effectiveTime</b><b> (CONF:1098-30454)</b>.</li>
 <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>value</b><b> (CONF:1098-31031)</b>.</li>
 <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>methodCode</b><b> (CONF:1098-32043)</b>.</li>
-<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*] <b>targetSiteCode</b>, which <b>SHALL</b> be selected from ValueSet Body Site Value Set<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.8.9/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.3221.8.9</a></b><b> DYNAMIC</b><b> (CONF:1098-32044)</b>.</li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*] <b>targetSiteCode</b>, which <b>SHALL</b> be selected from ValueSet Body Site Value Set<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.8.9/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.3221.8.9</a></b><b> DYNAMIC</b><b> (CONF:1098-32044)</b>.</li>
 <li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>performer</b><b> (CONF:1098-30456)</b>.</li>
 <li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*]  Author Participation<b> (identifier: 2.16.840.1.113883.10.20.22.4.119)</b><b> (CONF:1098-32033)</b>.</li>
 <li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1098-31073)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1098-31074)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Priority Preference<b> (identifier: 2.16.840.1.113883.10.20.22.4.143)</b><b> (CONF:1098-31075)</b>.</li></ul></li>
@@ -95,7 +95,7 @@
     <h4>
       Guide Examples:
     </h4>
-	<ul id="guide_examples"><li><a href="https://github.com/jddamore/HL7-Task-Force-Examples/blob/master/C-CDAR2.1/GUIDE_examples/Planned%20Observation%20(V2)_2.16.840.1.113883.10.20.22.4.44/Planned%20Observation%20(V2)%20Example.xml"><i class="fab fa-github"></i>&nbsp;Planned Observation (V2) Example</a></li></ul>
+	<ul id="guide_examples"><li><a href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Planned%20Observation%20(V2)_2.16.840.1.113883.10.20.22.4.44/Planned%20Observation%20(V2)%20Example.xml"><i class="fab fa-github"></i>&nbsp;Planned Observation (V2) Example</a></li></ul>
     <br>
 
   <h4 id="cdasearch">CDA Search Examples</h4>

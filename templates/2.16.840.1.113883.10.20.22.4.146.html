@@ -51,7 +51,7 @@
 
   <div class="container-fluid">
 
-    <h2 id="title">Planned Intervention Act (V2) <small class="text-muted">[2.16.840.1.113883.10.20.22.4.146, release 2015-08-01] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.146.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <h2 id="title">Planned Intervention Act (V2) <small class="text-muted">[act, 2.16.840.1.113883.10.20.22.4.146, release 2015-08-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.146.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
     <hr>
     <h4>
       Description:
@@ -72,9 +72,9 @@
     <h4>
       Conformance Statements:
     </h4>
-
+    <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
     <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"ACT"</b> (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b>)<b> (CONF:1198-32678)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>, which <b>SHALL</b> be selected from ValueSet Planned Intervention moodCode<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.54/expansion/Latest"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.54</a></b><b> DYNAMIC</b><b> (CONF:1198-32679)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>, which <b>SHALL</b> be selected from ValueSet Planned Intervention moodCode<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.54/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.54</a></b><b> DYNAMIC</b><b> (CONF:1198-32679)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-32653)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.146"</b><b> (CONF:1198-32680)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32912)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-32681)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1198-32654)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"362956003"</b> procedure / intervention (navigational concept)<b> (CONF:1198-32682)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.6.96"</b> (CodeSystem: <b>SNOMED CT 2.16.840.1.113883.6.96</b>)<b> (CONF:1198-32683)</b>.</li></ul></li>
