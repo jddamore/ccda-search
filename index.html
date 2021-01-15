@@ -23,10 +23,10 @@
   <!-- Provides for posting and reponse -->
   <script type="text/javascript">
     $(function () {
-      var fieldEl = document.getElementById("filter-field");
-      var typeEl = document.getElementById("filter-type");
-      var valueEl = document.getElementById("filter-value");
-      var tabledata = [
+      let fieldEl = document.getElementById("filter-field");
+      let typeEl = document.getElementById("filter-type");
+      let valueEl = document.getElementById("filter-value");
+      let tabledata = [
         {id: 1, template_type: 'Document', name: 'Care Plan  [2.16.840.1.113883.10.20.22.1.15[83-96', name2: 'Care Plan ', template: '2.16.840.1.113883.10.20.22.1.15', pageStart: 83, pages: '83-96', search: 'Care Plan  2.16.840.1.113883.10.20.22.1.15 CONF:1198-28741;CONF:1198-28742;CONF:1198-32877;CONF:1198-32934;CONF:1198-28745;CONF:1198-32959;CONF:1198-32321;CONF:1198-32322;CONF:1198-31993;CONF:1198-31994;CONF:1198-31996;CONF:1198-31997;CONF:1198-31998;CONF:1198-31999;CONF:1198-32320;CONF:1198-32000;CONF:1198-32001;CONF:1198-32002;CONF:1198-32003;CONF:1198-31910;CONF:1198-31911;CONF:1198-31912;CONF:1198-31913;CONF:1198-31914;CONF:1198-31915;CONF:1198-31916;CONF:1198-31917;CONF:1198-31918;CONF:1198-31677;CONF:1198-31678;CONF:1198-31679;CONF:1198-31680;CONF:1198-31681;CONF:1198-31682;CONF:1198-31683;CONF:1198-31686;CONF:1198-31684;CONF:1198-31685;CONF:1198-32367;CONF:1198-31895;CONF:1198-31896;CONF:1198-31897;CONF:1198-31898;CONF:1198-31899;CONF:1198-31900;CONF:1198-31901;CONF:1198-31902;CONF:1198-31903;CONF:1198-31904;CONF:1198-32330;CONF:1198-32331;CONF:1198-31905;CONF:1198-31907;CONF:1198-31908;CONF:1198-31909;CONF:1198-32328;CONF:1198-32329;CONF:1198-29893;CONF:1198-31889;CONF:1198-29894;CONF:1198-32949;CONF:1198-29895;CONF:1198-29896;CONF:1198-32004;CONF:1198-32005;CONF:1198-32007;CONF:1198-28753;CONF:1198-28754;CONF:1198-28755;CONF:1198-28756;CONF:1198-28761;CONF:1198-28762;CONF:1198-28763;CONF:1198-28764;CONF:1198-29596;CONF:1198-29597;CONF:1198-31044'},
         {id: 2, template_type: 'Document', name: 'Consultation Note   [2.16.840.1.113883.10.20.22.1.4[96-112', name2: 'Consultation Note  ', template: '2.16.840.1.113883.10.20.22.1.4', pageStart: 96, pages: '96-112', search: 'Consultation Note   2.16.840.1.113883.10.20.22.1.4 CONF:1198-8375;CONF:1198-10040;CONF:1198-32502;CONF:1198-32935;CONF:1198-17176;CONF:1198-31656;CONF:1198-31657;CONF:1198-31658;CONF:1198-31659;CONF:1198-31660;CONF:1198-31661;CONF:1198-31662;CONF:1198-31663;CONF:1198-31664;CONF:1198-31665;CONF:1198-8382;CONF:1198-29923;CONF:1198-29924;CONF:1198-8386;CONF:1198-8387;CONF:1198-8388;CONF:1198-8389;CONF:1198-8391;CONF:1198-32904;CONF:1198-32905;CONF:1198-8392;CONF:1198-32902;CONF:1198-32906;CONF:1198-8397;CONF:1198-28895;CONF:1198-28896;CONF:1198-28897;CONF:1198-28898;CONF:1198-28899;CONF:1198-28900;CONF:1198-28901;CONF:1198-28904;CONF:1198-28905;CONF:1198-28906;CONF:1198-28907;CONF:1198-28908;CONF:1198-28909;CONF:1198-28910;CONF:1198-28911;CONF:1198-28912;CONF:1198-28913;CONF:1198-28915;CONF:1198-28916;CONF:1198-28917;CONF:1198-28918;CONF:1198-28919;CONF:1198-28920;CONF:1198-28921;CONF:1198-28922;CONF:1198-28923;CONF:1198-28924;CONF:1198-28925;CONF:1198-28926;CONF:1198-28928;CONF:1198-28929;CONF:1198-28930;CONF:1198-28931;CONF:1198-28932;CONF:1198-28933;CONF:1198-28934;CONF:1198-28935;CONF:1198-28936;CONF:1198-28937;CONF:1198-28942;CONF:1198-28943;CONF:1198-28944;CONF:1198-28945;CONF:1198-30237;CONF:1198-30238;CONF:1198-30904;CONF:1198-30905;CONF:1198-30906;CONF:1198-30907;CONF:1198-30909;CONF:1198-30910;CONF:1198-28939;CONF:1198-28940;CONF:1198-9504;CONF:1198-9501'},
         {id: 3, template_type: 'Document', name: 'Continuity of Care Document (CCD)   [2.16.840.1.113883.10.20.22.1.2[112-123', name2: 'Continuity of Care Document (CCD)  ', template: '2.16.840.1.113883.10.20.22.1.2', pageStart: 112, pages: '112-123', search: 'Continuity of Care Document (CCD)   2.16.840.1.113883.10.20.22.1.2 CONF:1198-8450;CONF:1198-10038;CONF:1198-32516;CONF:1198-32936;CONF:1198-17180;CONF:1198-17181;CONF:1198-32138;CONF:1198-9442;CONF:1198-9443;CONF:1198-8456;CONF:1198-8457;CONF:1198-8452;CONF:1198-8480;CONF:1198-8453;CONF:1198-8481;CONF:1198-8454;CONF:1198-8455;CONF:1198-8482;CONF:1198-8458;CONF:1198-8459;CONF:1198-30882;CONF:1198-32466;CONF:1198-32467;CONF:1198-30659;CONF:1198-30660;CONF:1198-30661;CONF:1198-30662;CONF:1198-30663;CONF:1198-30664;CONF:1198-30665;CONF:1198-30666;CONF:1198-30667;CONF:1198-30668;CONF:1198-30669;CONF:1198-30670;CONF:1198-30671;CONF:1198-30672;CONF:1198-30673;CONF:1198-30674;CONF:1198-30675;CONF:1198-30676;CONF:1198-30677;CONF:1198-30678;CONF:1198-30679;CONF:1198-30680;CONF:1198-30681;CONF:1198-30682;CONF:1198-30683;CONF:1198-30684;CONF:1198-30685;CONF:1198-30686;CONF:1198-30687;CONF:1198-30688;CONF:1198-30689;CONF:1198-30690;CONF:1198-32143;CONF:1198-32144;CONF:1198-32624;CONF:1198-32625'},
@@ -270,10 +270,10 @@
 
       //Trigger setFilter function with correct parameters
       function updateFilter() {
-        var filterVal = fieldEl.options[fieldEl.selectedIndex].value;
-        var typeVal = typeEl.options[typeEl.selectedIndex].value;
+        let filterVal = fieldEl.options[fieldEl.selectedIndex].value;
+        let typeVal = typeEl.options[typeEl.selectedIndex].value;
 
-        var filter = filterVal == "function" ? customFilter : filterVal;
+        let filter = filterVal == "function" ? customFilter : filterVal;
 
         if (filterVal == "function") {
           typeEl.disabled = true;
@@ -299,7 +299,7 @@
       document.getElementById("filter-type").addEventListener("change", updateFilter);
       document.getElementById("filter-value").addEventListener("keyup", updateFilter);
 
-      var table = new Tabulator("#example-table", {
+      let table = new Tabulator("#example-table", {
         layout: "fitColumns",
         data: tabledata, //assign data to table
         columns: [
@@ -326,6 +326,18 @@
           {title: "Type", field: "template_type", width: 150},
         ],
       });
+      let query = null;
+      // allowing for queries to come on inbound requests
+      if (location.href && location.href.split('?')[1]) {
+        query = location.href.split('?')[1]
+        if (query.indexOf('query=') !== -1) {
+          query = query.slice(query.indexOf('query=') + 6);
+          if (query) {
+            console.log(`settings filter to ${query} based on query parameter`);
+            $('#filter-value').val(query);
+          }
+        }
+      }
       // need to set filter after page load to deal with back button form population
       updateFilter();
     });      
