@@ -50,7 +50,7 @@
       Description:
     </h4>
 
-    <div id="description"><p>The Notes Section allow for inclusion of clinical documentation which does not fit precisely within any other C-CDA section. Multiple Notes sections may be included in a document provided they each include different types of note content as indicated by a different section.code.The Notes Section SHOULD NOT be used in place of a more specific a C-CDA section. For example, notes about procedure should be placed within the Procedures Section, not a Notes Section.When a Notes Section is present, Note Activity entries contain structured information about the note information allowing it to be more machine processable.</p></div>
+    <div id="description"><p>The Notes Section allow for inclusion of clinical documentation which does not fit precisely within any other C-CDA section. Multiple Notes sections may be included in a document provided they each include different types of note content as indicated by a different section.code.The Notes Section SHOULD NOT be used in place of a more specific C-CDA section. For example, notes about procedure should be placed within the Procedures Section, not a Notes Section.When a Notes Section is present, Note Activity entries contain structured information about the note information allowing it to be more machine processable.</p></div>
 
     <table class="table">
       <thead>
@@ -67,7 +67,7 @@
     </h4>
     <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
     <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:3250-16935)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.2.65"</b><b> (CONF:3250-16936)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2016-11-01"</b><b> (CONF:3250-16938)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHOULD</b> be selected from ValueSet Note Types<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.68/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.68</a></b><b> (CONF:3250-16892)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHOULD</b> be selected from ValueSet Note Types<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.68/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.68 </a>DYNAMIC</b><b> (CONF:3250-16892)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>title</b><b> (CONF:3250-16891)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>text</b><b> (CONF:3250-16894)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>entry</b><b> (CONF:3250-16904)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1]  Note Activity<b> (identifier: 2.16.840.1.113883.10.20.22.4.202)</b><b> (CONF:3250-16905)</b>.</li></ul></li>
