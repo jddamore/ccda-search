@@ -26,8 +26,8 @@
     </h1>
     <div class="row">
       <div class="col-10">
-        <p style="margin-bottom: 0.25rem">This beta navigation tool is generated from the June 2019 Errata published PDF of the Consolidated Clinical Document Architecture (C-CDA)
-        2.1 and the C-CDA 2.1 Companion Guide R2. For the latest information on C-CDA, always refer to the
+        <p style="margin-bottom: 0.25rem">This beta navigation tool is generated from the published PDF of the Consolidated Clinical Document Architecture (C-CDA)
+        2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R2 (October 2021 Errata). For the latest information on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
         <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.</p>
         <p style="margin-bottom: 0.25rem">CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.</p>
       </div>
@@ -75,7 +75,7 @@
 <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>text</b><b> (CONF:1098-14304)</b>.<ul><li>The text, if present, <b>SHOULD</b> contain zero or one [0..1] <b>reference</b><b> (CONF:1098-15552)</b>.</li><ul><li>The reference, if present, <b>SHOULD</b> contain zero or one [0..1] <b>@value</b><b> (CONF:1098-15553)</b>.</li><ul><li><p>This reference/@value SHALL begin with a '#' and SHALL point to its corresponding narrative (using the approach defined in CDA Release 2, section 4.3.5.1) (CONF:1098-15554).</p></li></ul></ul></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1098-14286)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> Completed (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b><b> STATIC</b>)<b> (CONF:1098-19100)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>effectiveTime</b><b> (CONF:1098-14287)</b>.<ul><li>The effectiveTime, if present, <b>SHALL</b> contain exactly one [1..1] <b>low</b><b> (CONF:1098-26456)</b>.</li></ul><ul><li>The effectiveTime, if present, <b>MAY</b> contain zero or one [0..1] <b>high</b><b> (CONF:1098-26457)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CD", where the code <b>SHOULD</b> be selected from ValueSet Problem<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.7.4/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.3221.7.4</a></b><b> DYNAMIC</b><b> (CONF:1098-14291)</b>.<ul><li>This value <b>MAY</b> contain zero or one [0..1] <b>@nullFlavor</b><b> (CONF:1098-14292)</b>.</li><ul><li><p>If the diagnosis is unknown or the SNOMED code is unknown, @nullFlavor SHOULD be �UNK�.  If the diagnosis is known but the code cannot be found in the Value Set, @nullFlavor SHOULD be �OTH� and the known diagnosis code SHOULD be placed in the translation element (CONF:1098-14293).</p></li></ul></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CD", where the code <b>SHOULD</b> be selected from ValueSet Problem<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.7.4/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.3221.7.4</a></b><b> DYNAMIC</b><b> (CONF:1098-14291)</b>.<ul><li>This value <b>MAY</b> contain zero or one [0..1] <b>@nullFlavor</b><b> (CONF:1098-14292)</b>.</li><ul><li><p>If the diagnosis is unknown or the SNOMED code is unknown, @nullFlavor SHOULD be "UNK".  If the diagnosis is known but the code cannot be found in the Value Set, @nullFlavor SHOULD be "OTH" and the known diagnosis code SHOULD be placed in the translation element (CONF:1098-14293).</p></li></ul></ul></li>
 <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>methodCode</b><b> (CONF:1098-14316)</b>.</li>
 </ul>
     <br>
@@ -89,6 +89,6 @@
   <h4 id="cdasearch">CDA Search Examples</h4>
   <ul id="cdasearch_examples"><li><a href="http://cdasearch.hl7.org/sections/Functional%20Status"><i class="fas fa-external-link-alt"></i> Functional Status</a></li></ul>
 
-  <br><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
+  <hr /><br>To log an issue on C-CDA Standard, go to <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br /><br /><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
 
 </body></html>
