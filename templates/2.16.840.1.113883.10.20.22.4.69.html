@@ -10,29 +10,30 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="icon" href="../img/favicon.ico" type="image/x-icon"></head>
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
 
 <body>
   <div class="jumbotron container-fluid" style="padding-bottom:24px; padding-top:24px;">
     <h1 class="display-3 row">
-      <div class="col-12">
-        <img class="rounded" style="max-width:20%" src="../img/cda.png">
-        <!-- <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong> -->
-        <div style="font-size:0.4em"> 
-          <strong style="font-weight:500"><a href="../index.html">C-CDA Online</a></strong><span>: A navigation website for C-CDA 2.1</span>
-          <br>
-        </div>
-      </div>
-    </h1>
+		<div class="col-12">
+		  <img class="rounded" style="max-width:20%" src="../img/cda.png">
+		  <!-- <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong> -->
+		  <div style="font-size:0.4em"> 
+			<strong style="font-weight:500"><a href="../index.html">C-CDA Online</a></strong><span>: A navigation website for C-CDA 2.1</span>
+			<br>
+		  </div>
+		</div>
+	</h1>
     <div class="row">
       <div class="col-10">
         <p style="margin-bottom: 0.25rem">This beta navigation tool is generated from the published PDF of the Consolidated Clinical Document Architecture (C-CDA)
-        2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R2 (October 2021 Errata). For the latest information on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
-        <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.</p>
-        <p style="margin-bottom: 0.25rem">CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.</p>
+        2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R3 (May 2022 Publication). For the latest information on C-CDA, 
+        or to access the Supplemental Implementation Guides, please refer to the
+	    <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.</p>
+	    <p style="margin-bottom: 0.25rem">CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>. 
+	    Those terms are also included in Volume 1 of the C-CDA guide linked below.</p>
       </div>
-    </div>
-    <div>
     </div>
     <hr>
     <div style="font-size: 1.5rem;">
@@ -40,17 +41,17 @@
       Please <u><a class="btn btn-primary" href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">sign up 
         <i class="fas fa-user-plus"></i></a></u> if you do not have an account.
     </div>
-	</div>
+  </div>
 
   <div class="container-fluid">
 
-    <h2 id="title">Assessment Scale Observation <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.69, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.69.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <h2 id="title">Assessment Scale Observation (V2) <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.69, release 2022-06-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.69.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
     <hr>
     <h4>
       Description:
     </h4>
 
-    <div id="description"><p>An assessment scale is a collection of observations that together yield a summary evaluation of a particular condition. Examples include the Braden Scale (assesses pressure ulcer risk), APACHE Score (estimates mortality in critically ill patients), Mini-Mental Status Exam (assesses cognitive function), APGAR Score (assesses the health of a newborn), and Glasgow Coma Scale (assesses coma and impaired consciousness).</p></div>
+    <div id="description"><p>An assessment scale is a collection of observations that together can yield a calculated or non-calculated summary evaluation of a one or more conditions. Examples include the Braden Scale (assesses pressure ulcer risk), APACHE Score (estimates mortality in critically ill patients), Mini-Mental Status Exam (assesses cognitive function), APGAR Score (assesses the health of a newborn), Glasgow Coma Scale (assesses coma and impaired consciousness), and WE CARE (Well Child Care, Evaluation, Community Resources, Advocacy, Referral, Education - a clinic-based screening and referral system developed for pediatric settings).</p><p>When an Assessment Scale Observation is contained in a Problem Observation, a Social History Observation or a Procedure instance that is Social Determinant of Health focused, that Assessment scale <strong>MAY</strong> contain assessment scale observations that represent question and answer pairs from SDOH screening instruments that are represented in LOINC. Note that guidance on the use of LOINC in assessment scales already exists in Assessment Scale Observation constraints and Assessment Scale Supporting Observations constraints.</p></div>
 
     <table class="table">
       <thead>
@@ -58,7 +59,7 @@
         <th>Contains:</th>
       </tr></thead>
       <tbody>
-        <tr><td id="Contained_By"><a href="2.16.840.1.113883.10.20.22.4.127.html">Sensory Status</a><br><a href="2.16.840.1.113883.10.20.22.2.14.html">Functional Status Section (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.67.html">Functional Status Observation (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.74.html">Mental Status Observation (V3)</a><br><a href="2.16.840.1.113883.10.20.22.2.56.html">Mental Status Section (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.132.html">Health Concern Act (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.136.html">Risk Concern Act (V2)</a><br></td>
+        <tr><td id="Contained_By">none</td>
         <td id="Contains"><a href="2.16.840.1.113883.10.20.22.4.86.html">Assessment Scale Supporting Observation</a><br></td>
       </tr></tbody>
     </table>
@@ -66,19 +67,19 @@
       Conformance Statements:
     </h4>
     <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
-    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:81-14434)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b><b> STATIC</b>)<b> (CONF:81-14435)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:81-14436)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.69"</b><b> (CONF:81-14437)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:81-14438)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:81-14439)</b>.<ul><li><p><strong>SHOULD</strong> be from LOINC (CodeSystem: 2.16.840.1.113883.6.1) or SNOMED CT (CodeSystem: 2.16.840.1.113883.6.96) identifying the assessment scale (CONF:81-14440).</p></li></ul></li>
-<li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>derivationExpr</b><b> (CONF:81-14637)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:81-14444)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> Completed (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b><b> STATIC</b>)<b> (CONF:81-19088)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b> (CONF:81-14445)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b><b> (CONF:81-14450)</b>.</li>
-<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>interpretationCode</b><b> (CONF:81-14459)</b>.<ul><li>The interpretationCode, if present, <b>MAY</b> contain zero or more [0..*] <b>translation</b><b> (CONF:81-14888)</b>.</li></ul></li>
-<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>author</b><b> (CONF:81-14460)</b>.</li>
-<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:81-14451)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"COMP"</b> has component<b> (CONF:81-16741)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Assessment Scale Supporting Observation<b> (identifier: 2.16.840.1.113883.10.20.22.4.86)</b><b> (CONF:81-16742)</b>.</li></ul></li>
-<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>referenceRange</b><b> (CONF:81-16799)</b>.<ul><li>The referenceRange, if present, <b>SHALL</b> contain exactly one [1..1] <b>observationRange</b><b> (CONF:81-16800)</b>.</li><ul><li>This observationRange <b>SHOULD</b> contain zero or one [0..1] <b>text</b><b> (CONF:81-16801)</b>.</li><ul><li>The text, if present, <b>SHOULD</b> contain zero or one [0..1] <b>reference</b><b> (CONF:81-16802)</b>.</li><ul><li>The reference, if present, <b>MAY</b> contain zero or one [0..1] <b>@value</b><b> (CONF:81-16803)</b>.</li><ul><li><p>This reference/@value SHALL begin with a '#' and SHALL point to its corresponding narrative (using the approach defined in CDA Release 2, section 4.3.5.1) (CONF:81-16804).</p></li></ul></ul></ul></ul></ul></li>
+    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:4515-14434)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b><b> STATIC</b>)<b> (CONF:4515-14435)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:4515-14436)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.69"</b><b> (CONF:4515-14437)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2022-06-01"</b><b> (CONF:4515-33037)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:4515-14438)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHALL</b> be selected from CodeSystem <b>LOINC (2.16.840.1.113883.6.1)</b><b> DYNAMIC</b><b> (CONF:4515-14439)</b>.</li>
+<li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>derivationExpr</b><b> (CONF:4515-14637)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:4515-14444)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> Completed (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b><b> STATIC</b>)<b> (CONF:4515-19088)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b> (CONF:4515-14445)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b><b> (CONF:4515-14450)</b>.</li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>interpretationCode</b><b> (CONF:4515-14459)</b>.<ul><li>The interpretationCode, if present, <b>MAY</b> contain zero or more [0..*] <b>translation</b><b> (CONF:4515-14888)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>author</b><b> (CONF:4515-14460)</b>.</li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:4515-14451)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"COMP"</b> has component<b> (CONF:4515-16741)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Assessment Scale Supporting Observation<b> (identifier: 2.16.840.1.113883.10.20.22.4.86)</b><b> (CONF:4515-16742)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>referenceRange</b><b> (CONF:4515-16799)</b>.<ul><li>The referenceRange, if present, <b>SHALL</b> contain exactly one [1..1] <b>observationRange</b><b> (CONF:4515-16800)</b>.</li><ul><li>This observationRange <b>SHOULD</b> contain zero or one [0..1] <b>text</b><b> (CONF:4515-16801)</b>.</li><ul><li>The text, if present, <b>SHOULD</b> contain zero or one [0..1] <b>reference</b><b> (CONF:4515-16802)</b>.</li><ul><li>The reference, if present, <b>MAY</b> contain zero or one [0..1] <b>@value</b><b> (CONF:4515-16803)</b>.</li><ul><li><p>This reference/@value SHALL begin with a '#' and SHALL point to its corresponding narrative (using the approach defined in CDA Release 2, section 4.3.5.1) (CONF:4515-16804).</p></li></ul></ul></ul></ul></ul></li>
 </ul>
     <br>
 
@@ -92,6 +93,6 @@
   <ul id="cdasearch_examples">
 
   </ul>
-
-  <hr /><br>To log an issue on C-CDA Standard, go to <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br /><br /><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
+  
+  <hr><br>To log an issue on C-CDA Standard, go to <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br><br><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
 </body></html>

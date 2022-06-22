@@ -10,29 +10,30 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="icon" href="../img/favicon.ico" type="image/x-icon"></head>
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
 
 <body>
   <div class="jumbotron container-fluid" style="padding-bottom:24px; padding-top:24px;">
     <h1 class="display-3 row">
-      <div class="col-12">
-        <img class="rounded" style="max-width:20%" src="../img/cda.png">
-        <!-- <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong> -->
-        <div style="font-size:0.4em"> 
-          <strong style="font-weight:500"><a href="../index.html">C-CDA Online</a></strong><span>: A navigation website for C-CDA 2.1</span>
-          <br>
-        </div>
-      </div>
-    </h1>
+		<div class="col-12">
+		  <img class="rounded" style="max-width:20%" src="../img/cda.png">
+		  <!-- <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong> -->
+		  <div style="font-size:0.4em"> 
+			<strong style="font-weight:500"><a href="../index.html">C-CDA Online</a></strong><span>: A navigation website for C-CDA 2.1</span>
+			<br>
+		  </div>
+		</div>
+	</h1>
     <div class="row">
       <div class="col-10">
         <p style="margin-bottom: 0.25rem">This beta navigation tool is generated from the published PDF of the Consolidated Clinical Document Architecture (C-CDA)
-        2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R2 (October 2021 Errata). For the latest information on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
-        <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.</p>
-        <p style="margin-bottom: 0.25rem">CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.</p>
+        2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R3 (May 2022 Publication). For the latest information on C-CDA, 
+        or to access the Supplemental Implementation Guides, please refer to the
+	    <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.</p>
+	    <p style="margin-bottom: 0.25rem">CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>. 
+	    Those terms are also included in Volume 1 of the C-CDA guide linked below.</p>
       </div>
-    </div>
-    <div>
     </div>
     <hr>
     <div style="font-size: 1.5rem;">
@@ -40,17 +41,17 @@
       Please <u><a class="btn btn-primary" href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">sign up 
         <i class="fas fa-user-plus"></i></a></u> if you do not have an account.
     </div>
-	</div>
+  </div>
 
   <div class="container-fluid">
 
-    <h2 id="title">Planned Procedure (V2) <small class="text-muted">[procedure, 2.16.840.1.113883.10.20.22.4.41, release 2014-06-09, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.41.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <h2 id="title">Planned Procedure (V3) <small class="text-muted">[procedure, 2.16.840.1.113883.10.20.22.4.41, release 2022-06-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.41.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
     <hr>
     <h4>
       Description:
     </h4>
 
-    <div id="description"><p>This template represents planned alterations of the patient's physical condition. Examples of such procedures are tracheostomy, knee replacement, and craniectomy. The priority of the procedure to the patient and provider is communicated through Priority Preference. The effectiveTime indicates the time when the procedure is intended to take place and authorTime indicates when the documentation of the plan occurred. The Planned Procedure Template may also indicate the potential insurance coverage for the procedure.</p></div>
+    <div id="description"><p>This template represents planned alterations of the patient's physical condition. Examples of such procedures are tracheostomy, knee replacement, and craniectomy. The priority of the procedure to the patient and provider is communicated through Priority Preference. The effectiveTime indicates the time when the procedure is intended to take place and authorTime indicates when the documentation of the plan occurred. The Planned Procedure Template may also indicate the potential insurance coverage for the procedure.</p><p>Planned Procedure V3 Usage Note: Common practice in the industry has shown that Planned Procedure is the usually implemented CDA template for any type of intervention or procedure regardless of if the "immediate and primary outcome (post-condition) is the alteration of the physical condition of the patient", or not. As a result, it is recommended to use Planned Procedure when sending procedures also thought of as "interventions" such as "Home Environment Evaluation" or "Assessment of nutritional status".</p></div>
 
     <table class="table">
       <thead>
@@ -58,29 +59,31 @@
         <th>Contains:</th>
       </tr></thead>
       <tbody>
-        <tr><td id="Contained_By"><a href="2.16.840.1.113883.10.20.22.2.10.html">Plan of Treatment Section (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.130.html">Nutrition Recommendation</a><br><a href="2.16.840.1.113883.10.20.22.2.30.html">Planned Procedure Section (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.121.html">Goal Observation</a><br><a href="2.16.840.1.113883.10.20.22.4.146.html">Planned Intervention Act (V2)</a><br></td>
-        <td id="Contains"><a href="2.16.840.1.113883.10.20.22.4.119.html">Author Participation</a><br><a href="2.16.840.1.113883.10.20.22.4.19.html">Indication (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.20.html">Instruction (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.129.html">Planned Coverage</a><br><a href="2.16.840.1.113883.10.20.22.4.143.html">Priority Preference</a><br></td>
+        <tr><td id="Contained_By">none</td>
+        <td id="Contains"><a href="2.16.840.1.113883.10.20.22.4.143.html">Priority Preference</a><br><a href="2.16.840.1.113883.10.20.22.4.119.html">Author Participation</a><br><a href="2.16.840.1.113883.10.20.22.4.19.html">Indication (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.20.html">Instruction (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.129.html">Planned Coverage</a><br><a href="2.16.840.1.113883.10.20.22.4.69.html">Assessment Scale Observation</a><br><a href="2.16.840.1.113883.10.20.22.4.122.html">Entry Reference</a><br></td>
       </tr></tbody>
     </table>
     <h4>
       Conformance Statements:
     </h4>
     <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
-    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"PROC"</b> (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:1098-8568)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>, which <b>SHALL</b> be selected from ValueSet Planned moodCode (Act/Encounter/Procedure)<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.23/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.23</a></b><b> STATIC</b> 2011-09-30<b> (CONF:1098-8569)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1098-30444)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.41"</b><b> (CONF:1098-30445)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2014-06-09"</b><b> (CONF:1098-32554)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1098-8571)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1098-31976)</b>.<ul><li><p>The procedure/code in a planned procedure <strong>SHOULD</strong> be selected from LOINC (codeSystem 2.16.840.1.113883.6.1) <em>OR</em> SNOMED CT (CodeSystem: 2.16.840.1.113883.6.96), and <strong>MAY</strong> be selected from CPT-4 (CodeSystem: 2.16.840.1.113883.6.12) <strong>OR</strong> ICD10 PCS (CodeSystem: 2.16.840.1.113883.6.4) (CONF:1098-31977).</p></li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1098-30446)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"active"</b> Active (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b>)<b> (CONF:1098-31978)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>effectiveTime</b><b> (CONF:1098-30447)</b>.</li>
-<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>methodCode</b><b> (CONF:1098-31980)</b>.</li>
-<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>targetSiteCode</b>, which <b>SHALL</b> be selected from ValueSet Body Site Value Set<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.8.9/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.3221.8.9</a></b><b> DYNAMIC</b><b> (CONF:1098-31981)</b>.</li>
-<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>performer</b><b> (CONF:1098-30449)</b>.</li>
-<li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1]  Author Participation<b> (identifier: 2.16.840.1.113883.10.20.22.4.119)</b><b> (CONF:1098-31979)</b>.</li>
-<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1098-31079)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1098-31080)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Priority Preference<b> (identifier: 2.16.840.1.113883.10.20.22.4.143)</b><b> (CONF:1098-31081)</b>.</li></ul></li>
-<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1098-31982)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"RSON"</b> Has Reason (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1098-31983)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Indication (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.19)</b><b> (CONF:1098-31984)</b>.</li></ul></li>
-<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1098-31985)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SUBJ"</b> Has Subject (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:1098-31986)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@inversionInd</b>=<b>"true"</b> True<b> (CONF:1098-31987)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Instruction (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.20)</b><b> (CONF:1098-31989)</b>.</li></ul></li>
-<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:1098-31990)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"COMP"</b> Has component<b> (CONF:1098-31991)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Planned Coverage<b> (identifier: 2.16.840.1.113883.10.20.22.4.129)</b><b> (CONF:1098-31992)</b>.</li></ul></li>
+    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"PROC"</b> (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:4515-8568)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>, which <b>SHALL</b> be selected from ValueSet Planned moodCode (Act/Encounter/Procedure)<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.23/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.23</a></b><b> STATIC</b> 2011-09-30<b> (CONF:4515-8569)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:4515-30444)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.41"</b><b> (CONF:4515-30445)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2014-06-09"</b><b> (CONF:4515-32554)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:4515-8571)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:4515-31976)</b>.<ul><li><p>The procedure/code in a planned procedure <strong>SHOULD</strong> be selected from LOINC (codeSystem 2.16.840.1.113883.6.1) <em>OR</em> SNOMED CT (CodeSystem: 2.16.840.1.113883.6.96), and <strong>MAY</strong> be selected from CPT-4 (CodeSystem: 2.16.840.1.113883.6.12) <strong>OR</strong> ICD10 PCS (CodeSystem: 2.16.840.1.113883.6.4) <strong>OR</strong> HCPCS (Code System: 2.16.840.1.113762.1.4.1247.9) (CONF:4515-31977).</p></li></ul><ul><li><p>If the Planned Intervention Procedure is a Social Determinant of Health Planned Intervention Procedure, the procedure code <strong>SHOULD</strong> be selected from ValueSet Social Determinant of Health Service Request <strong>DYNAMIC</strong> (CONF:4515-32993).</p></li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:4515-30446)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"active"</b> Active (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b>)<b> (CONF:4515-31978)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>effectiveTime</b><b> (CONF:4515-30447)</b>.</li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>methodCode</b><b> (CONF:4515-31980)</b>.</li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>targetSiteCode</b>, which <b>SHALL</b> be selected from ValueSet Body Site Value Set<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.8.9/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.3221.8.9</a></b><b> DYNAMIC</b><b> (CONF:4515-31981)</b>.</li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>performer</b><b> (CONF:4515-30449)</b>.</li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1]  Author Participation<b> (identifier: 2.16.840.1.113883.10.20.22.4.119)</b><b> (CONF:4515-31979)</b>.</li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:4515-31079)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:4515-31080)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Priority Preference<b> (identifier: 2.16.840.1.113883.10.20.22.4.143)</b><b> (CONF:4515-31081)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:4515-31982)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"RSON"</b> Has Reason (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:4515-31983)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Indication (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.19)</b><b> (CONF:4515-31984)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:4515-31985)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SUBJ"</b> Has Subject (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:4515-31986)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@inversionInd</b>=<b>"true"</b> True<b> (CONF:4515-31987)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Instruction (V2)<b> (identifier: 2.16.840.1.113883.10.20.22.4.20)</b><b> (CONF:4515-31989)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:4515-31990)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"COMP"</b> Has component<b> (CONF:4515-31991)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Planned Coverage<b> (identifier: 2.16.840.1.113883.10.20.22.4.129)</b><b> (CONF:4515-31992)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:4515-32994)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"RSON"</b> Has reason (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:4515-32998)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Assessment Scale Observation<b> (identifier: 2.16.840.1.113883.10.20.22.4.69)</b><b> (CONF:4515-32995)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:4515-32996)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"RSON"</b> Has reason<b> (CONF:4515-32999)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Entry Reference<b> (identifier: 2.16.840.1.113883.10.20.22.4.122)</b><b> (CONF:4515-32997)</b>.</li></ul></li>
 </ul>
     <br>
 
@@ -92,6 +95,6 @@
 
   <h4 id="cdasearch">CDA Search Examples</h4>
   <ul id="cdasearch_examples"><li><a href="http://cdasearch.hl7.org/sections/Plan%20of%20Treatment"><i class="fas fa-external-link-alt"></i> Plan of Treatment</a></li></ul>
-
-  <hr /><br>To log an issue on C-CDA Standard, go to <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br /><br /><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
+  
+  <hr><br>To log an issue on C-CDA Standard, go to <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br><br><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
 </body></html>

@@ -45,13 +45,13 @@
 
   <div class="container-fluid">
 
-    <h2 id="title">Section Time Range Observation <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.201, release 2016-06-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.201.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <h2 id="title">Sexual Orientation Observation <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.501, release 2022-06-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.501.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
     <hr>
     <h4>
       Description:
     </h4>
 
-    <div id="description"><p>This observation represents the date and time range of the information contained in a section. It is an optional entry and may be used in any section.</p></div>
+    <div id="description"><p>This observation represents the sexual orientation of the patient, defined as:</p><blockquote><p>A person's identification of their emotional, romantic, sexual, or affectional attraction to another person.</p></blockquote><p>This template was informed by the HL7 Gender Harmony project.</p><p>This observation is not appropriate for recording patient gender (administrativeGender), Gender Identity (Gender Identity Observation), or birth sex (Birth Sex Observation).</p></div>
 
     <table class="table">
       <thead>
@@ -67,20 +67,20 @@
       Conformance Statements:
     </h4>
     <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
-    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:3250-32960)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b><b> STATIC</b>)<b> (CONF:3250-32961)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:3250-32951)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.201"</b><b> (CONF:3250-32955)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2016-06-01"</b><b> (CONF:3250-32956)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:3250-32952)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"82607-3"</b> Section Time Range (CodeSystem: <b>LOINC 2.16.840.1.113883.6.1</b><b> STATIC</b>)<b> (CONF:3250-32957)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.6.1"</b> (CodeSystem: <b>LOINC 2.16.840.1.113883.6.1</b><b> STATIC</b>)<b> (CONF:3250-32958)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>text</b><b> (CONF:3250-32962)</b>.<ul><li>This text <b>SHALL</b> contain exactly one [1..1] <b>reference</b><b> (CONF:3250-32963)</b>.</li><ul><li>This reference <b>SHALL</b> contain exactly one [1..1] <b>@value</b><b> (CONF:3250-32964)</b>.</li></ul></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:3250-32950)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> Completed (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b><b> STATIC</b>)<b> (CONF:3250-32954)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="IVL_TS"<b> (CONF:3250-32953)</b>.<ul><li>This value <b>SHALL</b> contain exactly one [1..1] <b>low</b><b> (CONF:3250-32965)</b>.</li></ul><ul><li>This value <b>SHALL</b> contain exactly one [1..1] <b>high</b><b> (CONF:3250-32966)</b>.</li></ul></li>
+    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:4515-193)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b><b> STATIC</b>)<b> (CONF:4515-194)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:4515-185)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.501"</b><b> (CONF:4515-188)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2022-06-01"</b><b> (CONF:4515-189)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:4515-186)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"76690-7"</b> Sexual Orientation<b> (CONF:4515-190)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.6.1"</b> (CodeSystem: <b>LOINC 2.16.840.1.113883.6.1</b><b> STATIC</b>)<b> (CONF:4515-191)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:4515-32881)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b>)<b> (CONF:4515-32883)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b> (CONF:4515-32882)</b>.<ul><li>This effectiveTime <b>SHALL</b> contain exactly one [1..1] <b>low</b><b> (CONF:4515-32884)</b>.</li></ul><ul><li>This effectiveTime <b>MAY</b> contain zero or one [0..1] <b>high</b><b> (CONF:4515-32885)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CD", where the code <b>SHALL</b> be selected from ValueSet Sexual Orientation<b> 2.16.840.1.113762.1.4.1021.33</b><b> DYNAMIC</b><b> (CONF:4515-187)</b>.<ul><li>This value <b>MAY</b> contain zero or one [0..1] <b>@nullFlavor</b>, which <b>SHOULD</b> be selected from ValueSet Other or unknown or refused to answer<b> 2.16.840.1.113762.1.4.1021.103</b><b> DYNAMIC</b><b> (CONF:4515-192)</b>.</li></ul></li>
 </ul>
     <br>
 
     <h4>
       Guide Examples:
     </h4>
-	<ul id="guide_examples"><li><a href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Section%20Time%20Range%20Observation_2.16.840.1.113883.10.20.22.4.201/Section%20Time%20Range%20Example.xml"><i class="fab fa-github"></i>&nbsp;Section Time Range Observation</a></li></ul>
+	<ul id="guide_examples"></ul>
     <br>
 
   <h4 id="cdasearch"></h4>

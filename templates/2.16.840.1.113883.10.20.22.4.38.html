@@ -10,29 +10,30 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="icon" href="../img/favicon.ico" type="image/x-icon"></head>
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
 
 <body>
   <div class="jumbotron container-fluid" style="padding-bottom:24px; padding-top:24px;">
     <h1 class="display-3 row">
-      <div class="col-12">
-        <img class="rounded" style="max-width:20%" src="../img/cda.png">
-        <!-- <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong> -->
-        <div style="font-size:0.4em"> 
-          <strong style="font-weight:500"><a href="../index.html">C-CDA Online</a></strong><span>: A navigation website for C-CDA 2.1</span>
-          <br>
-        </div>
-      </div>
-    </h1>
+		<div class="col-12">
+		  <img class="rounded" style="max-width:20%" src="../img/cda.png">
+		  <!-- <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong> -->
+		  <div style="font-size:0.4em"> 
+			<strong style="font-weight:500"><a href="../index.html">C-CDA Online</a></strong><span>: A navigation website for C-CDA 2.1</span>
+			<br>
+		  </div>
+		</div>
+	</h1>
     <div class="row">
       <div class="col-10">
         <p style="margin-bottom: 0.25rem">This beta navigation tool is generated from the published PDF of the Consolidated Clinical Document Architecture (C-CDA)
-        2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R2 (October 2021 Errata). For the latest information on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
-        <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.</p>
-        <p style="margin-bottom: 0.25rem">CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.</p>
+        2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R3 (May 2022 Publication). For the latest information on C-CDA, 
+        or to access the Supplemental Implementation Guides, please refer to the
+	    <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.</p>
+	    <p style="margin-bottom: 0.25rem">CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>. 
+	    Those terms are also included in Volume 1 of the C-CDA guide linked below.</p>
       </div>
-    </div>
-    <div>
     </div>
     <hr>
     <div style="font-size: 1.5rem;">
@@ -40,17 +41,17 @@
       Please <u><a class="btn btn-primary" href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">sign up 
         <i class="fas fa-user-plus"></i></a></u> if you do not have an account.
     </div>
-	</div>
+  </div>
 
   <div class="container-fluid">
 
-    <h2 id="title">Social History Observation (V3) <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.38, release 2015-08-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.38.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
+    <h2 id="title">Social History Observation (V4) <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.38, release 2022-06-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.38.pdf"><i class="fas fa-file-pdf"></i> view pdf</a></small></h2>
     <hr>
     <h4>
       Description:
     </h4>
 
-    <div id="description"><p>This template represents a patient's occupations, lifestyle, and environmental health risk factors. Demographic data (e.g., marital status, race, ethnicity, religious affiliation) are captured in the header. Though tobacco use and exposure may be represented with a Social History Observation, it is recommended to use the Current Smoking Status template or the Tobacco Use template instead, to represent smoking or tobacco habits.</p></div>
+    <div id="description"><p>This template represents a patient's occupations, lifestyle, and environmental health risk factors. Demographic data (e.g., marital status, race, ethnicity, religious affiliation) are captured in the header. Though tobacco use and exposure may be represented with a Social History Observation, it is recommended to use the Current Smoking Status template or the Tobacco Use template instead, to represent smoking or tobacco habits.There are supplemental templates and guidance for observations of <a href="http://https://www.hl7.org/implement/standards/product_brief.cfm?product_id=522">occupational data</a>, <a href="http://https://www.hl7.org/implement/standards/product_brief.cfm?product_id=478">nutrition</a> and <a href="http://https://www.hl7.org/implement/standards/product_brief.cfm?product_id=494">pregnancy</a> that could be captured in the Social History Observation, and implementers may want to consider using those more specific templates in the Social History section.</p></div>
 
     <table class="table">
       <thead>
@@ -58,23 +59,25 @@
         <th>Contains:</th>
       </tr></thead>
       <tbody>
-        <tr><td id="Contained_By"><a href="2.16.840.1.113883.10.20.22.4.132.html">Health Concern Act (V2)</a><br><a href="2.16.840.1.113883.10.20.22.4.136.html">Risk Concern Act (V2)</a><br><a href="2.16.840.1.113883.10.20.22.2.17.html">Social History Section (V3)</a><br></td>
-        <td id="Contains"><a href="2.16.840.1.113883.10.20.22.4.119.html">Author Participation</a><br></td>
+        <tr><td id="Contained_By">none</td>
+        <td id="Contains"><a href="2.16.840.1.113883.10.20.22.4.122.html">Entry Reference</a><br><a href="2.16.840.1.113883.10.20.22.4.119.html">Author Participation</a><br><a href="2.16.840.1.113883.10.20.22.4.69.html">Assessment Scale Observation</a><br></td>
       </tr></tbody>
     </table>
     <h4>
       Conformance Statements:
     </h4>
     <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
-    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> Observation (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:1198-8548)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> Event (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b><b> STATIC</b>)<b> (CONF:1198-8549)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-8550)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.38"</b><b> (CONF:1198-10526)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32495)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-8551)</b>.</li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHOULD</b> be selected from ValueSet Social History Type<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.60/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.80.60</a></b><b> DYNAMIC</b><b> (CONF:1198-8558)</b>.<ul><li><p>If @codeSystem is not LOINC, then this code <strong>SHALL</strong> contain at least one [1..*] translation, which <strong>SHOULD</strong> be selected from CodeSystem LOINC (2.16.840.1.113883.6.1) (CONF:1198-32951).</p></li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1198-8553)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> Completed (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b><b> STATIC</b>)<b> (CONF:1198-19117)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b> (CONF:1198-31868)</b>.</li>
-<li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>value</b><b> (CONF:1198-8559)</b>.<ul><li><p>If Observation/value is a physical quantity (xsi:type="PQ"), the unit of measure <strong>SHALL</strong> be selected from ValueSet UnitsOfMeasureCaseSensitive (2.16.840.1.113883.1.11.12839) <em>DYNAMIC</em> (CONF:1198-8555).</p></li></ul></li>
-<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*]  Author Participation<b> (identifier: 2.16.840.1.113883.10.20.22.4.119)</b><b> (CONF:1198-31869)</b>.</li>
+    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> Observation (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:4515-8548)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> Event (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b><b> STATIC</b>)<b> (CONF:4515-8549)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:4515-8550)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.38"</b><b> (CONF:4515-10526)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2022-06-01"</b><b> (CONF:4515-32495)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:4515-8551)</b>.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHOULD</b> be selected from ValueSet Social History Type<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.60/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.80.60</a></b><b> DYNAMIC</b><b> (CONF:4515-8558)</b>.<ul><li><p>If @codeSystem is not LOINC, then this code <strong>SHALL</strong> contain at least one [1..*] translation, which <strong>SHOULD</strong> be selected from CodeSystem LOINC (2.16.840.1.113883.6.1) (CONF:4515-32956).</p></li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:4515-8553)</b>.<ul><li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> Completed (CodeSystem: <b>HL7ActStatus 2.16.840.1.113883.5.14</b><b> STATIC</b>)<b> (CONF:4515-19117)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b> (CONF:4515-31868)</b>.</li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>value</b><b> (CONF:4515-8559)</b>.<ul><li><p>If Observation/value is a physical quantity (xsi:type="PQ"), the unit of measure <strong>SHALL</strong> be selected from ValueSet UnitsOfMeasureCaseSensitive (2.16.840.1.113883.1.11.12839) <em>DYNAMIC</em> (CONF:4515-8555).</p></li></ul><ul><li><p>If the Social History Observation is a Social Determinant of Health Observation, the observation/value code <strong>SHOULD</strong> be selected from ValueSet Social Determinant of Health Conditions 2.16.840.1.113762.1.4.1196.788 <strong>DYNAMIC</strong> (CONF:4515-32957).</p></li></ul></li>
+<li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*]  Author Participation<b> (identifier: 2.16.840.1.113883.10.20.22.4.119)</b><b> (CONF:4515-31869)</b>.</li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:4515-32958)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SPRT"</b> Has support (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:4515-32960)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Assessment Scale Observation<b> (identifier: 2.16.840.1.113883.10.20.22.4.69)</b><b> (CONF:4515-32959)</b>.</li></ul></li>
+<li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b> (CONF:4515-32969)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SPRT"</b> Has support (CodeSystem: <b>HL7ActRelationshipType 2.16.840.1.113883.5.1002</b>)<b> (CONF:4515-32971)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1]  Entry Reference<b> (identifier: 2.16.840.1.113883.10.20.22.4.122)</b><b> (CONF:4515-32970)</b>.</li></ul></li>
 </ul>
     <br>
 
@@ -86,6 +89,6 @@
 
   <h4 id="cdasearch">CDA Search Examples</h4>
   <ul id="cdasearch_examples"><li><a href="http://cdasearch.hl7.org/sections/Social%20History"><i class="fas fa-external-link-alt"></i> Social History</a></li></ul>
-
-  <hr /><br>To log an issue on C-CDA Standard, go to <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br /><br /><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
+  
+  <hr><br>To log an issue on C-CDA Standard, go to <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br><br><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
 </body></html>
