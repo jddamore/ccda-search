@@ -10,29 +10,30 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="icon" href="../img/favicon.ico" type="image/x-icon"></head>
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+</head>
 
 <body>
   <div class="jumbotron container-fluid" style="padding-bottom:24px; padding-top:24px;">
     <h1 class="display-3 row">
-      <div class="col-12">
-        <img class="rounded" style="max-width:20%" src="../img/cda.png">
-        <!-- <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong> -->
-        <div style="font-size:0.4em"> 
-          <strong style="font-weight:500"><a href="../index.html">C-CDA Online</a></strong><span>: A navigation website for C-CDA 2.1</span>
-          <br>
-        </div>
-      </div>
-    </h1>
+		<div class="col-12">
+		  <img class="rounded" style="max-width:20%" src="../img/cda.png">
+		  <!-- <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong> -->
+		  <div style="font-size:0.4em"> 
+			<strong style="font-weight:500"><a href="../index.html">C-CDA Online</a></strong><span>: A navigation website for C-CDA 2.1</span>
+			<br>
+		  </div>
+		</div>
+	</h1>
     <div class="row">
       <div class="col-10">
         <p style="margin-bottom: 0.25rem">This beta navigation tool is generated from the published PDF of the Consolidated Clinical Document Architecture (C-CDA)
-        2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R2 (October 2021 Errata). For the latest information on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
-        <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.</p>
-        <p style="margin-bottom: 0.25rem">CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.</p>
+        2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R3 (May 2022 Publication). For the latest information on C-CDA, 
+        or to access the Supplemental Implementation Guides, please refer to the
+	    <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.</p>
+	    <p style="margin-bottom: 0.25rem">CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>. 
+	    Those terms are also included in Volume 1 of the C-CDA guide linked below.</p>
       </div>
-    </div>
-    <div>
     </div>
     <hr>
     <div style="font-size: 1.5rem;">
@@ -40,7 +41,7 @@
       Please <u><a class="btn btn-primary" href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">sign up 
         <i class="fas fa-user-plus"></i></a></u> if you do not have an account.
     </div>
-	</div>
+  </div>
 
   <div class="container-fluid">
 
@@ -68,18 +69,18 @@
     <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
     <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:4437-3432)</b>.<ul><li>This templateId <b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.302"</b><b> (CONF:4437-3434)</b>.<br>Note: template oid</li></ul><ul><li>This templateId <b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2019-06-21"</b><b> (CONF:4437-3435)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:4437-3433)</b>.<br>Note: Code for "Device Catalog Number"<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"C99286"</b> Catalog Number (CodeSystem: <b>NCI Thesaurus (NCIt) 2.16.840.1.113883.3.26.1.1</b><b> STATIC</b>)<b> (CONF:4437-3436)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.3.26.1.1"</b><b> (CONF:4437-3437)</b>.</li></ul><ul><li>This code <b>MAY</b> contain zero or one [0..1] <b>@codeSystemName</b>=<b>"NCI Thesaurus"</b><b> (CONF:4437-3438)</b>.</li></ul><ul><li>This code <b>MAY</b> contain zero or one [0..1] <b>@displayName</b>=<b>"Catalog Number"</b><b> (CONF:4437-3439)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="ED"<b> (CONF:4437-3440)</b>.<br>Note: Catalog Number can point to its corresponding narrative using the approach defined in CDA Release 2, section 4.3.5.1.</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="ED"<b> (CONF:4437-3440)</b>.</li>
 </ul>
     <br>
 
     <h4>
       Guide Examples:
     </h4>
-	<ul id="guide_examples"><li><a href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Catalog%20Number%20Observation_2.16.840.1.113883.10.20.22.4.302/Catalog%20Number%20Sample.xml"><i class="fab fa-github"></i>&nbsp;Catalog Number</a></li></ul>
+	<ul id="guide_examples"><li><a href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Catalog_Number_Observation_2.16.840.1.113883.10.20.22.4.302/Catalog%20Number%20Sample.xml"><i class="fab fa-github"></i>&nbsp;Catalog_Number_Observation</a></li></ul>
     <br>
 
   <h4 id="cdasearch">CDA Search Examples</h4>
   <ul id="cdasearch_examples"><li><a href="http://cdasearch.hl7.org/sections/Medical%20Equipment"><i class="fas fa-external-link-alt"></i> Medical Equipment</a></li></ul>
-
-  <hr /><br>To log an issue on C-CDA Standard, go to <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br /><br /><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
+  
+  <hr><br>To log an issue on C-CDA Standard, go to <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br><br><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
 </body></html>
