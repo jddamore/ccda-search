@@ -36,8 +36,10 @@ const checkFile = function (pieces) {
           found2 = true;
           let regex = new RegExp(/\*R-ENDLINE\*\*N-ENDLINE\*/g)
           let note = pieces[1].replace(regex, '<br />' )
-          console.log(note);
-          // list_items.eq(i).html(`<p>${note}</p>${list_item});
+          // console.log(note);
+          list_items.eq(i).html(`<p>${note}</p>${list_item}`);
+          fs.writeFileSync(`./templates/${files[file_index]}`, '<!DOCTYPE html><html lang="en">' + $('*').html() + '</html>');
+          console.log(`wrote preceding note to file ${files[file_index]}` );
         }
         if (found2) break;
       }
