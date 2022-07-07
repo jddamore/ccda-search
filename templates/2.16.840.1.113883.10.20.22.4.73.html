@@ -68,7 +68,7 @@
     <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
     <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> Observation (CodeSystem: <b>HL7ActClass 2.16.840.1.113883.5.6</b><b> STATIC</b>)<b> (CONF:1098-14319)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> Event (CodeSystem: <b>HL7ActMood 2.16.840.1.113883.5.1001</b><b> STATIC</b>)<b> (CONF:1098-14320)</b>.</li>
-<li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>@negationInd</b><b> (CONF:1098-14344)</b>.</li>
+<li class="list-group-item"><p>Use negationInd="true" to indicate that the problem was not observed.<br></p> <b>MAY</b> contain zero or one [0..1] <b>@negationInd</b><b> (CONF:1098-14344)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1098-14346)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.73"</b><b> (CONF:1098-14347)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2014-06-09"</b><b> (CONF:1098-32600)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1098-14321)</b>.</li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1098-14804)</b>.<ul><li>This code <b>SHOULD</b> contain zero or one [0..1] <b>@code</b>=<b>"373930000"</b> Cognitive function finding   (CodeSystem: <b>SNOMED CT 2.16.840.1.113883.6.96</b><b> STATIC</b>)<b> (CONF:1098-14805)</b>.</li></ul></li>
@@ -91,5 +91,5 @@
 
   </ul>
 
-  <hr /><br>To log an issue on C-CDA Standard, go to <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br /><br /><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
+  <hr><br>To log an issue on C-CDA Standard, go to <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br><br><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
 </body></html>
