@@ -33,6 +33,10 @@ let data = {
   '2.16.840.1.113883.6.96)':'<a href="https://terminology.hl7.org/CodeSystem-v3-snomed-CT.html" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.6.96</a>)'
   // can't do UCUM universally, need to search manually since partially done
   //  '2.16.840.1.113883.1.11.12839':'<a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.12839/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.12839</a>'
+  // can't do these since they didn't inlucde OID in CG
+  //Goals <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i>2.16.840.1.113762.1.4.1247.71</a>',
+  //HS requests <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i>2.16.840.1.113762.1.4.1196.790</a>',
+  //Procedures <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i>2.16.840.1.113762.1.4.1196.789</a>',
 };
 
 for (let i = 0; i < files.length; i++) {
