@@ -27,7 +27,7 @@
     <div class="row">
       <div class="col-10">
         <p style="margin-bottom: 0.25rem">This beta navigation tool is generated from the published PDF of the Consolidated Clinical Document Architecture (C-CDA)
-        2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R2 (October 2021 Errata). For the latest information on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
+        2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R3 (May 2022 Publication). For the latest information on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
         <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.</p>
         <p style="margin-bottom: 0.25rem">CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.</p>
       </div>
@@ -35,10 +35,10 @@
     <div>
     </div>
     <hr>
-    <div style="font-size: 1.5rem;">
+    <div id="user-sign-up" style="font-size: 1rem;">
       <p>HL7 encourages users to sign up for an account, which is free!</p>
       Please <u><a class="btn btn-primary" href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">sign up 
-        <i class="fas fa-user-plus"></i></a></u> if you do not have an account.
+        <i class="fas fa-user-plus"></i></a></u> if you do not have an account. C-CDA Online Navigator last updated: August 2022.
     </div>
 	</div>
 
@@ -67,7 +67,7 @@
     </h4>
     <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
     <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1098-7372)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.25"</b><b> (CONF:1098-10517)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2014-06-09"</b><b> (CONF:1098-32603)</b>.</li></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b> with @xsi:type="CD"<b> (CONF:1098-32396)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"ASSERTION"</b> Assertion<b> (CONF:1098-32397)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.5.4"</b> (CodeSystem: <b>HL7ActCode 2.16.840.1.113883.5.4</b>)<b> (CONF:1098-32398)</b>.</li></ul></li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>code</b> with @xsi:type="CD"<b> (CONF:1098-32396)</b>.<ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"ASSERTION"</b> Assertion<b> (CONF:1098-32397)</b>.</li></ul><ul><li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.5.4"</b> (CodeSystem: <b>HL7ActCode <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActCode.html" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.4</a>&nbsp;</b>)<b> (CONF:1098-32398)</b>.</li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CD", where the code <b>SHALL</b> be selected from ValueSet Problem<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.7.4/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.3221.7.4</a></b><b> DYNAMIC</b><b> (CONF:1098-7369)</b>.</li>
 </ul>
     <br>

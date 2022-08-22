@@ -27,7 +27,7 @@
     <div class="row">
       <div class="col-10">
         <p style="margin-bottom: 0.25rem">This beta navigation tool is generated from the published PDF of the Consolidated Clinical Document Architecture (C-CDA)
-        2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R2 (October 2021 Errata). For the latest information on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
+        2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R3 (May 2022 Publication). For the latest information on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
         <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.</p>
         <p style="margin-bottom: 0.25rem">CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.</p>
       </div>
@@ -35,10 +35,10 @@
     <div>
     </div>
     <hr>
-    <div style="font-size: 1.5rem;">
+    <div id="user-sign-up" style="font-size: 1rem;">
       <p>HL7 encourages users to sign up for an account, which is free!</p>
       Please <u><a class="btn btn-primary" href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">sign up 
-        <i class="fas fa-user-plus"></i></a></u> if you do not have an account.
+        <i class="fas fa-user-plus"></i></a></u> if you do not have an account. C-CDA Online Navigator last updated: August 2022.
     </div>
 	</div>
 
@@ -66,10 +66,11 @@
       Conformance Statements:
     </h4>
     <i>HL7 Code Systems are available <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks <i class="fas fa-external-link-alt"></i> and require <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
-    <ul id="conformance" class="list-group"><li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-7710)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.1.10"</b><b> (CONF:1198-10054)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32522)</b>.</li></ul><ul><li><p>When asserting this templateId, all C-CDA 2.1 section and entry templates that had a previous version in C-CDA R1.1 <strong>SHALL</strong> include both the C-CDA 2.1 templateId and the C-CDA R1.1 templateId root without an extension. See C-CDA R2.1 Volume 1 - Design Considerations for additional detail (CONF:1198-32944).</p></li></ul></li>
+    <ul id="conformance" class="list-group"><li class="list-group-item">Conforms to US Realm Header (V3) template (urn:hl7ii:2.16.840.1.113883.10.20.22.1.1:2015-08-01)</li>
+<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-7710)</b> such that it<ul><li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.1.10"</b><b> (CONF:1198-10054)</b>.</li></ul><ul><li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32522)</b>.</li></ul><ul><li><p>When asserting this templateId, all C-CDA 2.1 section and entry templates that had a previous version in C-CDA R1.1 <strong>SHALL</strong> include both the C-CDA 2.1 templateId and the C-CDA R1.1 templateId root without an extension. See C-CDA R2.1 Volume 1 - Design Considerations for additional detail (CONF:1198-32944).</p></li></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>recordTarget</b><b> (CONF:1198-31089)</b>.<ul><li>Such recordTargets <b>SHALL</b> contain exactly one [1..1] <b>patientRole</b><b> (CONF:1198-31090)</b>.</li><ul><li>This patientRole <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-31091)</b>.</li></ul></ul></li>
 <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>custodian</b><b> (CONF:1198-31096)</b>.<ul><li>This custodian <b>SHALL</b> contain exactly one [1..1] <b>assignedCustodian</b><b> (CONF:1198-31097)</b>.</li><ul><li>This assignedCustodian <b>SHALL</b> contain exactly one [1..1] <b>representedCustodianOrganization</b><b> (CONF:1198-31098)</b>.</li></ul></ul></li>
-<li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>component</b><b> (CONF:1198-31085)</b>.<ul><li>This component <b>SHALL</b> contain exactly one [1..1] <b>nonXMLBody</b><b> (CONF:1198-31086)</b>.</li><ul><li>This nonXMLBody <b>SHALL</b> contain exactly one [1..1] <b>text</b><b> (CONF:1198-31087)</b>.</li><ul><li><p>If the text element does not contain a reference element with a value attribute, then it <strong>SHALL</strong> contain exactly one [1..1] @representation="B64" and exactly one [1..1] @mediaType (CONF:1198-7624).</p></li></ul><ul><li><p>The value of @mediaType, if present, <strong>SHALL</strong> be drawn from the value set <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.7.1/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.7.1 </a>SupportedFileFormats STATIC 2010-05-12 (CONF:1198-7623).</p></li></ul></ul></ul></li>
+<li class="list-group-item"><p>Heading: nonXMLBody<br>An Unstructured Document must include a nonXMLBody component with a single text element. The text element can reference an external file using a reference element, or include unstructured content directly with a mediaType attribute. The nonXMLBody/text element also has a "compression" attribute that can be used to indicate that the unstructured content was compressed before being Base64Encoded. At a minimum, a compression value of "DF" for the deflate compression algorithm (RFC 1951 [URL:http://www.ietf.org/rfc/rfc1951.txt]) must be supported although it is not required that content be compressed.</p> <b>SHALL</b> contain exactly one [1..1] <b>component</b><b> (CONF:1198-31085)</b>.<ul><li>This component <b>SHALL</b> contain exactly one [1..1] <b>nonXMLBody</b><b> (CONF:1198-31086)</b>.</li><ul><li>This nonXMLBody <b>SHALL</b> contain exactly one [1..1] <b>text</b><b> (CONF:1198-31087)</b>.</li><ul><li><p>If the text element does not contain a reference element with a value attribute, then it <strong>SHALL</strong> contain exactly one [1..1] @representation="B64" and exactly one [1..1] @mediaType (CONF:1198-7624).</p></li></ul><ul><li><p>The value of @mediaType, if present, <strong>SHALL</strong> be drawn from the value set <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.7.1/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.7.1 </a>SupportedFileFormats STATIC 2010-05-12 (CONF:1198-7623).</p></li></ul></ul></ul></li>
 </ul>
     <br>
 
@@ -82,5 +83,5 @@
   <h4 id="cdasearch">CDA Search Examples</h4>
   <ul id="cdasearch_examples"><li><a href="http://cdasearch.hl7.org/sections/Unstructured"><i class="fas fa-external-link-alt"></i> Unstructured</a></li></ul>
 
-  <hr /><br>To log an issue on C-CDA Standard, go to <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br /><br /><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
+  <hr><br>To log an issue on C-CDA Standard, go to <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br><br><img class="rounded float-left" style="max-width:10%" src="../img/hl7-logo.png"></div>
 </body></html>
