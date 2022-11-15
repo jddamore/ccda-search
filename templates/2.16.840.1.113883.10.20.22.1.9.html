@@ -175,20 +175,17 @@
             </ul>
           </ul>
           <ul>
-            <li>This serviceEvent <b>SHOULD</b> contain zero or one [0..1] US Realm Date and Time (DT.US.FIELDED)<b>
-                (identifier: 2.16.840.1.113883.10.20.22.5.3)</b><b> (CONF:1198-9481)</b>.</li>
-            <ul>
-              <li>
-                <p>The serviceEvent/effectiveTime element <strong>SHOULD</strong> be present with effectiveTime/low
-                  element (CONF:1198-9482).</p>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <p>If a width element is not present, the serviceEvent <strong>SHALL</strong> include effectiveTime/high
-                  (CONF:1198-10066).</p>
-              </li>
-            </ul>
+            <li>This serviceEvent <b>SHALL</b> contain exactly one [1..1] US Realm Date and Time (DT.US.FIELDED)
+              (identifier: <b>2.16.840.1.113883.10.20.22.5.3</b>) <b>(CONF:1198-9481)</b>.
+              <ul>
+                <li>
+                  This effectiveTime <b>SHALL</b> contain exactly one [1..1] <b>low (CONF:1198-32976).</b>
+                </li>
+                <li>
+                  If a <b>width</b> element is not present, the serviceEvent <b>SHALL</b> include <b>effectiveTime/high (CONF:1198-10066)</b>
+                </li>
+              </ul>
+            </li>
           </ul>
         </ul>
       </li>
