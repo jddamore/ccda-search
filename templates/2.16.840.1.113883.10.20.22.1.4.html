@@ -150,11 +150,16 @@
         <p>The Consultation Note recommends use of the document type code 11488-4 "Consult Note", with further
           specification provided by author or performer, setting, or specialty. When pre-coordinated codes are used, any
           coded values describing the author or performer of the service act or the practice setting must be consistent
-          with the LOINC document type.<br></p> <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHALL</b>
-        be selected from ValueSet ConsultDocumentType<b> <a
-            href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.31/expansion/Latest" target="_blank"><i
-              class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.31</a></b><b> DYNAMIC</b><b>
-          (CONF:1198-17176)</b>.
+          with the LOINC document type.<br></p>
+        <b>SHALL</b> contain exactly one [1..1] <b>code (CONF:1198-17176)</b>
+        <ul>
+          <li>
+            This code <b>SHALL</b> be selected from ValueSet ConsultDocumentType<b> <a
+                href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.31/expansion/Latest"
+                target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.31</a></b><b>
+              DYNAMIC</b><b> (CONF:1198-32969)</b>.
+          </li>
+        </ul>
       </li>
       <li class="list-group-item">
         <p>Heading: participant (This participant represents the person to contact for questions about the consult
@@ -165,7 +170,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"CALLBCK"</b> call back contact (CodeSystem:
             <b>HL7ParticipationType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ParticipationType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.90</a>)</b><b>
-              DYNAMIC</b>)<b> (CONF:1198-31657)</b>.</li>
+              DYNAMIC</b>)<b> (CONF:1198-31657)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] <b>associatedEntity</b><b> (CONF:1198-31658)</b>.</li>
