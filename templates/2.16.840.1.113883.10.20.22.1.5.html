@@ -288,7 +288,8 @@
           </ul>
           <li>When a Diagnostic Imaging Report has been transformed from a DICOM SR document, relatedDocument/@typeCode
             <b>SHALL</b> be XFRM, and relatedDocument/parentDocument/id <b>SHALL</b> contain the SOP Instance UID of the
-            original DICOM SR document <b>(CONF:1198-8433)</b>.</li>
+            original DICOM SR document <b>(CONF:1198-8433)</b>.
+          </li>
         </ul>
       </li>
       <li class="list-group-item">
@@ -356,7 +357,8 @@
               <ul>
                 <li>
                   <p>The DICOM Object Catalog section (templateId 2.16.840.1.113883.10.20.6.1.1), if present,
-                    <strong>SHALL</strong> be the first section in the document Body (CONF:1198-31206).</p>
+                    <strong>SHALL</strong> be the first section in the document Body (CONF:1198-31206).
+                  </p>
                 </li>
               </ul>
             </ul>
@@ -408,7 +410,7 @@
                 </ul>
               </ul>
               <ul>
-                <li>This section <b>MAY</b> contain zero or more [0..*] <b>subject</b><b> (CONF:1198-31215)</b> such
+                <li>This section <b>MAY</b> contain zero or one [0..1] <b>subject</b><b> (CONF:1198-31215)</b> such
                   that it</li>
                 <ul>
                   <li><b>SHALL</b> contain exactly one [1..1] Fetus Subject Context<b> (identifier:
@@ -429,7 +431,8 @@
                   documentationOf/serviceEvent, then the section SHALL contain one or more entries containing Procedure
                   Context (templateId 2.16.840.1.113883.10.20.6.2.5), which will reset the context for any clinical
                   statements nested within those elements.<br>This section <b>MAY</b> contain zero or more [0..*]
-                  <b>entry</b><b> (CONF:1198-31213)</b> such that it</li>
+                  <b>entry</b><b> (CONF:1198-31213)</b> such that it
+                </li>
                 <ul>
                   <li><b>SHALL</b> contain exactly one [1..1] Procedure Context<b> (identifier:
                       2.16.840.1.113883.10.20.6.2.5)</b><b> (CONF:1198-31214)</b>.</li>
