@@ -132,7 +132,8 @@
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"SBADM"</b> (CodeSystem:
         <b>HL7ActClass <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActClass.html" target="_blank"><i
               class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.6</a>&nbsp;</b><b> STATIC</b>)<b>
-          (CONF:1198-8826)</b>.</li>
+          (CONF:1198-8826)</b>.
+      </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>, which <b>SHALL</b> be
         selected from ValueSet MoodCodeEvnInt<b> <a
             href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.18/expansion/Latest" target="_blank"><i
@@ -179,18 +180,25 @@
             href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.8.7/expansion/Latest"
             target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.3221.8.7</a></b><b>
           DYNAMIC</b><b> (CONF:1198-8839)</b>.<ul>
-          <li>The routeCode, if present, <b>SHOULD</b> contain zero or more [0..*] <b>translation</b>, which
-            <b>SHALL</b> be selected from ValueSet Medication Route<b> <a
-                href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.12/expansion/Latest"
-                target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1099.12</a></b><b>
-              DYNAMIC</b><b> (CONF:1198-32960)</b>.</li>
+          <li>The routeCode, if present, <b>SHOULD</b> contain zero or more [0..*] <b>translation (CONF:1198-32960)</b>
+            such that it
+            <ul>
+              <li>
+                <b>SHALL</b> contain exactly one [1..1] <b>@code</b> which <b>SHALL</b> be selected from ValueSet Medication Route<b>
+                  <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.12/expansion/Latest"
+                    target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1099.12</a></b><b>
+                  DYNAMIC</b><b> (CONF:1198-32970)</b>.
+              </li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>approachSiteCode</b>, where the code
         <b>SHALL</b> be selected from ValueSet Body Site Value Set<b> <a
             href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.8.9/expansion/Latest"
             target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.3221.8.9</a></b><b>
-          DYNAMIC</b><b> (CONF:1198-8840)</b>.</li>
+          DYNAMIC</b><b> (CONF:1198-8840)</b>.
+      </li>
       <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>doseQuantity</b><b> (CONF:1198-8841)</b>.
         <ul>
           <li>The doseQuantity, if present, <b>SHOULD</b> contain zero or one [0..1] <b>@unit</b>, which <b>SHALL</b> be
@@ -204,7 +212,8 @@
         <b>SHALL</b> be selected from ValueSet AdministrationUnitDoseForm<b> <a
             href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1021.30/expansion/Latest" target="_blank"><i
               class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1021.30</a></b><b> DYNAMIC</b><b>
-          (CONF:1198-8846)</b>.</li>
+          (CONF:1198-8846)</b>.
+      </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>consumable</b><b> (CONF:1198-8847)</b>.
         <ul>
           <li>This consumable <b>SHALL</b> contain exactly one [1..1] Immunization Medication Information (V2)<b>
@@ -232,7 +241,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"RSON"</b> (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b><b>
-              STATIC</b>)<b> (CONF:1198-8854)</b>.</li>
+              STATIC</b>)<b> (CONF:1198-8854)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Indication (V2)<b> (identifier:
@@ -244,7 +254,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SUBJ"</b> (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b><b>
-              STATIC</b>)<b> (CONF:1198-8857)</b>.</li>
+              STATIC</b>)<b> (CONF:1198-8857)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] <b>@inversionInd</b>=<b>"true"</b> True<b> (CONF:1198-8858)</b>.
@@ -260,7 +271,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b><b>
-              STATIC</b>)<b> (CONF:1198-8861)</b>.</li>
+              STATIC</b>)<b> (CONF:1198-8861)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Medication Supply Order (V2)<b> (identifier:
@@ -272,7 +284,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b><b>
-              STATIC</b>)<b> (CONF:1198-8864)</b>.</li>
+              STATIC</b>)<b> (CONF:1198-8864)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Medication Dispense (V2)<b> (identifier:
@@ -284,7 +297,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"CAUS"</b> (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b><b>
-              STATIC</b>)<b> (CONF:1198-8867)</b>.</li>
+              STATIC</b>)<b> (CONF:1198-8867)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Reaction Observation (V2)<b> (identifier:
@@ -296,7 +310,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"RSON"</b> (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b><b>
-              STATIC</b>)<b> (CONF:1198-8989)</b>.</li>
+              STATIC</b>)<b> (CONF:1198-8989)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Immunization Refusal Reason<b> (identifier:
@@ -311,7 +326,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"COMP"</b> Component (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b>)<b>
-              (CONF:1198-31511)</b>.</li>
+              (CONF:1198-31511)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] <b>@inversionInd</b>=<b>"true"</b><b> (CONF:1198-31512)</b>.</li>
@@ -329,7 +345,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"PRCN"</b> (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b><b>
-              STATIC</b>)<b> (CONF:1198-8870)</b>.</li>
+              STATIC</b>)<b> (CONF:1198-8870)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Precondition for Substance Administration (V2)<b> (identifier:
