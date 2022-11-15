@@ -124,7 +124,8 @@
         <ul>
           <li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"active"</b> Active (CodeSystem:
             <b>HL7ActStatus <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActStatus.html" target="_blank"><i
-                  class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.14</a></b>)<b> (CONF:1098-32102)</b>.</li>
+                  class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.14</a></b>)<b> (CONF:1098-32102)</b>.
+          </li>
         </ul>
       </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b>
@@ -140,7 +141,8 @@
             <b>SHALL</b> be selected from ValueSet Medication Route<b> <a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.12/expansion/Latest"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1099.12</a></b><b>
-              DYNAMIC</b><b> (CONF:1098-32951)</b>.</li>
+              DYNAMIC</b><b> (CONF:1098-32951)</b>.
+          </li>
         </ul>
       </li>
       <li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>approachSiteCode</b>, which <b>SHALL</b> be
@@ -150,7 +152,9 @@
           DYNAMIC</b><b> (CONF:1098-32128)</b>.</li>
       <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>doseQuantity</b><b> (CONF:1098-32129)</b>.
         <ul>
-          <li>The doseQuantity, if present, <b>SHOULD</b> contain zero or one [0..1] <b>@unit</b>, which <b>SHALL</b> be
+          <li>Note: The base CDA R2.0 standard requires @unit to be drawn from UCUM, and best practice is to use case
+            sensitive UCUM units <br />
+            The doseQuantity, if present, <b>SHOULD</b> contain zero or one [0..1] <b>@unit</b>, which <b>SHOULD</b> be
             selected from ValueSet UnitsOfMeasureCaseSensitive<b> <a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.12839/expansion/Latest"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.12839</a></b><b>
@@ -172,7 +176,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b>)<b>
-              (CONF:1098-32109)</b>.</li>
+              (CONF:1098-32109)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Priority Preference<b> (identifier:
@@ -184,7 +189,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"RSON"</b> Has Reason (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b>)<b>
-              (CONF:1098-32115)</b>.</li>
+              (CONF:1098-32115)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Indication (V2)<b> (identifier:
@@ -196,7 +202,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SUBJ"</b> Has Subject (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b>)<b>
-              (CONF:1098-32118)</b>.</li>
+              (CONF:1098-32118)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Instruction (V2)<b> (identifier:
@@ -208,7 +215,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"PRCN"</b> Precondition (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b>)<b>
-              (CONF:1098-32124)</b>.</li>
+              (CONF:1098-32124)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Precondition for Substance Administration (V2)<b> (identifier:

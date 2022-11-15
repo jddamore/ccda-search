@@ -152,12 +152,13 @@
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b>
           (CONF:4515-31868)</b>.</li>
       <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>value</b><b> (CONF:4515-8559)</b>.<ul>
-          <li>
-            <p>If Observation/value is a physical quantity (xsi:type="PQ"), the unit of measure <strong>SHALL</strong>
+          <li>Note: The base CDA R2.0 standard requires @unit to be drawn from UCUM, and best practice is to use case
+            sensitive UCUM units <br />
+            If Observation/value is a physical quantity (xsi:type="PQ"), the unit of measure <strong>SHOULD</strong>
               be selected from ValueSet UnitsOfMeasureCaseSensitive (<a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.12839/expansion/Latest"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.12839</a>)
-              <em>DYNAMIC</em> (CONF:4515-8555).</p>
+              <em>DYNAMIC</em> (CONF:4515-8555).
           </li>
         </ul>
         <ul>

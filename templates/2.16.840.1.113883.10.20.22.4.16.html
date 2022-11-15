@@ -138,7 +138,8 @@
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"SBADM"</b> (CodeSystem:
         <b>HL7ActClass <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActClass.html" target="_blank"><i
               class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.6</a>&nbsp;</b><b> STATIC</b>)<b>
-          (CONF:1098-7496)</b>.</li>
+          (CONF:1098-7496)</b>.
+      </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>, which <b>SHALL</b> be
         selected from ValueSet MoodCodeEvnInt<b> <a
             href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.18/expansion/Latest" target="_blank"><i
@@ -223,17 +224,21 @@
             <b>SHALL</b> be selected from ValueSet Medication Route<b> <a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.12/expansion/Latest"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1099.12</a></b><b>
-              DYNAMIC</b><b> (CONF:1098-32950)</b>.</li>
+              DYNAMIC</b><b> (CONF:1098-32950)</b>.
+          </li>
         </ul>
       </li>
       <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>approachSiteCode</b>, where the code
         <b>SHALL</b> be selected from ValueSet Body Site Value Set<b> <a
             href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.8.9/expansion/Latest"
             target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.3221.8.9</a></b><b>
-          DYNAMIC</b><b> (CONF:1098-7515)</b>.</li>
+          DYNAMIC</b><b> (CONF:1098-7515)</b>.
+      </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>doseQuantity</b><b> (CONF:1098-7516)</b>.
         <ul>
-          <li>This doseQuantity <b>SHOULD</b> contain zero or one [0..1] <b>@unit</b>, which <b>SHALL</b> be selected
+          <li>Note: The base CDA R2.0 standard requires @unit to be drawn from UCUM, and best practice is to use case
+            sensitive UCUM units <br />
+            This doseQuantity <b>SHOULD</b> contain zero or one [0..1] <b>@unit</b>, which <b>SHOULD</b> be selected
             from ValueSet UnitsOfMeasureCaseSensitive<b> <a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.12839/expansion/Latest"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.12839</a></b><b>
@@ -303,7 +308,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"RSON"</b> (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b><b>
-              STATIC</b>)<b> (CONF:1098-7537)</b>.</li>
+              STATIC</b>)<b> (CONF:1098-7537)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Indication (V2)<b> (identifier:
@@ -315,7 +321,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SUBJ"</b> (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b><b>
-              STATIC</b>)<b> (CONF:1098-7540)</b>.</li>
+              STATIC</b>)<b> (CONF:1098-7540)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] <b>@inversionInd</b>=<b>"true"</b> True<b> (CONF:1098-7542)</b>.
@@ -331,7 +338,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b><b>
-              STATIC</b>)<b> (CONF:1098-7547)</b>.</li>
+              STATIC</b>)<b> (CONF:1098-7547)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Medication Supply Order (V2)<b> (identifier:
@@ -343,7 +351,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b><b>
-              STATIC</b>)<b> (CONF:1098-7553)</b>.</li>
+              STATIC</b>)<b> (CONF:1098-7553)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Medication Dispense (V2)<b> (identifier:
@@ -355,7 +364,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"CAUS"</b> (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b><b>
-              STATIC</b>)<b> (CONF:1098-7544)</b>.</li>
+              STATIC</b>)<b> (CONF:1098-7544)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Reaction Observation (V2)<b> (identifier:
@@ -380,7 +390,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"COMP"</b> Component (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b>)<b>
-              (CONF:1098-31516)</b>.</li>
+              (CONF:1098-31516)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] <b>@inversionInd</b>=<b>"true"</b><b> (CONF:1098-31517)</b>.</li>
@@ -398,7 +409,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"COMP"</b> Has component (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b>)<b>
-              (CONF:1098-32908)</b>.</li>
+              (CONF:1098-32908)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Medication Free Text Sig<b> (identifier:

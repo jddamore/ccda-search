@@ -142,24 +142,25 @@
           (CONF:1198-7140)</b>.<br>Note: Represents the biologically relevant time of the measurement (e.g., the time a
         blood pressure reading is obtained, the time the blood sample was obtained for a chemistry test).</li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b><b> (CONF:1198-7143)</b>.<ul>
-          <li>
-            <p>If Observation/value is a physical quantity (<strong>xsi:type="PQ"</strong>), the unit of measure
-              <strong>SHALL</strong> be selected from ValueSet UnitsOfMeasureCaseSensitive <a
-                href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.12839/expansion/Latest"
-                target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.12839
-              </a><strong>DYNAMIC</strong> (CONF:1198-31484).</p>
+          <li>Note: The base CDA R2.0 standard requires @unit to be drawn from UCUM, and best practice is to use case
+            sensitive UCUM units <br />
+            If Observation/value is a physical quantity (<strong>xsi:type="PQ"</strong>), the unit of measure
+            <strong>SHOULD</strong> be selected from ValueSet UnitsOfMeasureCaseSensitive <a
+              href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.12839/expansion/Latest" target="_blank"><i
+                class="fas fa-external-link-alt"></i> <b>2.16.840.1.113883.1.11.12839</b>
+            </a><strong>DYNAMIC</strong> (CONF:1198-31484).
           </li>
         </ul>
         <ul>
           <li>
-            <p>A coded or physical quantity value <strong>MAY</strong> contain zero or more [0..*] translations, which
-              can be used to represent the original results as output by the lab (CONF:1198-31866).</p>
+            A coded or physical quantity value <strong>MAY</strong> contain zero or more [0..*] translations, which
+              can be used to represent the original results as output by the lab (CONF:1198-31866).
           </li>
         </ul>
         <ul>
           <li>
-            <p>If Observation/value is a CD (<strong>xsi:type="CD"</strong>) the value <strong>SHOULD</strong> be
-              SNOMED-CT (CONF:1198-32610).</p>
+            If Observation/value is a CD (<strong>xsi:type="CD"</strong>) the value <strong>SHOULD</strong> be
+              SNOMED-CT (CONF:1198-32610).
           </li>
         </ul>
       </li>
@@ -169,7 +170,8 @@
             <b>SHALL</b> be selected from ValueSet Observation Interpretation (HL7)<b> <a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.78/expansion/Latest" target="_blank"><i
                   class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.78</a></b><b> DYNAMIC</b><b>
-              (CONF:1198-32476)</b>.</li>
+              (CONF:1198-32476)</b>.
+          </li>
         </ul>
       </li>
       <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>methodCode</b><b> (CONF:1198-7148)</b>.</li>

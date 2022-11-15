@@ -183,8 +183,11 @@
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b> (CONF:1098-7304)</b>.
       </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="PQ"<b>
-          (CONF:1098-7305)</b>.<ul>
-          <li>This value <b>SHALL</b> contain exactly one [1..1] <b>@unit</b>, which <b>SHALL</b> be selected from
+          (CONF:1098-7305)</b>.
+        <ul>
+          <li>Note: The base CDA R2.0 standard requires @unit to be drawn from UCUM, and
+            best practice is to use case sensitive UCUM units<br />
+            This value <b>SHOULD</b> contain exactly one [1..1] <b>@unit</b>, which <b>SHOULD</b> be selected from
             ValueSet UnitsOfMeasureCaseSensitive<b> <a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.12839/expansion/Latest"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.12839</a></b><b>
@@ -197,7 +200,8 @@
             <b>SHALL</b> be selected from ValueSet Observation Interpretation (HL7)<b> <a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.78/expansion/Latest" target="_blank"><i
                   class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.78</a></b><b> DYNAMIC</b><b>
-              (CONF:1098-32886)</b>.</li>
+              (CONF:1098-32886)</b>.
+          </li>
         </ul>
       </li>
       <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>methodCode</b><b> (CONF:1098-7308)</b>.</li>

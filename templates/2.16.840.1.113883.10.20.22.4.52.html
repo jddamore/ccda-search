@@ -184,7 +184,8 @@
             such that it
             <ul>
               <li>
-                <b>SHALL</b> contain exactly one [1..1] <b>@code</b> which <b>SHALL</b> be selected from ValueSet Medication Route<b>
+                <b>SHALL</b> contain exactly one [1..1] <b>@code</b> which <b>SHALL</b> be selected from ValueSet
+                Medication Route<b>
                   <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.12/expansion/Latest"
                     target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1099.12</a></b><b>
                   DYNAMIC</b><b> (CONF:1198-32970)</b>.
@@ -201,7 +202,9 @@
       </li>
       <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>doseQuantity</b><b> (CONF:1198-8841)</b>.
         <ul>
-          <li>The doseQuantity, if present, <b>SHOULD</b> contain zero or one [0..1] <b>@unit</b>, which <b>SHALL</b> be
+          <li>Note: The base CDA R2.0 standard requires @unit to be drawn from UCUM, and best practice is to use case
+            sensitive UCUM units <br />
+            The doseQuantity, if present, <b>SHOULD</b> contain zero or one [0..1] <b>@unit</b>, which <b>SHOULD</b> be
             selected from ValueSet UnitsOfMeasureCaseSensitive<b> <a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.12839/expansion/Latest"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.12839</a></b><b>
