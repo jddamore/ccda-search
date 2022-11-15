@@ -353,7 +353,8 @@
             <li>This serviceEvent <b>SHOULD</b> contain zero or more [0..*] <b>performer</b><b> (CONF:1198-28713)</b>.
             </li>
             <ul>
-              <li>The performer, if present, <b>MAY</b> contain zero or one [0..1] functionCode, which <b>SHALL</b> be
+              <li>When indicating the performer was the primary care physician, implementers should indicate "PCP" as the functionCode. <br />
+                The performer, if present, <b>MAY</b> contain zero or one [0..1] functionCode, which <b>SHALL</b> be
                 selected from ValueSet ParticipationFunction <b><a
                     href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.10267/expansion/Latest"
                     target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.10267</a></b>
