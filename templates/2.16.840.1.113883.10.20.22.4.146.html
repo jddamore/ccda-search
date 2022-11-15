@@ -98,10 +98,7 @@
           <td id="Contains"><a href="2.16.840.1.113883.10.20.22.4.48.html">Advance Directive Observation (V3)</a><br><a
               href="2.16.840.1.113883.10.20.22.4.52.html">Immunization Activity (V3)</a><br><a
               href="2.16.840.1.113883.10.20.22.4.16.html">Medication Activity (V2)</a><br><a
-              href="2.16.840.1.113883.10.20.22.4.12.html">Procedure Activity Act (V2)</a><br><a
               href="2.16.840.1.113883.10.20.22.4.131.html">Intervention Act (V2)</a><br><a
-              href="2.16.840.1.113883.10.20.22.4.13.html">Procedure Activity Observation (V2)</a><br><a
-              href="2.16.840.1.113883.10.20.22.4.14.html">Procedure Activity Procedure (V2)</a><br><a
               href="2.16.840.1.113883.10.20.22.4.49.html">Encounter Activity (V3)</a><br><a
               href="2.16.840.1.113883.10.20.22.4.20.html">Instruction (V2)</a><br><a
               href="2.16.840.1.113883.10.20.22.4.50.html">Non-Medicinal Supply Activity (V2)</a><br><a
@@ -205,18 +202,6 @@
               2.16.840.1.113883.10.20.22.4.16)</b><b> (CONF:1198-32689)</b>.</li>
         </ul>
       </li>
-      <li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b>
-          (CONF:1198-32658)</b> such that it<ul>
-          <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem:
-            <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
-                target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b>)<b>
-              (CONF:1198-32690)</b>.</li>
-        </ul>
-        <ul>
-          <li><b>SHALL</b> contain exactly one [1..1] Procedure Activity Act (V2)<b> (identifier:
-              2.16.840.1.113883.10.20.22.4.12)</b><b> (CONF:1198-32691)</b>.</li>
-        </ul>
-      </li>
       <li class="list-group-item">
         <p>The following entryRelationship represents the relationship between two Intervention Acts (Intervention
           RELATES TO Intervention).<br></p> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b>
@@ -229,30 +214,6 @@
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Intervention Act (V2)<b> (identifier:
               2.16.840.1.113883.10.20.22.4.131)</b><b> (CONF:1198-32693)</b>.</li>
-        </ul>
-      </li>
-      <li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b>
-          (CONF:1198-32660)</b> such that it<ul>
-          <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem:
-            <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
-                target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b>)<b>
-              (CONF:1198-32694)</b>.</li>
-        </ul>
-        <ul>
-          <li><b>SHALL</b> contain exactly one [1..1] Procedure Activity Observation (V2)<b> (identifier:
-              2.16.840.1.113883.10.20.22.4.13)</b><b> (CONF:1198-32695)</b>.</li>
-        </ul>
-      </li>
-      <li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b>
-          (CONF:1198-32661)</b> such that it<ul>
-          <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"REFR"</b> Refers to (CodeSystem:
-            <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
-                target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b>)<b>
-              (CONF:1198-32696)</b>.</li>
-        </ul>
-        <ul>
-          <li><b>SHALL</b> contain exactly one [1..1] Procedure Activity Procedure (V2)<b> (identifier:
-              2.16.840.1.113883.10.20.22.4.14)</b><b> (CONF:1198-32697)</b>.</li>
         </ul>
       </li>
       <li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b>
