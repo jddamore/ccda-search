@@ -8,19 +8,20 @@
     "email": "jdamore@moreinformaticss.com"
   },
   "scripts": {
-    "start": "node app.js"
-  },
-  "engines": {
-    "node": "^8.9.1"
+    "start": "npx nodemon app.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
     "express": "^4.17.1",
+    "nodemon": "^3.0.1",
     "serve": "^11.3.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jddamore/CCDA-search"
   },
-  "snyk": true
+  "snyk": true,
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
