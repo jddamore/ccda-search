@@ -42,16 +42,16 @@
           on C-CDA,
           or to access the Supplemental Implementation Guides, please refer to the
           <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.
-        CDA and C-CDA are copyright property of <a
-            href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a
-            href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
+          CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a>
+          and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
         </p>
       </div>
     </div>
     <hr>
     <div id="user-sign-up" style="font-size: 1rem;">
       <p>HL7 encourages users to sign up for an account, which is free!</p>
-      Please <u><a class="btn btn-primary" href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up
+      Please <u><a class="btn btn-primary"
+          href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up
           <i class="fas fa-user-plus"></i></a></u> if you do not have an account. C-CDA Online Navigator last updated:
       August 2023.
     </div>
@@ -59,8 +59,8 @@
 
   <div class="container-fluid">
 
-    <h2 id="title">Birth Sex Observation <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.200,
-        release 2016-06-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.200.pdf"><i class="fas fa-file-pdf"></i>
+    <h2 id="title">Birth Sex Observation (V2) <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.200,
+        release 2023-05-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.200.pdf"><i class="fas fa-file-pdf"></i>
           view pdf</a></small></h2>
     <hr>
     <h4>
@@ -71,6 +71,9 @@
       <p>This observation represents the sex of the patient at birth. It is the sex that is entered on the person's
         birth certificate at time of birth.</p>
       <p>This observation is not appropriate for recording patient gender (administrativeGender).</p>
+      <p>This observation is not appropriate for recording Gender Identity (GI).</p>
+      <p>This observation meets the USCDI V3 Data element “Sex”.</p>
+      <p>It is recommended systems include the Birth Sex observation in the Social History section.</p>
     </div>
 
     <table class="table">
@@ -99,18 +102,20 @@
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> (CodeSystem:
         <b>HL7ActClass <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActClass.html" target="_blank"><i
               class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.6</a>&nbsp;</b><b> STATIC</b>)<b>
-          (CONF:3250-18230)</b>.</li>
+          (CONF:3250-18230)</b>.
+      </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> (CodeSystem:
         <b>HL7ActMood <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActMood.html" target="_blank"><i
               class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1001</a></b><b> STATIC</b>)<b>
-          (CONF:3250-18231)</b>.</li>
+          (CONF:3250-18231)</b>.
+      </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:3250-18232)</b>
         such that it<ul>
           <li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.200"</b><b>
               (CONF:3250-18233)</b>.</li>
         </ul>
         <ul>
-          <li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2016-06-01"</b><b> (CONF:3250-32949)</b>.
+          <li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2023-05-01"</b><b> (CONF:3250-32949)</b>.
           </li>
         </ul>
       </li>
@@ -129,6 +134,18 @@
             (CodeSystem: <b>HL7ActStatus <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActStatus.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.14</a></b><b>
               STATIC</b>)<b> (CONF:3250-18125)</b>.</li>
+        </ul>
+      </li>
+      <li class="list-group-item"><b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b> (CONF: 4537-33043)</b>.
+        <br />
+        Note: This template represents a "snapshot in time" observation, simply reflecting the patient's sex at the time
+        of the observation. As a result, the effectiveTime is constrained to just a time stamp. Since this represents
+        Birth Sex it SHALL match the birthTime.
+        <ul>
+          <li>This effectiveTime <b>SHALL NOT</b> contain exactly one [1..1] <b>low</b> <b>(CONF:4537-33044)</b>.</li>
+          <li>This effectiveTime <b>SHALL NOT</b> contain exactly one [1..1] <b>width</b> <b>(CONF:4537-33045)</b>.</li>
+          <li>This effectiveTime <b>SHALL NOT</b> contain exactly one [1..1] <b>high</b> <b>(CONF:4537-33046)</b>.</li>
+          <li>This effectiveTime <b>SHALL NOT</b> contain exactly one [1..1] <b>center</b> <b>(CONF:4537-33047)</b>.</li>
         </ul>
       </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="CD", where the
