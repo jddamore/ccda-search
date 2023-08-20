@@ -60,8 +60,8 @@
 
   <div class="container-fluid">
 
-    <h2 id="title">Result Observation (V3) <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.2,
-        release 2015-08-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.2.pdf"><i class="fas fa-file-pdf"></i>
+    <h2 id="title">Result Observation (V4) <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.2,
+        release 2023-05-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.2.pdf"><i class="fas fa-file-pdf"></i>
           view pdf</a><a href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.2.html" target="_blank" style="color:green"> <i class="fas fa-external-link-alt" ></i> view prototype</a></small></h2>
     <hr>
     <h4>
@@ -114,7 +114,7 @@
               (CONF:1198-9138)</b>.</li>
         </ul>
         <ul>
-          <li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32575)</b>.
+          <li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2023-05-01"</b><b> (CONF:1198-32575)</b>.
           </li>
         </ul>
       </li>
@@ -176,6 +176,25 @@
       </li>
       <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>methodCode</b><b> (CONF:1198-7148)</b>.</li>
       <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>targetSiteCode</b><b> (CONF:1198-7153)</b>.
+      </li>
+      <li class="list-group-item">
+        <b>MAY</b> contain zero or more [0..*] <b>specimen</b> (CONF:4537-32611).
+        <ul>
+          <li>
+            The specimen, if present, <b>SHALL</b> contain exactly one [1..1] <b>specimenRole</b> (CONF:4537-32612).
+            <ul>
+              <li>
+                This specimenRole <b>SHALL</b> contain exactly one [1..1] <b>specimenPlayingEntity</b> (CONF:4537-32613).
+                <ul>
+                  This specimenPlayingEntity <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHOULD</b> be selected from ValueSet Specimen type 
+                  <b> <a
+                    href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.54/expansion/Latest" target="_blank"><i
+                      class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1099.54</a></b><b> DYNAMIC</b><b> (CONF:4537-32614)</b>. 
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </li>
       <li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*] Author Participation<b> (identifier:
           2.16.840.1.113883.10.20.22.4.119)</b><b> (CONF:1198-7149)</b>.</li>
