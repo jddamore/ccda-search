@@ -42,16 +42,16 @@
           on C-CDA,
           or to access the Supplemental Implementation Guides, please refer to the
           <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.
-        CDA and C-CDA are copyright property of <a
-            href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a
-            href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
+          CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a>
+          and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
         </p>
       </div>
     </div>
     <hr>
     <div id="user-sign-up" style="font-size: 1rem;">
       <p>HL7 encourages users to sign up for an account, which is free!</p>
-      Please <u><a class="btn btn-primary" href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up
+      Please <u><a class="btn btn-primary"
+          href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up
           <i class="fas fa-user-plus"></i></a></u> if you do not have an account. C-CDA Online Navigator last updated:
       August 2023.
     </div>
@@ -61,17 +61,20 @@
 
     <h2 id="title">Social History Observation (V4) <small class="text-muted">[observation,
         2.16.840.1.113883.10.20.22.4.38, release 2022-06-01, open] <a
-          href="../pdfs/2.16.840.1.113883.10.20.22.4.38.pdf"><i class="fas fa-file-pdf"></i> view pdf</a><a href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.38.html" target="_blank" style="color:green"> <i class="fas fa-external-link-alt" ></i> view prototype</a></small></h2>
+          href="../pdfs/2.16.840.1.113883.10.20.22.4.38.pdf"><i class="fas fa-file-pdf"></i> view pdf</a><a
+          href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.38.html"
+          target="_blank" style="color:green"> <i class="fas fa-external-link-alt"></i> view prototype</a></small></h2>
     <hr>
     <h4>
       Description:
     </h4>
 
     <div id="description">
-      <p>This template represents a patient's occupations, lifestyle, and environmental health risk factors. Demographic
-        data (e.g., marital status, race, ethnicity, religious affiliation) are captured in the header. Though tobacco
-        use and exposure may be represented with a Social History Observation, it is recommended to use the Current
-        Smoking Status template or the Tobacco Use template instead, to represent smoking or tobacco habits.
+      <p>This template represents a patient's job (occupation and industry), lifestyle, and environmental health risk
+        factors. Demographic data (e.g., marital status, race, ethnicity, religious affiliation) are captured in the
+        header. Though tobacco use and exposure may be represented with a Social History Observation, it is recommended
+        to use the Current Smoking Status template or the Tobacco Use template instead, to represent smoking or tobacco
+        habits.
         <br />
         <br />
         There are supplemental templates and guidance for observations of <a
@@ -154,10 +157,10 @@
           <li>Note: The base CDA R2.0 standard requires @unit to be drawn from UCUM, and best practice is to use case
             sensitive UCUM units <br />
             If Observation/value is a physical quantity (xsi:type="PQ"), the unit of measure <strong>SHOULD</strong>
-              be selected from ValueSet UnitsOfMeasureCaseSensitive (<a
-                href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.12839/expansion/Latest"
-                target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.12839</a>)
-              <em>DYNAMIC</em> (CONF:4515-8555).
+            be selected from ValueSet UnitsOfMeasureCaseSensitive (<a
+              href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.12839/expansion/Latest" target="_blank"><i
+                class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.12839</a>)
+            <em>DYNAMIC</em> (CONF:4515-8555).
           </li>
         </ul>
         <ul>
@@ -166,7 +169,8 @@
               code <strong>SHOULD</strong> be selected from ValueSet Social Determinant of Health Conditions <a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion/Latest"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1196.788</a>
-              <strong>DYNAMIC</strong> (CONF:4515-32957).</p>
+              <strong>DYNAMIC</strong> (CONF:4515-32957).
+            </p>
           </li>
         </ul>
       </li>
@@ -181,7 +185,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SPRT"</b> Has support (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b>)<b>
-              (CONF:4515-32960)</b>.</li>
+              (CONF:4515-32960)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Assessment Scale Observation<b> (identifier:
@@ -196,7 +201,8 @@
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SPRT"</b> Has support (CodeSystem:
             <b>HL7ActRelationshipType <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1002</a></b>)<b>
-              (CONF:4515-32971)</b>.</li>
+              (CONF:4515-32971)</b>.
+          </li>
         </ul>
         <ul>
           <li><b>SHALL</b> contain exactly one [1..1] Entry Reference<b> (identifier:
