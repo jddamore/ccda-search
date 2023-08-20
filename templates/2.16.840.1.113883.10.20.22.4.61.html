@@ -41,9 +41,8 @@
           2.1 (2.1.0.7, September 2022) and the C-CDA 2.1 Companion Guide (4.1.1, July 2023). For the latest information
           on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
           <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.
-        CDA and C-CDA are copyright property of <a
-            href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a
-            href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
+          CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a>
+          and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
         </p>
       </div>
     </div>
@@ -52,7 +51,8 @@
     <hr>
     <div id="user-sign-up" style="font-size: 1rem;">
       <p>HL7 encourages users to sign up for an account, which is free!</p>
-      Please <u><a class="btn btn-primary" href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up
+      Please <u><a class="btn btn-primary"
+          href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up
           <i class="fas fa-user-plus"></i></a></u> if you do not have an account. C-CDA Online Navigator last updated:
       August 2023.
     </div>
@@ -62,7 +62,8 @@
 
     <h2 id="title">Policy Activity (V3) <small class="text-muted">[act, 2.16.840.1.113883.10.20.22.4.61, release
         2015-08-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.61.pdf"><i class="fas fa-file-pdf"></i> view
-          pdf</a><a href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.61.html" target="_blank" style="color:green"> <i class="fas fa-external-link-alt" ></i> view prototype</a></small></h2>
+          pdf</a><a href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.61.html"
+          target="_blank" style="color:green"> <i class="fas fa-external-link-alt"></i> view prototype</a></small></h2>
     <hr>
     <h4>
       Description:
@@ -156,7 +157,12 @@
           </ul>
         </ul>
         <ul>
-          <li><b>SHALL</b> contain exactly one [1..1] <b>assignedEntity</b><b> (CONF:1198-8908)</b>.</li>
+          <li><b>SHALL</b> contain exactly one [1..1] <b>assignedEntity</b><b> (CONF:1198-8908)</b>.
+            <br />
+            This is the Payer id. The root is a unique identifier to an openly available assigning authority, such as
+            National Association of Insurance Commissioners (NAIC) (2.16.840.1.113883.6.300), and the extension
+            identifiers the payer within that authority.
+          </li>
           <ul>
             <li>This assignedEntity <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-8909)</b>.</li>
           </ul>
