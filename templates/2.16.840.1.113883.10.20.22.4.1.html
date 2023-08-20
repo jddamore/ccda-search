@@ -41,9 +41,8 @@
           2.1 (2.1.0.7, September 2022) and the C-CDA 2.1 Companion Guide (4.1.1, July 2023). For the latest information
           on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
           <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.
-        CDA and C-CDA are copyright property of <a
-            href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a
-            href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
+          CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a>
+          and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
         </p>
       </div>
     </div>
@@ -52,7 +51,8 @@
     <hr>
     <div id="user-sign-up" style="font-size: 1rem;">
       <p>HL7 encourages users to sign up for an account, which is free!</p>
-      Please <u><a class="btn btn-primary" href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up
+      Please <u><a class="btn btn-primary"
+          href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up
           <i class="fas fa-user-plus"></i></a></u> if you do not have an account. C-CDA Online Navigator last updated:
       August 2023.
     </div>
@@ -60,9 +60,10 @@
 
   <div class="container-fluid">
 
-    <h2 id="title">Result Organizer (V3) <small class="text-muted">[organizer, 2.16.840.1.113883.10.20.22.4.1, release
-        2015-08-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.1.pdf"><i class="fas fa-file-pdf"></i> view
-          pdf</a><a href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.1.html" target="_blank" style="color:green"> <i class="fas fa-external-link-alt" ></i> view prototype</a></small></h2>
+    <h2 id="title">Result Organizer (V4) <small class="text-muted">[organizer, 2.16.840.1.113883.10.20.22.4.1, release
+        2023-05-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.1.pdf"><i class="fas fa-file-pdf"></i> view
+          pdf</a><a href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.1.html"
+          target="_blank" style="color:green"> <i class="fas fa-external-link-alt"></i> view prototype</a></small></h2>
     <hr>
     <h4>
       Description:
@@ -117,7 +118,7 @@
               (CONF:1198-9134)</b>.</li>
         </ul>
         <ul>
-          <li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32588)</b>.
+          <li><b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2023-05-01"</b><b> (CONF:1198-32588)</b>.
           </li>
         </ul>
       </li>
@@ -163,6 +164,30 @@
         <ul>
           <li>The effectiveTime, if present, <b>SHALL</b> contain exactly one [1..1] <b>high</b><b>
               (CONF:1198-32489)</b>.</li>
+        </ul>
+      </li>
+      <li class="list-group-item">
+        When an organizer is for laboratory, observations are expected to include the specimen participant. The specimen
+        included at specimenPlayingEntity/code must be consistent with the observation/code.
+        <br/>
+        <b>MAY</b> contain zero or more [0..*] <b>specimen</b> (CONF:4537-32615).
+        <ul>
+          <li>
+            The specimen, if present, <b>SHALL</b> contain exactly one [1..1] <b>specimenRole</b> (CONF:4537-32616).
+            <ul>
+              <li>
+                This specimenRole <b>SHALL</b> contain exactly one [1..1] <b>specimenPlayingEntity</b>
+                (CONF:4537-32617).
+                <ul>
+                  This specimenPlayingEntity <b>SHALL</b> contain exactly one [1..1] <b>code</b>, which <b>SHOULD</b> be
+                  selected from ValueSet Specimen type
+                  <b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.54/expansion/Latest"
+                      target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1099.54</a></b><b>
+                    DYNAMIC</b><b> (CONF:4537-32618)</b>.
+                </ul>
+              </li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li class="list-group-item"> <b>SHOULD</b> contain zero or more [0..*] Author Participation<b> (identifier:
