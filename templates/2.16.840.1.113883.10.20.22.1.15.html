@@ -36,15 +36,15 @@
     </h1>
     <div class="row">
       <div class="col-10">
-        <p style="margin-bottom: 0.25rem">This beta navigation tool is generated from the published PDF of the
+        <p style="margin-bottom: 0.25rem">This navigation tool is generated from the published PDF of the
           Consolidated Clinical Document Architecture (C-CDA)
-          2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R3 (May 2022 Publication). For the latest information
+          2.1 (2.1.0.7, September 2022) and the C-CDA 2.1 Companion Guide (4.1.1, July 2023). For the latest information
           on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
-          <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.
-        </p>
-        <p style="margin-bottom: 0.25rem">CDA and C-CDA are copyright property of <a
+          <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> which remains the definitive source for the standards.
+        CDA and C-CDA are copyright property of <a
             href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a
-            href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.</p>
+            href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
+        </p>
       </div>
     </div>
     <div>
@@ -52,9 +52,9 @@
     <hr>
     <div id="user-sign-up" style="font-size: 1rem;">
       <p>HL7 encourages users to sign up for an account, which is free!</p>
-      Please <u><a class="btn btn-primary" href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">sign up
+      Please <u><a class="btn btn-primary" href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up
           <i class="fas fa-user-plus"></i></a></u> if you do not have an account. C-CDA Online Navigator last updated:
-      August 2022.
+      August 2023.
     </div>
   </div>
 
@@ -62,7 +62,7 @@
 
     <h2 id="title">Care Plan (V2) <small class="text-muted">[ClinicalDocument, 2.16.840.1.113883.10.20.22.1.15, release
         2015-08-01, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.1.15.pdf"><i class="fas fa-file-pdf"></i> view
-          pdf</a></small></h2>
+          pdf</a><a href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.1.15.html" target="_blank" style="color:green"> <i class="fas fa-external-link-alt" ></i> view prototype</a></small></h2>
     <hr>
     <h4>
       Description:
@@ -82,10 +82,30 @@
         increases. The Care Plan also serves to enable longitudinal coordination of care.</p>
       <p>The CDA Care Plan represents an instance of this dynamic Care Plan at a point in time. The CDA document itself
         is NOT dynamic.</p>
-      <p>Key differentiators between a Care Plan CDA and CCD (another 'snapshot in time' document):There are 2 required
-        sections:o Health Concernso InterventionsThere are 2 optional sections:o Goalso Outcomes' Provides the ability
-        to identify patient and provider priorities with each act' Provides a header participant to indicate occurrences
-        of Care Plan reviewA care plan document can include entry references from the information in these sections to
+      <p>Key differentiators between a Care Plan CDA and CCD (another 'snapshot in time' document):<br/>
+        <ul>
+          <li>
+            There are 2 required sections:
+            <ul>
+              <li>Health Concerns</li>
+              <li>Goals</li>
+            </ul>    
+          </li>
+          <li>
+            There are 2 optional sections:
+            <ul>
+              <li>Interventions</li>
+              <li>Outcomes</li>
+            </ul>    
+          </li>
+          <li>
+            Provides the ability to identify patient and provider priorities with each act<br/> 
+          </li>
+          <li>
+            Provides a header participant to indicate occurrences of Care Plan review<br />
+          </li>
+        </ul>
+        A care plan document can include entry references from the information in these sections to
         the information (entries) in other sections.</p>
       <p>Please see Volume 1 of this guide to view a Care Plan Relationship diagram and story board.</p>
     </div>
@@ -283,7 +303,7 @@
               selected from ValueSet INDRoleclassCodes<b> <a
                   href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.33/expansion/Latest"
                   target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.33</a></b><b>
-                STATIC</b><b> (CONF:1198-31898)</b>.</li>
+                DYNAMIC</b><b> (CONF:1198-31898)</b>.</li>
           </ul>
           <ul>
             <li>This associatedEntity <b>SHALL</b> contain exactly one [1..1] <b>associatedPerson</b><b>

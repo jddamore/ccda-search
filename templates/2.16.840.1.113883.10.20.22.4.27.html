@@ -36,15 +36,15 @@
     </h1>
     <div class="row">
       <div class="col-10">
-        <p style="margin-bottom: 0.25rem">This beta navigation tool is generated from the published PDF of the
+        <p style="margin-bottom: 0.25rem">This navigation tool is generated from the published PDF of the
           Consolidated Clinical Document Architecture (C-CDA)
-          2.1 (June 2019 Errata) and the C-CDA 2.1 Companion Guide R3 (May 2022 Publication). For the latest information
+          2.1 (2.1.0.7, September 2022) and the C-CDA 2.1 Companion Guide (4.1.1, July 2023). For the latest information
           on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
-          <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>.
-        </p>
-        <p style="margin-bottom: 0.25rem">CDA and C-CDA are copyright property of <a
+          <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> which remains the definitive source for the standards.
+        CDA and C-CDA are copyright property of <a
             href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a> and subject to the terms of <a
-            href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.</p>
+            href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
+        </p>
       </div>
     </div>
     <div>
@@ -52,9 +52,9 @@
     <hr>
     <div id="user-sign-up" style="font-size: 1rem;">
       <p>HL7 encourages users to sign up for an account, which is free!</p>
-      Please <u><a class="btn btn-primary" href="https://qcommerce.hl7.org/qcommercenet/NewUser/Index.aspx">sign up
+      Please <u><a class="btn btn-primary" href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up
           <i class="fas fa-user-plus"></i></a></u> if you do not have an account. C-CDA Online Navigator last updated:
-      August 2022.
+      August 2023.
     </div>
   </div>
 
@@ -62,7 +62,7 @@
 
     <h2 id="title">Vital Sign Observation (V2) <small class="text-muted">[observation, 2.16.840.1.113883.10.20.22.4.27,
         release 2014-06-09, open] <a href="../pdfs/2.16.840.1.113883.10.20.22.4.27.pdf"><i class="fas fa-file-pdf"></i>
-          view pdf</a></small></h2>
+          view pdf</a><a href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.27.html" target="_blank" style="color:green"> <i class="fas fa-external-link-alt" ></i> view prototype</a></small></h2>
     <hr>
     <h4>
       Description:
@@ -183,8 +183,11 @@
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b> (CONF:1098-7304)</b>.
       </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with @xsi:type="PQ"<b>
-          (CONF:1098-7305)</b>.<ul>
-          <li>This value <b>SHALL</b> contain exactly one [1..1] <b>@unit</b>, which <b>SHALL</b> be selected from
+          (CONF:1098-7305)</b>.
+        <ul>
+          <li>Note: The base CDA R2.0 standard requires @unit to be drawn from UCUM, and
+            best practice is to use case sensitive UCUM units<br />
+            This value <b>SHOULD</b> contain exactly one [1..1] <b>@unit</b>, which <b>SHOULD</b> be selected from
             ValueSet UnitsOfMeasureCaseSensitive<b> <a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.12839/expansion/Latest"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.12839</a></b><b>
@@ -197,7 +200,8 @@
             <b>SHALL</b> be selected from ValueSet Observation Interpretation (HL7)<b> <a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.78/expansion/Latest" target="_blank"><i
                   class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.78</a></b><b> DYNAMIC</b><b>
-              (CONF:1098-32886)</b>.</li>
+              (CONF:1098-32886)</b>.
+          </li>
         </ul>
       </li>
       <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>methodCode</b><b> (CONF:1098-7308)</b>.</li>
