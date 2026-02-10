@@ -121,13 +121,29 @@
         </ul>
       </li>
       <li class="list-group-item"> <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1098-7454)</b>.</li>
-      <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:1098-7455)</b>.
+      <li class="list-group-item"> 
+        <p>The MedicationDispense Status Codes value set is the same value set used in the FHIR
+Dispense Resource, is broader than and has more meaningful codes for the act of dispensing
+than are permitted at actStatus in CDA, thus actStatus code is fixed to "completed".
+Comments are welcome as to if this will confuse the industry and instead there should not be
+constraints on Supply/actCode, and instead we should bind actStatus to the closest codes
+available in the HL7 v3 Code System ActStatus and provide a mapping to the FHIR set.</p>
+        
+        <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:4537-32974)</b>.
         <ul>
           <li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>, which <b>SHALL</b> be selected from
-            ValueSet Medication Fill Status<b> <a
-                href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.64/expansion/Latest"
-                target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.80.64</a></b><b>
-              STATIC</b> 2014-04-23<b> (CONF:1098-32361)</b>.</li>
+            ValueSet MedicationDispense Status Code<b> <a
+                href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.4.642.3.1312/expansion/Latest"
+                target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.4.642.3.1312</a></b><b>
+              DYNAMIC</b><b> (CONF:4537-32974)</b>.</li>
+        </ul>
+      </li>
+      <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:4537-7455)</b>.
+        <ul>
+          <li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b> ="completed", Completed
+            (CodeSystem: <b>HL7ActStatus <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActStatus.html"
+                target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.14</a></b><b>
+              STATIC</b>)<b> (CONF:4537-32361)</b>.</li>
         </ul>
       </li>
       <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>effectiveTime</b><b>
