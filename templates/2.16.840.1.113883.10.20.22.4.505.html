@@ -105,10 +105,10 @@
         login</a></i>
     <ul id="conformance" class="list-group">
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> (CodeSystem:
-        <b>HL7ActClass 2.16.840.1.113883.5.6</b>)<b> (CONF:4537-32620)</b>.
+        <b>HL7ActClass <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActClass.html" target="_blank"><i class="fas fa-external-link-alt"></i>2.16.840.1.113883.5.6</a></b>)<b> (CONF:4537-32620)</b>.
       </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b> (CodeSystem:
-        <b>HL7ActMood 2.16.840.1.113883.5.1001</b>)<b> (CONF:4537-32621)</b>.
+        <b>HL7ActMood <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActMood.html" target="_blank"><i class="fas fa-external-link-alt"></i>2.16.840.1.113883.5.1001</a></b>)<b> (CONF:4537-32621)</b>.
       </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:4537-32619)</b>
         such that it<ul>
@@ -132,14 +132,14 @@
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:4537-32625)</b>.
         <ul>
           <li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> (CodeSystem:
-            <b>HL7ActStatus 2.16.840.1.113883.5.14</b>)<b> (CONF:4537-32626)</b>.
+            <b>HL7ActStatus <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActStatus.html" target="_blank"><i class="fas fa-external-link-alt"></i>2.16.840.1.113883.5.14</a></b>)<b> (CONF:4537-32626)</b>.
           </li>
         </ul>
       </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>effectiveTime</b><b>
           (CONF:4537-32627)</b>.</li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b>, which <b>MAY</b> be selected
-        from ValueSet CUBS_Disability<b> 1.3.6.1.4.1.12009.10.1.3932</b><b> DYNAMIC</b><b> (CONF:4537-32628)</b>.</li>
+        from ValueSet <b>CUBS_Disability 1.3.6.1.4.1.12009.10.1.3932</b><b> DYNAMIC</b><b> (CONF:4537-32628)</b>.</li>
       <li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>entryRelationship</b><b>
           (CONF:4537-32629)</b> such that it<ul>
           <li><b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"COMP"</b> has component<b>

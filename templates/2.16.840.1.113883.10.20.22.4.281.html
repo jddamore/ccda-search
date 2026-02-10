@@ -98,10 +98,10 @@
         login</a></i>
     <ul id="conformance" class="list-group">
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"OBS"</b> (CodeSystem:
-        <b>HL7ActClass 2.16.840.1.113883.5.6</b>)<b> (CONF:4537-26557)</b>.
+        <b>HL7ActClass <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActClass.html" target="_blank"><i class="fas fa-external-link-alt"></i>2.16.840.1.113883.5.6</a></b>)<b> (CONF:4537-26557)</b>.
       </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"INT"</b> (CodeSystem:
-        <b>HL7ActMood 2.16.840.1.113883.5.1001</b>)<b> (CONF:4537-26558)</b>.
+        <b>HL7ActMood <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActMood.html" target="_blank"><i class="fas fa-external-link-alt"></i>2.16.840.1.113883.5.1001</a></b>)<b> (CONF:4537-26558)</b>.
       </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:4537-26549)</b>
         such
@@ -123,14 +123,14 @@
             Reported <b>(CONF:4537-26554)</b>.
           </li>
           <li>This code <b>SHALL</b> contain exactly one [1..1] <b>@codeSystem</b>=<b>"2.16.840.1.113883.6.1"</b>
-            (CodeSystem: <b>LOINC 2.16.840.1.113883.6.1</b>)<b>(CONF:4537-26555)</b>.
+            (CodeSystem: <b>LOINC: <a href="https://loinc.org/" target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.6.1</a></b>)<b>(CONF:4537-26555)</b>.
           </li>
         </ul>
       </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>statusCode</b><b> (CONF:4537-26551)</b>.
         <ul>
           <li>This statusCode <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"completed"</b> (CodeSystem:
-            <b>HL7ActStatus 2.16.840.1.113883.5.14</b>)<b> (CONF:4537-26556)</b>.
+            <b>HL7ActStatus <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActStatus.html" target="_blank"><i class="fas fa-external-link-alt"></i>2.16.840.1.113883.5.14</a></b>)<b> (CONF:4537-26556)</b>.
           </li>
         </ul>
       </li>
@@ -150,8 +150,11 @@
         </ul>
       </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>value</b> with v@xsi:type="CD", where
-        the code <b>SHALL</b> be selected from ValueSet Pregnancy Intention<b>
-          urn:oid:2.16.840.1.113762.1.4.1166.22</b><b> DYNAMIC</b><b> (CONF:4537-26559)</b>.</li>
+        the code <b>SHALL</b> be selected from ValueSet <b>Pregnancy Intention
+         <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1166.22/expansion/Latest"
+                target="_blank"><i class="fas fa-external-link-alt"></i> urn:oid:2.16.840.1.113762.1.4.1166.22</a></b>
+                <b> DYNAMIC</b><b> (CONF:4537-26559)</b>.
+      </li>
     </ul>
     <br>
 

@@ -129,8 +129,8 @@
             <ul>
               <li>If id with <b>@root</b>="2.16.840.1.113883.4.6" National Provider Identifier is unknown then
                 <br /><b>MAY</b> contain zero or one [0..1] <b>@nullFlavor</b>=<b>"UNK"</b> Unknown (CodeSystem:
-                HL7NullFlavor <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html"
-                  target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1008</a>)
+                <b>HL7NullFlavor <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html"
+                  target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1008</a></b>)
                 <b>(CONF:4440-21)</b>.</li>
               <li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.4.6"</b> National Provider
                 Identifier <b>(CONF:4440-22)</b>.</li>
@@ -143,12 +143,12 @@
             or legal relationship between author and the patient.<br /> This assignedAuthor <b>SHOULD</b> contain zero
             or one [0..1] <b>code</b><b> (CONF:4440-33)</b>.</li>
           <ul>
-            <li>If the content is provider authored, the code SHOULD be selected from the ValueSet Healthcare Provider
-              Taxonomy<b> <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.1066/expansion/Latest"
+            <li>If the content is provider authored, the code SHOULD be selected from the ValueSet <b>Healthcare Provider
+              Taxonomy <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.1066/expansion/Latest"
                   target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.114222.4.11.1066</a></b>
               <b>DYNAMIC</b> <b>(CONF:4440-56)</b>.</li>
             <li>If the author is a person who is not acting in the role of a clinician, the code SHOULD be selected from
-              the ValueSet Personal And Legal Relationship Role Type<b> <a
+              the ValueSet <b>Personal And Legal Relationship Role Type <a
                   href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.12.1/expansion/Latest"
                   target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.12.1</a></b><b>
                 DYNAMIC</b> <b>(CONF:4440-57)</b>.</li>
@@ -190,9 +190,9 @@
             <li>This representedOrganization, if present, <b>SHALL</b> contain exactly one [1..1] <b>id </b><b>
                 (CONF:4440-24)</b> such that it<ul>
                 <li>If id with @root="2.16.840.1.113883.4.2" Tax ID Number is unknown then <br /><b>MAY</b> contain zero
-                  or one [0..1] <b>@nullFlavor</b>=<b>"UNK"</b> Unknown (CodeSystem: HL7NullFlavor <a
+                  or one [0..1] <b>@nullFlavor</b>=<b>"UNK"</b> Unknown (CodeSystem: <b>HL7NullFlavor <a
                     href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-NullFlavor.html" target="_blank"><i
-                      class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1008</a>)<b> (CONF:4440-25)</b>.</li>
+                      class="fas fa-external-link-alt"></i> 2.16.840.1.113883.5.1008</a></b>)<b> (CONF:4440-25)</b>.</li>
                 <li><b>SHALL</b> contain exactly one [1..1] <b>@root</b>="2.16.840.1.113883.4.2" Tax ID
                   Number<b>(CONF:4440-26)</b>.</li>
                 <li><b>SHOULD</b> contain zero or one [0..1] <b>@extension</b> <b>(CONF:4440-27)</b>.</li>

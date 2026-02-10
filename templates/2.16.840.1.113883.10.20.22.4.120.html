@@ -109,7 +109,7 @@
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"SBADM"</b><b>
           (CONF:1098-32091)</b>.</li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>, which <b>SHALL</b> be
-        selected from ValueSet Planned moodCode (SubstanceAdministration/Supply)<b> <a
+        selected from ValueSet <b>Planned moodCode (SubstanceAdministration/Supply) <a
             href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.24/expansion/Latest" target="_blank"><i
               class="fas fa-external-link-alt"></i> 2.16.840.1.113883.11.20.9.24</a></b><b> STATIC</b> 2014-09-01<b>
           (CONF:1098-32097)</b>.</li>
@@ -133,12 +133,12 @@
       <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>repeatNumber</b><b> (CONF:1098-32126)</b>.
       </li>
       <li class="list-group-item"> <b>MAY</b> contain zero or one [0..1] <b>routeCode</b>, which <b>SHALL</b> be
-        selected from ValueSet SPL Drug Route of Administration Terminology<b> <a
+        selected from ValueSet <b>SPL Drug Route of Administration Terminology <a
             href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.8.7/expansion/Latest"
             target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.3221.8.7</a></b><b>
           DYNAMIC</b><b> (CONF:1098-32127)</b>.<ul>
           <li>The routeCode, if present, <b>SHOULD</b> contain zero or more [0..*] <b>translation</b>, which
-            <b>SHALL</b> be selected from ValueSet Medication Route<b> <a
+            <b>SHALL</b> be selected from ValueSet <b>Medication Route <a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.12/expansion/Latest"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113762.1.4.1099.12</a></b><b>
               DYNAMIC</b><b> (CONF:1098-32951)</b>.
@@ -146,7 +146,7 @@
         </ul>
       </li>
       <li class="list-group-item"> <b>MAY</b> contain zero or more [0..*] <b>approachSiteCode</b>, which <b>SHALL</b> be
-        selected from ValueSet Body Site Value Set<b> <a
+        selected from ValueSet <b>Body Site  <a
             href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.3221.8.9/expansion/Latest"
             target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.3.88.12.3221.8.9</a></b><b>
           DYNAMIC</b><b> (CONF:1098-32128)</b>.</li>
@@ -155,7 +155,7 @@
           <li>Note: The base CDA R2.0 standard requires @unit to be drawn from UCUM, and best practice is to use case
             sensitive UCUM units <br />
             The doseQuantity, if present, <b>SHOULD</b> contain zero or one [0..1] <b>@unit</b>, which <b>SHOULD</b> be
-            selected from ValueSet UnitsOfMeasureCaseSensitive<b> <a
+            selected from ValueSet <b>UnitsOfMeasureCaseSensitive <a
                 href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.12839/expansion/Latest"
                 target="_blank"><i class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.12839</a></b><b>
               DYNAMIC</b><b> (CONF:1098-32130)</b>.</li>

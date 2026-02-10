@@ -99,14 +99,14 @@
         login</a></i>
     <ul id="conformance" class="list-group">
       <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>@use</b>, which <b>SHALL</b> be selected
-        from ValueSet PostalAddressUse<b> <a
+        from ValueSet <b>PostalAddressUse <a
             href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.10637/expansion/Latest" target="_blank"><i
               class="fas fa-external-link-alt"></i> 2.16.840.1.113883.1.11.10637</a></b><b> STATIC</b> 2005-05-01<b>
           (CONF:81-7290)</b>.</li>
       <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>country</b>, which <b>SHALL</b> be
-        selected from ValueSet Country<b> 2.16.840.1.113883.3.88.12.80.63</b><b> DYNAMIC</b><b> (CONF:81-7295)</b>.</li>
-      <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>state</b> (ValueSet: StateValueSet<b>
-          2.16.840.1.113883.3.88.12.80.1</b><b> DYNAMIC</b>)<b> (CONF:81-7293)</b>.<ul>
+        selected from ValueSet <b>Country 2.16.840.1.113883.3.88.12.80.63</b><b> DYNAMIC</b><b> (CONF:81-7295)</b>.</li>
+      <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>state</b> from ValueSet <b>StateValueSet<b>
+          2.16.840.1.113883.3.88.12.80.1</b><b> DYNAMIC</b><b> (CONF:81-7293)</b>.<ul>
           <li>
             <p>If the country is US, the state element is required but SHOULD have @nullFlavor if the state is unknown.
               If country is not specified, it's assumed to be US. If country is something other than US, the state MAY
@@ -116,7 +116,7 @@
       </li>
       <li class="list-group-item"> <b>SHALL</b> contain exactly one [1..1] <b>city</b><b> (CONF:81-7292)</b>.</li>
       <li class="list-group-item"> <b>SHOULD</b> contain zero or one [0..1] <b>postalCode</b>, which <b>SHOULD</b> be
-        selected from ValueSet PostalCode<b> 2.16.840.1.113883.3.88.12.80.2</b><b> DYNAMIC</b><b> (CONF:81-7294)</b>.
+        selected from ValueSet <b>PostalCode 2.16.840.1.113883.3.88.12.80.2</b><b> DYNAMIC</b><b> (CONF:81-7294)</b>.
         <ul>
           <li>
             <p>If the country is US, the postalCode element is required but SHOULD have @nullFlavor if the postalCode is
