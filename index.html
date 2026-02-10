@@ -1,47 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <title>C-CDA Online</title>
 
-<head>
-  <title>C-CDA Online</title>
-  
-  <!-- Structured data for search engines -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "C-CDA Online",
-    "url": "https://www.hl7.org/ccdasearch/",
-    "description": "A web-based tool for browsing, searching, and exploring the HL7 Consolidated Clinical Document Architecture (C-CDA) templates, constraints, and definitions.",
-    "creator": "HL7 International",
-    "image": "https://www.hl7.org/ccdasearch/img/cda.png",
-    "applicationCategory": "Health Data Interoperability"
-  }
-  </script>
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "C-CDA Online",
+        "url": "https://www.hl7.org/ccdasearch/",
+        "description": "A web-based tool for browsing, searching, and exploring the HL7 Consolidated Clinical Document Architecture (C-CDA) templates, constraints, and definitions.",
+        "creator": "HL7 International",
+        "image": "https://www.hl7.org/ccdasearch/img/cda.png",
+        "applicationCategory": "Health Data Interoperability"
+      }
+    </script>
 
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-    crossorigin="anonymous"></script>
-  <!-- Font awesome icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="https://unpkg.com/tabulator-tables@4.9.3/dist/css/tabulator.min.css" rel="stylesheet">
-  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.9.3/dist/js/tabulator.min.js"></script>
-  <!-- Provides for posting and reponse -->
-  <script type="text/javascript">
-    $(function () {
-      let fieldEl = document.getElementById("filter-field");
-      let typeEl = document.getElementById("filter-type");
-      let valueEl = document.getElementById("filter-value");
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      crossorigin="anonymous"
+    />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link
+      href="https://unpkg.com/tabulator-tables@4.9.3/dist/css/tabulator.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .tabulator {
+        font-size: 18px;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/tabulator-tables@4.9.3/dist/js/tabulator.min.js"
+    ></script>
+    <!-- Provides for posting and reponse -->
+    <script type="text/javascript">
+      $(function () {
+        let fieldEl = document.getElementById("filter-field");
+        let typeEl = document.getElementById("filter-type");
+        let valueEl = document.getElementById("filter-value");
       let tabledata = [
         { 'id': '-1', 'template_type': 'Document', 'name': 'Care Plan  [2.16.840.1.113883.10.20.22.1.15[87-101', 'name2': 'Care Plan ', 'template': '2.16.840.1.113883.10.20.22.1.15', 'pageStart': '87', 'pages': '87-101', 'search': 'Care Plan  2.16.840.1.113883.10.20.22.1.15 CONF:1198-28741;CONF:1198-28742;CONF:1198-32877;CONF:1198-32934;CONF:1198-28745;CONF:1198-32959;CONF:1198-32321;CONF:1198-32322;CONF:1198-31993;CONF:1198-31994;CONF:1198-31996;CONF:1198-31997;CONF:1198-31998;CONF:1198-31999;CONF:1198-32320;CONF:1198-32000;CONF:1198-32001;CONF:1198-32002;CONF:1198-32003;CONF:1198-31910;CONF:1198-31911;CONF:1198-31912;CONF:1198-31913;CONF:1198-31914;CONF:1198-31915;CONF:1198-31916;CONF:1198-31917;CONF:1198-31918;CONF:1198-31677;CONF:1198-31678;CONF:1198-31679;CONF:1198-31680;CONF:1198-31681;CONF:1198-31682;CONF:1198-31683;CONF:1198-31686;CONF:1198-31684;CONF:1198-31685;CONF:1198-32367;CONF:1198-31895;CONF:1198-31896;CONF:1198-31897;CONF:1198-31898;CONF:1198-31899;CONF:1198-31900;CONF:1198-31901;CONF:1198-31902;CONF:1198-31903;CONF:1198-31904;CONF:1198-32330;CONF:1198-32331;CONF:1198-31905;CONF:1198-31907;CONF:1198-31908;CONF:1198-31909;CONF:1198-32328;CONF:1198-32329;CONF:1198-29893;CONF:1198-31889;CONF:1198-29894;CONF:1198-32949;CONF:1198-29895;CONF:1198-29896;CONF:1198-32004;CONF:1198-32005;CONF:1198-32007;CONF:1198-28753;CONF:1198-28754;CONF:1198-28755;CONF:1198-28756;CONF:1198-28761;CONF:1198-28762;CONF:1198-28763;CONF:1198-28764;CONF:1198-29596;CONF:1198-29597;CONF:1198-31044' },
         { 'id': '0', 'template_type': 'Document', 'name': 'Consultation Note   [2.16.840.1.113883.10.20.22.1.4[101-117', 'name2': 'Consultation Note  ', 'template': '2.16.840.1.113883.10.20.22.1.4', 'pageStart': '101', 'pages': '101-117', 'search': 'Consultation Note   2.16.840.1.113883.10.20.22.1.4 CONF:1198-8375;CONF:1198-10040;CONF:1198-32502;CONF:1198-32935;CONF:1198-17176;CONF:1198-31656;CONF:1198-31657;CONF:1198-31658;CONF:1198-31659;CONF:1198-31660;CONF:1198-31661;CONF:1198-31662;CONF:1198-31663;CONF:1198-31664;CONF:1198-31665;CONF:1198-8382;CONF:1198-29923;CONF:1198-29924;CONF:1198-8386;CONF:1198-8387;CONF:1198-8388;CONF:1198-8389;CONF:1198-8391;CONF:1198-32904;CONF:1198-32905;CONF:1198-8392;CONF:1198-32902;CONF:1198-32906;CONF:1198-8397;CONF:1198-28895;CONF:1198-28896;CONF:1198-28897;CONF:1198-28898;CONF:1198-28899;CONF:1198-28900;CONF:1198-28901;CONF:1198-28904;CONF:1198-28905;CONF:1198-28906;CONF:1198-28907;CONF:1198-28908;CONF:1198-28909;CONF:1198-28910;CONF:1198-28911;CONF:1198-28912;CONF:1198-28913;CONF:1198-28915;CONF:1198-28916;CONF:1198-28917;CONF:1198-28918;CONF:1198-28919;CONF:1198-28920;CONF:1198-28921;CONF:1198-28922;CONF:1198-28923;CONF:1198-28924;CONF:1198-28925;CONF:1198-28926;CONF:1198-28928;CONF:1198-28929;CONF:1198-28930;CONF:1198-28931;CONF:1198-28932;CONF:1198-28933;CONF:1198-28934;CONF:1198-28935;CONF:1198-28936;CONF:1198-28937;CONF:1198-28942;CONF:1198-28943;CONF:1198-28944;CONF:1198-28945;CONF:1198-30237;CONF:1198-30238;CONF:1198-30904;CONF:1198-30905;CONF:1198-30906;CONF:1198-30907;CONF:1198-30909;CONF:1198-30910;CONF:1198-28939;CONF:1198-28940;CONF:1198-9504;CONF:1198-9501' },
@@ -295,184 +317,278 @@
         { 'id': '250', 'template_type': 'Other', 'name': 'US Realm Patient Name (PTN.US.FIELDED) [2.16.840.1.113883.10.20.22.5.1[901-904', 'name2': 'US Realm Patient Name (PTN.US.FIELDED)', 'template': '2.16.840.1.113883.10.20.22.5.1', 'pageStart': '901', 'pages': '901-904', 'search': 'US Realm Patient Name (PTN.US.FIELDED) 2.16.840.1.113883.10.20.22.5.1 CONF:81-7154;CONF:81-7159;CONF:81-7160;CONF:81-7157;CONF:81-7158;CONF:81-7163;CONF:81-7155;CONF:81-7156;CONF:81-7161;CONF:81-7162;CONF:81-7278' },
         { 'id': '251', 'template_type': 'Other', 'name': 'US Realm Person Name (PN.US.FIELDED)  [2.16.840.1.113883.10.20.22.5.1.1[904-904', 'name2': 'US Realm Person Name (PN.US.FIELDED) ', 'template': '2.16.840.1.113883.10.20.22.5.1.1', 'pageStart': '904', 'pages': '904-904', 'search': 'US Realm Person Name (PN.US.FIELDED)  2.16.840.1.113883.10.20.22.5.1.1 CONF:81-9368;CONF:81-9371;CONF:81-9372' },
       ];
+        //Trigger setFilter function with correct parameters
+        function updateFilter() {
+          let filterVal = fieldEl.options[fieldEl.selectedIndex].value;
+          let typeVal = typeEl.options[typeEl.selectedIndex].value;
 
-      //Trigger setFilter function with correct parameters
-      function updateFilter() {
-        let filterVal = fieldEl.options[fieldEl.selectedIndex].value;
-        let typeVal = typeEl.options[typeEl.selectedIndex].value;
+          let filter = filterVal == "function" ? customFilter : filterVal;
 
-        let filter = filterVal == "function" ? customFilter : filterVal;
+          if (filterVal == "function") {
+            typeEl.disabled = true;
+            valueEl.disabled = true;
+          } else {
+            typeEl.disabled = false;
+            valueEl.disabled = false;
+          }
 
-        if (filterVal == "function") {
-          typeEl.disabled = true;
-          valueEl.disabled = true;
-        } else {
-          typeEl.disabled = false;
-          valueEl.disabled = false;
-        }
-
-        if (filterVal) {
-          table.setFilter(filter, typeVal, valueEl.value);
-        }
-      }
-
-      var printIcon = function (cell, formatterParams, onRendered) {
-        let index = cell._cell.value.split('[')[1];
-        let display = cell._cell.value.split('[')[2];
-        return `<a href="pdfs/${index}.pdf"><i class='fas fa-file-pdf'></i> ${display}</a>`;
-      };
-
-      //Update filters on value change
-      document.getElementById("filter-field").addEventListener("change", updateFilter);
-      document.getElementById("filter-type").addEventListener("change", updateFilter);
-      document.getElementById("filter-value").addEventListener("keyup", updateFilter);
-
-      let table = new Tabulator("#example-table", {
-        layout: "fitColumns",
-        data: tabledata, //assign data to table
-        columns: [
-          {
-            title: "Description", field: "name", formatter: "link", formatterParams: {
-              labelField: "name2",
-              url: function (thing) {
-                let index = thing._cell.value.split('[')[1];
-                return `templates/${index}.html`;
-              }
-              // target: "_blank",
-            }
-          },
-          // {title: "Link", formatter: 'link', field: 'link', width: 25},
-          // {title: "Name", field: "name", width: 200},
-          { title: "Template OID", field: "template" },
-          {
-            title: "Page", field: "name", width: 150, formatter: printIcon, sorter: function (a, b, aRow, bRow, column, dir, sorterParams) {
-              let a1 = aRow._row.data.pageStart;
-              let b1 = bRow._row.data.pageStart;
-              return a1 - b1;
-            }
-          },
-          { title: "Type", field: "template_type", width: 150 },
-        ],
-      });
-      let query = null;
-      // allowing for queries to come on inbound requests
-      if (location.href && location.href.split('?')[1]) {
-        query = location.href.split('?')[1]
-        if (query.indexOf('query=') !== -1) {
-          query = query.slice(query.indexOf('query=') + 6);
-          if (query) {
-            console.log(`settings filter to ${query} based on query parameter`);
-            $('#filter-value').val(query);
+          if (filterVal) {
+            table.setFilter(filter, typeVal, valueEl.value);
           }
         }
-      }
-      // need to set filter after page load to deal with back button form population
-      updateFilter();
-    });      
-  </script>
-</head>
 
-<body>
-  <div class="jumbotron container-fluid" style="padding-bottom:24px; padding-top:24px;">
-    <h1 class="display-3 row">
-      <div class="col-12">
-        <img class="rounded" style="max-width:20%" src="img/cda.png" />
-        <!-- <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong> -->
-        <div style="font-size:0.4em">
-          <strong style="font-weight:500">C-CDA Online</strong><span>: A navigation website for C-CDA 2.1</span>
-          <br />
-        </div>
-      </div>
-    </h1>
-    <div class="row">
-      <div class="col-10">
-        <p style="margin-bottom: 0.25rem">This navigation tool is generated from the published PDF of the
-          Consolidated Clinical Document Architecture (C-CDA)
-          2.1 (2.1.0.7, September 2022) and the C-CDA 2.1 Companion Guide (4.1.1, June 2023). For the latest information
-          on C-CDA, or to access the Supplemental Implementation Guides, please refer to the
-          <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a> which remains the definitive source for the standards.
-          CDA and C-CDA are copyright property of <a href="https://www.hl7.org/index.cfm"> Health Level Seven (HL7)</a>
-          and subject to the terms of <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
-          Those terms are also included in Volume 1 of the C-CDA guide linked below. Something about patches
-        </p>
-        <p>
-          The new <b></i><a href="http://hl7.org/cda/stds/ccda/draft1/" target="_blank" style="color:green"><i
-                class="fas fa-external-link-alt"> </i> Prototype for online publishing of C-CDA is now available for
-              review</a></b>. This website using Structure Definition (SD) will become the definitive source for the
-          C-CDA standard in the near future (expected 2024). Links for each template to the SD version will be shown
-          with a green link ( <i class="fas fa-external-link-alt" style="color:green"></i> ) throughout this
-          publication. The templates new to the Companion Guide 4.1 Release are not present in the Prototype and so do
-          not contain prototype links.
-        </p>
-      </div>
-    </div>
-    <div>
-    </div>
-    <hr />
-    <div style="font-size: 1 rem;">
-      <p>HL7 encourages users to sign up for an account, which is free!</p>
-      Please <u><a class="btn btn-primary"
-          href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up
-          <i class="fas fa-user-plus"></i></a></u> if you do not have an account. C-CDA Online Navigator last updated:
-      August 2023.
-    </div>
-  </div>
+        var printIcon = function (cell, formatterParams, onRendered) {
+          let index = cell._cell.value.split("[")[1];
+          let display = cell._cell.value.split("[")[2];
+          return `<a href="pdfs/${index}.pdf"><i class='fas fa-file-pdf'></i> ${display}</a>`;
+        };
 
-  <div class="container-fluid" style="font-size:2.0em;">
-    <div class="row">
-      <div class="col-3" style="font-size:0.75em">
-        <div>
-          <strong>Read Narrative Introductions</strong>
+        //Update filters on value change
+        document
+          .getElementById("filter-field")
+          .addEventListener("change", updateFilter);
+        document
+          .getElementById("filter-type")
+          .addEventListener("change", updateFilter);
+        document
+          .getElementById("filter-value")
+          .addEventListener("keyup", updateFilter);
+
+        let table = new Tabulator("#example-table", {
+          layout: "fitColumns",
+          data: tabledata, //assign data to table
+          columns: [
+            {
+              title: "Description",
+              field: "name",
+              formatter: "link",
+              formatterParams: {
+                labelField: "name2",
+                url: function (thing) {
+                  let index = thing._cell.value.split("[")[1];
+                  return `templates/${index}.html`;
+                },
+                // target: "_blank",
+              },
+            },
+            // {title: "Link", formatter: 'link', field: 'link', width: 25},
+            // {title: "Name", field: "name", width: 200},
+            { title: "Template OID", field: "template" },
+            {
+              title: "Page",
+              field: "name",
+              width: 150,
+              formatter: printIcon,
+              sorter: function (a, b, aRow, bRow, column, dir, sorterParams) {
+                let a1 = aRow._row.data.pageStart;
+                let b1 = bRow._row.data.pageStart;
+                return a1 - b1;
+              },
+            },
+            { title: "Type", field: "template_type", width: 150 },
+          ],
+        });
+        let query = null;
+        // allowing for queries to come on inbound requests
+        if (location.href && location.href.split("?")[1]) {
+          query = location.href.split("?")[1];
+          if (query.indexOf("query=") !== -1) {
+            query = query.slice(query.indexOf("query=") + 6);
+            if (query) {
+              console.log(
+                `settings filter to ${query} based on query parameter`,
+              );
+              $("#filter-value").val(query);
+            }
+          }
+        }
+        // need to set filter after page load to deal with back button form population
+        updateFilter();
+        setTimeout(() => {
+          let check = $("#example-table")
+            .text()
+            .replace(/\s+|\t+/, "")
+            .slice(0, 7);
+          console.log("ran tabulator check");
+          if (check === "Loading") {
+            console.log("tabulator is still loading, showing backup table");
+            let backup_table = `<table class="table table-striped table-bordered"><thead><tr><th>Description</th><th>Template OID</th><th>Page</th><th>Type</th></tr></thead>`;
+            backup_table += `<tbody>`;
+            for (let i = 0; i < tabledata.length; i++) {
+              backup_table += `<tr><td><a href="templates/${tabledata[i].id}.html">${tabledata[i].name2}</a></td><td>${tabledata[i].template}</td>`;
+              backup_table += `<td><a href="pdfs/${tabledata[i].name.split("[")[1]}.pdf"><i class='fas fa-file-pdf'></i> ${tabledata[i].name.split("[")[2]}</a></td><td>${tabledata[i].template_type}</td></tr>`;
+            }
+            backup_table += `</tbody></table>`;
+            $("#backup-table").html(backup_table);
+          }
+          else {
+            console.log("tabulator loaded successfully, not rendering backup table");
+          }
+        }, 3000);
+      });
+    </script>
+  </head>
+
+  <body>
+    <div
+      class="jumbotron container-fluid"
+      style="padding-bottom: 24px; padding-top: 24px"
+    >
+      <h1 class="display-3 row">
+        <div class="col-12">
+          <img class="rounded" style="max-width: 20%" src="img/cda.png" />
+          <!-- <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong> -->
+          <div style="font-size: 0.4em">
+            <strong style="font-weight: 500">C-CDA Online</strong
+            ><span>: A navigation website for C-CDA 2.1</span>
+            <br />
+          </div>
         </div>
-        <ul class="list-unstyled" style="font-size:0.7em;">
-          <li><a href="pdfs/CCDA_Volume_One.pdf"><i class="fas fa-file-pdf"></i>&nbsp;C-CDA 2.1 Introduction (Volume 1)
-              Sept 2022 Errata</a></li>
-          <li><a href="pdfs/Companion_Guide.pdf"><i class="fas fa-file-pdf"></i>&nbsp;C-CDA 2.1 Companion Guide R4.1 June
-              2023 Publication</a></li>
-        </ul>
+      </h1>
+      <div class="row">
+        <div class="col-10">
+          <p style="margin-bottom: 0.25rem">
+            This navigation tool is generated from the published PDF of the
+            Consolidated Clinical Document Architecture (C-CDA) 2.1 (2.1.0.7,
+            September 2022) and the C-CDA 2.1 Companion Guide (4.1.1, June
+            2023). For the latest information on C-CDA, or to access the
+            Supplemental Implementation Guides, please refer to the
+            <a
+              href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492"
+              >HL7 C-CDA Page</a
+            >
+            which remains the definitive source for the standards. CDA and C-CDA
+            are copyright property of
+            <a href="https://www.hl7.org/index.cfm">
+              Health Level Seven (HL7)</a
+            >
+            and subject to the terms of
+            <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
+            Those terms are also included in Volume 1 of the C-CDA guide linked
+            below. Something about patches
+          </p>
+          <p>
+            The new
+            <b
+              ><a
+                href="http://hl7.org/cda/stds/ccda/draft1/"
+                target="_blank"
+                style="color: green"
+                ><i class="fas fa-external-link-alt"> </i> Prototype for online
+                publishing of C-CDA is now available for review</a
+              ></b
+            >. This website using Structure Definition (SD) will become the
+            definitive source for the C-CDA standard in the near future
+            (expected 2024). Links for each template to the SD version will be
+            shown with a green link (
+            <i class="fas fa-external-link-alt" style="color: green"></i> )
+            throughout this publication. The templates new to the Companion
+            Guide 4.1 Release are not present in the Prototype and so do not
+            contain prototype links.
+          </p>
+        </div>
       </div>
-      <div class="col-9">
-        <div style="font-size:0.75em">
-          <strong>Navigate Templates (C-CDA Volume 2 and Companion Guide Appendices)</strong>
+      <div></div>
+      <hr />
+      <div style="font-size: 1 rem">
+        <p>HL7 encourages users to sign up for an account, which is free!</p>
+        Please
+        <u
+          ><a
+            class="btn btn-primary"
+            href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister"
+            >sign up <i class="fas fa-user-plus"></i></a
+        ></u>
+        if you do not have an account. C-CDA Online Navigator last updated:
+        August 2023.
+      </div>
+    </div>
+
+    <div class="container-fluid" style="font-size: 2em">
+      <div class="row">
+        <div class="col-3" style="font-size: 0.75em">
+          <div>
+            <strong>Read Narrative Introductions</strong>
+          </div>
+          <ul class="list-unstyled" style="font-size: 0.7em">
+            <li>
+              <a href="pdfs/CCDA_Volume_One.pdf"
+                ><i class="fas fa-file-pdf"></i>&nbsp;C-CDA 2.1 Introduction
+                (Volume 1) Sept 2022 Errata</a
+              >
+            </li>
+            <li>
+              <a href="pdfs/Companion_Guide.pdf"
+                ><i class="fas fa-file-pdf"></i>&nbsp;C-CDA 2.1 Companion Guide
+                R4.1 June 2023 Publication</a
+              >
+            </li>
+          </ul>
         </div>
-        <i class="fas fa-search"></i>
-        <input id="filter-value" type="text" class="form-control"
-          style="width:90%; display:inline-block; font-size:1.5rem;"
-          placeholder="Search C-CDA by description, template OID or conformance number" />
-        <!--
+        <div class="col-9">
+          <div style="font-size: 0.75em">
+            <strong
+              >Navigate Templates (C-CDA Volume 2 and Companion Guide
+              Appendices)</strong
+            >
+          </div>
+          <i class="fas fa-search"></i>
+          <input
+            id="filter-value"
+            type="text"
+            class="form-control"
+            style="width: 90%; display: inline-block; font-size: 1.5rem"
+            placeholder="Search C-CDA by description, template OID or conformance number"
+          />
+          <!--
             <div style="margin-top:-12px"><i class="fas fa-search" style="color:white"></i><i style="font-size:0.5em;">&nbsp;Navigate C-CDA 2.1 Volume 2 and Companion Guide Appendixes using above search</i></div>
           -->
+        </div>
+      </div>
+      <hr />
+      <div id="example-table">
+        Loading...
+        <div>
+          if this remains after several seconds, tabulator was not loaded (which
+          some companies may block). You cannot search using above search bar,
+          but basic table shown below
+        </div>
+      </div>
+      <br />
+      <div style="font-size: 0.8em" id="backup-table"></div>
+
+      <img
+        class="rounded float-left"
+        style="max-width: 10%"
+        src="img/hl7-logo.png"
+      />
+
+      <br />
+      <br />
+      <div style="font-size: 0.5em">
+        To log an issue on C-CDA Standard, go to
+        <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a>
+        To report an issue with this webpage (but not underlying standard)
+        please log in
+        <a href="https://github.com/jddamore/ccda-search/issues"
+          >C-CDA Search Github Repository</a
+        >
+      </div>
+      <div style="font-size: 0.5em; display: none">
+        <select id="filter-field">
+          <option></option>
+          <option value="name">Name</option>
+          <option value="template_type">Type</option>
+          <option value="template">Template</option>
+          <option value="search" selected="selected">Search</option>
+        </select>
+
+        <select id="filter-type">
+          <option value="=">equals</option>
+          <option value="like" selected="selected">contains</option>
+          <option></option>
+        </select>
       </div>
     </div>
-    <hr />
-    <div id="example-table">Loading...</div>
-    <br />
-    <img class="rounded float-left" style="max-width:10%" src="img/hl7-logo.png" />
-
-    <br />
-    <br />
-    <div style="font-size: 0.5em">To log an issue on C-CDA Standard, go to <a
-        href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a> To report an issue with this webpage (but
-      not underlying standard) please log in <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search
-        Github Repository</a>
-    </div>
-    <div style="font-size: 0.5em; display:none">
-      <select id="filter-field">
-        <option></option>
-        <option value="name">Name</option>
-        <option value="template_type">Type</option>
-        <option value="template">Template</option>
-        <option value="search" selected="selected">Search</option>
-      </select>
-
-      <select id="filter-type">
-        <option value="=">equals</option>
-        <option value="like" selected="selected">contains
-        <option>
-      </select>
-    </div>
-  </div>
-
-</body>
-
+  </body>
 </html>
