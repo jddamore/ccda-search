@@ -8,7 +8,8 @@
     "email": "jdamore@moreinformaticss.com"
   },
   "scripts": {
-    "start": "npx nodemon app.js"
+    "start": "npx nodemon app.js",
+    "validate" : "npx html-validate \"templates/*.html\""
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
