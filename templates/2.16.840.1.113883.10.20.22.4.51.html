@@ -1,56 +1,27 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html><html lang="en"><head>
     <title>C-CDA Online</title>
     <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <!-- Font awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
   </head>
 
   <body>
-    <div
-      class="jumbotron container-fluid"
-      style="padding-bottom: 24px; padding-top: 24px"
-    >
+    <div class="jumbotron container-fluid" style="padding-bottom: 24px; padding-top: 24px">
       <div class="display-3 row">
         <div class="col-12">
-          <img
-            class="rounded"
-            style="max-width: 20%"
-            src="../img/cda.png"
-            alt="HL7 CDA Logo"
-          />
+          <img class="rounded" style="max-width: 20%" src="../img/cda.png" alt="HL7 CDA Logo">
           <!-- <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong> -->
           <div style="font-size: 0.4em; margin-bottom: 0.5%">
-            <strong style="font-weight: 500"
-              ><a href="../index.html">C-CDA Online</a></strong
-            ><span>: A navigation website for C-CDA 2.1</span>
-            <br />
+            <strong style="font-weight: 500"><a href="../index.html">C-CDA Online</a></strong><span>: A navigation website for C-CDA 2.1</span>
+            <br>
           </div>
         </div>
       </div>
@@ -62,31 +33,22 @@
             September 2022) and the C-CDA 2.1 Companion Guide (4.1.1, June
             2023). For the latest information on C-CDA, or to access the
             Supplemental Implementation Guides, please refer to the
-            <a
-              href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492"
-              >HL7 C-CDA Page</a
-            >
+            <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>
             which remains the definitive source for the standards. CDA and C-CDA
             are copyright property of
             <a href="https://www.hl7.org/index.cfm">
-              Health Level Seven (HL7)</a
-            >
+              Health Level Seven (HL7)</a>
             and subject to the terms of
             <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
           </p>
         </div>
       </div>
       <div></div>
-      <hr />
+      <hr>
       <div id="user-sign-up" style="font-size: 1rem">
         <p>HL7 encourages users to sign up for an account, which is free!</p>
         Please
-        <u
-          ><a
-            class="btn btn-primary"
-            href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister"
-            >sign up <i class="fas fa-user-plus"></i></a
-        ></u>
+        <u><a class="btn btn-primary" href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up <i class="fas fa-user-plus"></i></a></u>
         if you do not have an account. C-CDA Online Navigator last updated:
         August 2023.
       </div>
@@ -95,20 +57,11 @@
     <div class="container-fluid">
       <h2 id="title">
         Postprocedure Diagnosis (V3)
-        <small class="text-muted"
-          >[act, 2.16.840.1.113883.10.20.22.4.51, release 2015-08-01, open]
-          <a href="../pdfs/2.16.840.1.113883.10.20.22.4.51.pdf"
-            ><i class="fas fa-file-pdf"></i> view pdf</a
-          ><a
-            href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.51.html"
-            target="_blank"
-            style="color: green"
-          >
-            <i class="fas fa-external-link-alt"></i> view prototype</a
-          ></small
-        >
+        <small class="text-muted">[act, 2.16.840.1.113883.10.20.22.4.51, release 2015-08-01, open]
+          <a href="../pdfs/2.16.840.1.113883.10.20.22.4.51.pdf"><i class="fas fa-file-pdf"></i> view pdf</a><a href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.4.51.html" target="_blank" style="color: green">
+            <i class="fas fa-external-link-alt"></i> view prototype</a></small>
       </h2>
-      <hr />
+      <hr>
       <h4>Description:</h4>
 
       <div id="description">
@@ -129,71 +82,45 @@
         <tbody>
           <tr>
             <td id="Contained_By">
-              <a href="2.16.840.1.113883.10.20.22.4.132.html"
-                >Health Concern Act </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.4.136.html"
-                >Risk Concern Act </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.36.html"
-                >Postprocedure Diagnosis Section </a
-              ><br />
+              <a href="2.16.840.1.113883.10.20.22.4.132.html">Health Concern Act </a><br><a href="2.16.840.1.113883.10.20.22.4.136.html">Risk Concern Act </a><br><a href="2.16.840.1.113883.10.20.22.2.36.html">Postprocedure Diagnosis Section </a><br>
             </td>
             <td id="Contains">
-              <a href="2.16.840.1.113883.10.20.22.4.4.html"
-                >Problem Observation </a
-              ><br />
+              <a href="2.16.840.1.113883.10.20.22.4.4.html">Problem Observation </a><br>
             </td>
           </tr>
         </tbody>
       </table>
       <h4>Conformance Statements:</h4>
-      <i
-        >HL7 Code Systems are available
-        <a
-          href="https://terminology.hl7.org/codesystems-cda.html"
-          target="_blank"
-          >here</a
-        >. HL7 Value Sets are available
-        <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank"
-          >here</a
-        >. Links to Value Set Authority Center (VSAC) are shown as hyperlinks
+      <i>HL7 Code Systems are available
+        <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available
+        <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks
         <i class="fas fa-external-link-alt"></i> and require
-        <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i
-      >
+        <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
       <ul id="conformance" class="list-group">
         <li class="list-group-item">
-          <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"ACT"</b
-          ><b> (CONF:1198-8756)</b>.
+          <b>SHALL</b> contain exactly one [1..1] <b>@classCode</b>=<b>"ACT"</b><b> (CONF:1198-8756)</b>.
         </li>
         <li class="list-group-item">
-          <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b
-          ><b> (CONF:1198-8757)</b>.
+          <b>SHALL</b> contain exactly one [1..1] <b>@moodCode</b>=<b>"EVN"</b><b> (CONF:1198-8757)</b>.
         </li>
         <li class="list-group-item">
-          <b>SHALL</b> contain exactly one [1..1] <b>templateId</b
-          ><b> (CONF:1198-16766)</b> such that it
+          <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-16766)</b> such that it
           <ul>
             <li>
-              <b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b
-                >"2.16.840.1.113883.10.20.22.4.51"</b
-              ><b> (CONF:1198-16767)</b>.
+              <b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.4.51"</b><b> (CONF:1198-16767)</b>.
             </li>
           </ul>
           <ul>
             <li>
-              <b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b
-                >"2015-08-01"</b
-              ><b> (CONF:1198-32539)</b>.
+              <b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32539)</b>.
             </li>
           </ul>
         </li>
         <li class="list-group-item">
-          <b>SHALL</b> contain exactly one [1..1] <b>code</b
-          ><b> (CONF:1198-19151)</b>.
+          <b>SHALL</b> contain exactly one [1..1] <b>code</b><b> (CONF:1198-19151)</b>.
           <ul>
             <li>
-              This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b
-                >"59769-0"</b
-              >
+              This code <b>SHALL</b> contain exactly one [1..1] <b>@code</b>=<b>"59769-0"</b>
               Postprocedure diagnosis<b> (CONF:1198-19152)</b>.
             </li>
           </ul>
@@ -201,74 +128,46 @@
             <li>
               This code <b>SHALL</b> contain exactly one [1..1]
               <b>@codeSystem</b>=<b>"2.16.840.1.113883.6.1"</b> (CodeSystem:
-              <b
-                >LOINC:
-                <a href="https://loinc.org/" target="_blank"
-                  ><i class="fas fa-external-link-alt"></i>
-                  2.16.840.1.113883.6.1</a
-                ></b
-              >)<b> (CONF:1198-32166)</b>.
+              <b>LOINC:
+                <a href="https://loinc.org/" target="_blank"><i class="fas fa-external-link-alt"></i>
+                  2.16.840.1.113883.6.1</a></b>)<b> (CONF:1198-32166)</b>.
             </li>
           </ul>
         </li>
         <li class="list-group-item">
-          <b>SHALL</b> contain at least one [1..*] <b>entryRelationship</b
-          ><b> (CONF:1198-8759)</b> such that it
+          <b>SHALL</b> contain at least one [1..*] <b>entryRelationship</b><b> (CONF:1198-8759)</b> such that it
           <ul>
             <li>
-              <b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b
-                >"SUBJ"</b
-              >
+              <b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"SUBJ"</b>
               Has subject (CodeSystem:
-              <b
-                >HL7ActRelationshipType
-                <a
-                  href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html"
-                  target="_blank"
-                  ><i class="fas fa-external-link-alt"></i>
-                  2.16.840.1.113883.5.1002</a
-                ></b
-              ><b> STATIC</b>)<b> (CONF:1198-8760)</b>.
+              <b>HL7ActRelationshipType
+                <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ActRelationshipType.html" target="_blank"><i class="fas fa-external-link-alt"></i>
+                  2.16.840.1.113883.5.1002</a></b><b> STATIC</b>)<b> (CONF:1198-8760)</b>.
             </li>
           </ul>
           <ul>
             <li>
               <b>SHALL</b> contain exactly one [1..1] Problem Observation (V3)<b>
-                (identifier: 2.16.840.1.113883.10.20.22.4.4)</b
-              ><b> (CONF:1198-15583)</b>.
+                (identifier: 2.16.840.1.113883.10.20.22.4.4)</b><b> (CONF:1198-15583)</b>.
             </li>
           </ul>
         </li>
       </ul>
-      <br />
+      <br>
 
       <h4>Guide Examples:</h4>
-      <ul id="guide_examples">
-        <li>
-          <a
-            href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Postprocedure%20Diagnosis%20(V3)_2.16.840.1.113883.10.20.22.4.51/Postprocedure%20Diagnosis%20(V3)%20Example.xml"
-            ><i class="fab fa-github"></i>&nbsp;Postprocedure Diagnosis (V3)
-            Example</a
-          >
-        </li>
-      </ul>
-      <br />
+      <ul id="guide_examples"></ul>
+      <br>
 
       <ul id="cdasearch_examples"></ul>
 
-      <hr />
-      <br />To log an issue on C-CDA Standard, go to
+      <hr>
+      <br>To log an issue on C-CDA Standard, go to
       <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a>
       To report an issue with this webpage (but not underlying standard) please
       log in
-      <a href="https://github.com/jddamore/ccda-search/issues"
-        >C-CDA Search Github Repository</a
-      ><br /><br /><img
-        class="rounded float-left"
-        style="max-width: 10%"
-        src="../img/hl7-logo.png"
-        alt="HL7 Logo"
-      />
+      <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br><br><img class="rounded float-left" style="max-width: 10%" src="../img/hl7-logo.png" alt="HL7 Logo">
     </div>
-  </body>
-</html>
+  
+
+</body></html>

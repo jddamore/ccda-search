@@ -1,56 +1,27 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html><html lang="en"><head>
     <title>C-CDA Online</title>
     <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <!-- Font awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
   </head>
 
   <body>
-    <div
-      class="jumbotron container-fluid"
-      style="padding-bottom: 24px; padding-top: 24px"
-    >
+    <div class="jumbotron container-fluid" style="padding-bottom: 24px; padding-top: 24px">
       <div class="display-3 row">
         <div class="col-12">
-          <img
-            class="rounded"
-            style="max-width: 20%"
-            src="../img/cda.png"
-            alt="HL7 CDA Logo"
-          />
+          <img class="rounded" style="max-width: 20%" src="../img/cda.png" alt="HL7 CDA Logo">
           <!-- <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong> -->
           <div style="font-size: 0.4em; margin-bottom: 0.5%">
-            <strong style="font-weight: 500"
-              ><a href="../index.html">C-CDA Online</a></strong
-            ><span>: A navigation website for C-CDA 2.1</span>
-            <br />
+            <strong style="font-weight: 500"><a href="../index.html">C-CDA Online</a></strong><span>: A navigation website for C-CDA 2.1</span>
+            <br>
           </div>
         </div>
       </div>
@@ -62,31 +33,22 @@
             September 2022) and the C-CDA 2.1 Companion Guide (4.1.1, June
             2023). For the latest information on C-CDA, or to access the
             Supplemental Implementation Guides, please refer to the
-            <a
-              href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492"
-              >HL7 C-CDA Page</a
-            >
+            <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>
             which remains the definitive source for the standards. CDA and C-CDA
             are copyright property of
             <a href="https://www.hl7.org/index.cfm">
-              Health Level Seven (HL7)</a
-            >
+              Health Level Seven (HL7)</a>
             and subject to the terms of
             <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
           </p>
         </div>
       </div>
       <div></div>
-      <hr />
+      <hr>
       <div id="user-sign-up" style="font-size: 1rem">
         <p>HL7 encourages users to sign up for an account, which is free!</p>
         Please
-        <u
-          ><a
-            class="btn btn-primary"
-            href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister"
-            >sign up <i class="fas fa-user-plus"></i></a
-        ></u>
+        <u><a class="btn btn-primary" href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up <i class="fas fa-user-plus"></i></a></u>
         if you do not have an account. C-CDA Online Navigator last updated:
         August 2023.
       </div>
@@ -95,21 +57,12 @@
     <div class="container-fluid">
       <h2 id="title">
         Consultation Note (V3)
-        <small class="text-muted"
-          >[ClinicalDocument, 2.16.840.1.113883.10.20.22.1.4, release
+        <small class="text-muted">[ClinicalDocument, 2.16.840.1.113883.10.20.22.1.4, release
           2015-08-01, open]
-          <a href="../pdfs/2.16.840.1.113883.10.20.22.1.4.pdf"
-            ><i class="fas fa-file-pdf"></i> view pdf</a
-          ><a
-            href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.1.4.html"
-            target="_blank"
-            style="color: green"
-          >
-            <i class="fas fa-external-link-alt"></i> view prototype</a
-          ></small
-        >
+          <a href="../pdfs/2.16.840.1.113883.10.20.22.1.4.pdf"><i class="fas fa-file-pdf"></i> view pdf</a><a href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.22.1.4.html" target="_blank" style="color: green">
+            <i class="fas fa-external-link-alt"></i> view prototype</a></small>
       </h2>
-      <hr />
+      <hr>
       <h4>Description:</h4>
 
       <div id="description">
@@ -139,97 +92,32 @@
           <tr>
             <td id="Contained_By">none</td>
             <td id="Contains">
-              <a href="2.16.840.1.113883.10.20.22.5.3.html"
-                >US Realm Date and Time (DT.US.FIELDED)</a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.8.html"
-                >Assessment Section</a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.9.html"
-                >Assessment and Plan Section </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.10.html"
-                >Plan of Treatment Section </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.12.html"
-                >Reason for Visit Section</a
-              ><br /><a href="1.3.6.1.4.1.19376.1.5.3.1.3.4.html"
-                >History of Present Illness Section</a
-              ><br /><a href="2.16.840.1.113883.10.20.2.10.html"
-                >Physical Exam Section </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.6.1.html"
-                >Allergies and Intolerances Section (entries required) </a
-              ><br /><a href="1.3.6.1.4.1.19376.1.5.3.1.1.13.2.1.html"
-                >Chief Complaint Section</a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.13.html"
-                >Chief Complaint and Reason for Visit Section</a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.15.html"
-                >Family History Section </a
-              ><br /><a href="2.16.840.1.113883.10.20.2.5.html"
-                >General Status Section</a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.20.html"
-                >Past Medical History </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.2.html"
-                >Immunizations Section (entries optional) </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.1.1.html"
-                >Medications Section (entries required) </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.5.1.html"
-                >Problem Section (entries required) </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.7.html"
-                >Procedures Section (entries optional) </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.3.1.html"
-                >Results Section (entries required) </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.17.html"
-                >Social History Section </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.4.1.html"
-                >Vital Signs Section (entries required) </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.14.html"
-                >Functional Status Section </a
-              ><br /><a href="1.3.6.1.4.1.19376.1.5.3.1.3.18.html"
-                >Review of Systems Section</a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.23.html"
-                >Medical Equipment Section </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.56.html"
-                >Mental Status Section </a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.57.html"
-                >Nutrition Section</a
-              ><br /><a href="2.16.840.1.113883.10.20.22.2.21.html"
-                >Advance Directives Section (entries optional) </a
-              ><br />
+              <a href="2.16.840.1.113883.10.20.22.5.3.html">US Realm Date and Time (DT.US.FIELDED)</a><br><a href="2.16.840.1.113883.10.20.22.2.8.html">Assessment Section</a><br><a href="2.16.840.1.113883.10.20.22.2.9.html">Assessment and Plan Section </a><br><a href="2.16.840.1.113883.10.20.22.2.10.html">Plan of Treatment Section </a><br><a href="2.16.840.1.113883.10.20.22.2.12.html">Reason for Visit Section</a><br><a href="1.3.6.1.4.1.19376.1.5.3.1.3.4.html">History of Present Illness Section</a><br><a href="2.16.840.1.113883.10.20.2.10.html">Physical Exam Section </a><br><a href="2.16.840.1.113883.10.20.22.2.6.1.html">Allergies and Intolerances Section (entries required) </a><br><a href="1.3.6.1.4.1.19376.1.5.3.1.1.13.2.1.html">Chief Complaint Section</a><br><a href="2.16.840.1.113883.10.20.22.2.13.html">Chief Complaint and Reason for Visit Section</a><br><a href="2.16.840.1.113883.10.20.22.2.15.html">Family History Section </a><br><a href="2.16.840.1.113883.10.20.2.5.html">General Status Section</a><br><a href="2.16.840.1.113883.10.20.22.2.20.html">Past Medical History </a><br><a href="2.16.840.1.113883.10.20.22.2.2.html">Immunizations Section (entries optional) </a><br><a href="2.16.840.1.113883.10.20.22.2.1.1.html">Medications Section (entries required) </a><br><a href="2.16.840.1.113883.10.20.22.2.5.1.html">Problem Section (entries required) </a><br><a href="2.16.840.1.113883.10.20.22.2.7.html">Procedures Section (entries optional) </a><br><a href="2.16.840.1.113883.10.20.22.2.3.1.html">Results Section (entries required) </a><br><a href="2.16.840.1.113883.10.20.22.2.17.html">Social History Section </a><br><a href="2.16.840.1.113883.10.20.22.2.4.1.html">Vital Signs Section (entries required) </a><br><a href="2.16.840.1.113883.10.20.22.2.14.html">Functional Status Section </a><br><a href="1.3.6.1.4.1.19376.1.5.3.1.3.18.html">Review of Systems Section</a><br><a href="2.16.840.1.113883.10.20.22.2.23.html">Medical Equipment Section </a><br><a href="2.16.840.1.113883.10.20.22.2.56.html">Mental Status Section </a><br><a href="2.16.840.1.113883.10.20.22.2.57.html">Nutrition Section</a><br><a href="2.16.840.1.113883.10.20.22.2.21.html">Advance Directives Section (entries optional) </a><br>
             </td>
           </tr>
         </tbody>
       </table>
       <h4>Conformance Statements:</h4>
-      <i
-        >HL7 Code Systems are available
-        <a
-          href="https://terminology.hl7.org/codesystems-cda.html"
-          target="_blank"
-          >here</a
-        >. HL7 Value Sets are available
-        <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank"
-          >here</a
-        >. Links to Value Set Authority Center (VSAC) are shown as hyperlinks
+      <i>HL7 Code Systems are available
+        <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available
+        <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks
         <i class="fas fa-external-link-alt"></i> and require
-        <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i
-      >
+        <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
       <ul id="conformance" class="list-group">
         <li class="list-group-item">
           Conforms to US Realm Header (V3) template
           (urn:hl7ii:2.16.840.1.113883.10.20.22.1.1:2015-08-01)
         </li>
         <li class="list-group-item">
-          <b>SHALL</b> contain exactly one [1..1] <b>templateId</b
-          ><b> (CONF:1198-8375)</b> such that it
+          <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-8375)</b> such that it
           <ul>
             <li>
-              <b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b
-                >"2.16.840.1.113883.10.20.22.1.4"</b
-              ><b> (CONF:1198-10040)</b>.
+              <b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.22.1.4"</b><b> (CONF:1198-10040)</b>.
             </li>
           </ul>
           <ul>
             <li>
-              <b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b
-                >"2015-08-01"</b
-              ><b> (CONF:1198-32502)</b>.
+              <b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32502)</b>.
             </li>
           </ul>
           <ul>
@@ -252,21 +140,15 @@
             author or performer, setting, or specialty. When pre-coordinated
             codes are used, any coded values describing the author or performer
             of the service act or the practice setting must be consistent with
-            the LOINC document type.<br />
+            the LOINC document type.<br>
           </p>
           <b>SHALL</b> contain exactly one [1..1] <b>code (CONF:1198-17176)</b>
           <ul>
             <li>
               This code <b>SHALL</b> be selected from ValueSet
-              <b
-                >ConsultDocumentType
-                <a
-                  href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.31/expansion/Latest"
-                  target="_blank"
-                  ><i class="fas fa-external-link-alt"></i>
-                  2.16.840.1.113883.11.20.9.31</a
-                ></b
-              ><b> DYNAMIC</b><b> (CONF:1198-32969)</b>.
+              <b>ConsultDocumentType
+                <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.31/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i>
+                  2.16.840.1.113883.11.20.9.31</a></b><b> DYNAMIC</b><b> (CONF:1198-32969)</b>.
             </li>
           </ul>
         </li>
@@ -275,45 +157,29 @@
             Heading: participant (This participant represents the person to
             contact for questions about the consult summary. This call back
             contact individual may be a different person than the individual(s)
-            identified in the author or legalAuthenticator participant.)<br />SHOULD
+            identified in the author or legalAuthenticator participant.)<br>SHOULD
             contain zero or more [0..*] participant (CONF:1198-31656) such that
             it
           </p>
-          <b>SHOULD</b> contain zero or more [0..*] <b>participant</b
-          ><b> (CONF:1198-31656)</b> such that it
+          <b>SHOULD</b> contain zero or more [0..*] <b>participant</b><b> (CONF:1198-31656)</b> such that it
           <ul>
             <li>
-              <b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b
-                >"CALLBCK"</b
-              >
+              <b>SHALL</b> contain exactly one [1..1] <b>@typeCode</b>=<b>"CALLBCK"</b>
               call back contact (CodeSystem:
-              <b
-                >HL7ParticipationType
-                <a
-                  href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ParticipationType.html"
-                  target="_blank"
-                  ><i class="fas fa-external-link-alt"></i>
-                  2.16.840.1.113883.5.90</a
-                >)</b
-              ><b> DYNAMIC</b>)<b> (CONF:1198-31657)</b>.
+              <b>HL7ParticipationType
+                <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-ParticipationType.html" target="_blank"><i class="fas fa-external-link-alt"></i>
+                  2.16.840.1.113883.5.90</a>)</b><b> DYNAMIC</b>)<b> (CONF:1198-31657)</b>.
             </li>
             <li>
-              <b>SHALL</b> contain exactly one [1..1] <b>associatedEntity</b
-              ><b> (CONF:1198-31658)</b>.
+              <b>SHALL</b> contain exactly one [1..1] <b>associatedEntity</b><b> (CONF:1198-31658)</b>.
               <ul>
                 <li>
                   This associatedEntity <b>SHALL</b> contain exactly one [1..1]
                   <b>@classCode</b>=<b>"ASSIGNED"</b> assigned entity
                   (CodeSystem:
-                  <b
-                    >HL7RoleClass
-                    <a
-                      href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-RoleClass.html"
-                      target="_blank"
-                      ><i class="fas fa-external-link-alt"></i>
-                      2.16.840.1.113883.5.110</a
-                    ></b
-                  ><b> DYNAMIC</b>)<b> (CONF:1198-31659)</b>.
+                  <b>HL7RoleClass
+                    <a href="https://terminology.hl7.org/1.0.0/CodeSystem-v3-RoleClass.html" target="_blank"><i class="fas fa-external-link-alt"></i>
+                      2.16.840.1.113883.5.110</a></b><b> DYNAMIC</b>)<b> (CONF:1198-31659)</b>.
                 </li>
                 <li>
                   This associatedEntity <b>SHALL</b> contain at least one [1..*]
@@ -347,22 +213,20 @@
         </li>
         <li class="list-group-item">
           <p>
-            Heading: inFulfillmentOf<br />The inFulfillmentOf element describes
+            Heading: inFulfillmentOf<br>The inFulfillmentOf element describes
             prior orders that are fulfilled (in whole or part) by the service
             events described in the Consultation Note. For example, a prior
             order might be the consultation that is being reported in the
-            note.<br />
+            note.<br>
           </p>
-          <b>SHALL</b> contain at least one [1..*] <b>inFulfillmentOf</b
-          ><b> (CONF:1198-8382)</b>.
+          <b>SHALL</b> contain at least one [1..*] <b>inFulfillmentOf</b><b> (CONF:1198-8382)</b>.
           <ul>
             <li>
               Such inFulfillmentOfs <b>SHALL</b> contain exactly one [1..1]
               <b>order</b><b> (CONF:1198-29923)</b>.
               <ul>
                 <li>
-                  This order <b>SHALL</b> contain at least one [1..*] <b>id</b
-                  ><b> (CONF:1198-29924)</b>.
+                  This order <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-29924)</b>.
                 </li>
               </ul>
             </li>
@@ -370,13 +234,12 @@
         </li>
         <li class="list-group-item">
           <p>
-            Heading: componentOf<br /><br />A Consultation Note is always
+            Heading: componentOf<br><br>A Consultation Note is always
             associated with an encounter; the id element of the
             encompassingEncounter is required to be present and represents the
-            identifier for the encounter.<br /><br />
+            identifier for the encounter.<br><br>
           </p>
-          <b>SHALL</b> contain exactly one [1..1] <b>componentOf</b
-          ><b> (CONF:1198-8386)</b>.
+          <b>SHALL</b> contain exactly one [1..1] <b>componentOf</b><b> (CONF:1198-8386)</b>.
           <ul>
             <li>
               This componentOf <b>SHALL</b> contain exactly one [1..1]
@@ -389,8 +252,7 @@
                 <li>
                   This encompassingEncounter <b>SHALL</b> contain exactly one
                   [1..1] US Realm Date and Time (DT.US.FIELDED)<b>
-                    (identifier: 2.16.840.1.113883.10.20.22.5.3)</b
-                  ><b> (CONF:1198-8389)</b>.
+                    (identifier: 2.16.840.1.113883.10.20.22.5.3)</b><b> (CONF:1198-8389)</b>.
                 </li>
                 <li>
                   This encompassingEncounter <b>MAY</b> contain zero or one
@@ -398,8 +260,7 @@
                   <ul>
                     <li>
                       The responsibleParty, if present, <b>SHALL</b> contain
-                      exactly one [1..1] <b>assignedEntity</b
-                      ><b> (CONF:1198-32904)</b>.
+                      exactly one [1..1] <b>assignedEntity</b><b> (CONF:1198-32904)</b>.
                       <ul>
                         <li>
                           <p>
@@ -418,8 +279,7 @@
                   <ul>
                     <li>
                       The encounterParticipant, if present, <b>SHALL</b> contain
-                      exactly one [1..1] <b>assignedEntity</b
-                      ><b> (CONF:1198-32902)</b>.
+                      exactly one [1..1] <b>assignedEntity</b><b> (CONF:1198-32902)</b>.
                       <ul>
                         <li>
                           <p>
@@ -437,8 +297,7 @@
           </ul>
         </li>
         <li class="list-group-item">
-          <b>SHALL</b> contain exactly one [1..1] <b>component</b
-          ><b> (CONF:1198-8397)</b>.
+          <b>SHALL</b> contain exactly one [1..1] <b>component</b><b> (CONF:1198-8397)</b>.
           <ul>
             <li>
               This component <b>SHALL</b> contain exactly one [1..1]
@@ -450,8 +309,7 @@
                   <ul>
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Assessment
-                      Section<b> (identifier: 2.16.840.1.113883.10.20.22.2.8)</b
-                      ><b> (CONF:1198-28897)</b>.
+                      Section<b> (identifier: 2.16.840.1.113883.10.20.22.2.8)</b><b> (CONF:1198-28897)</b>.
                     </li>
                   </ul>
                 </li>
@@ -462,8 +320,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Assessment and
                       Plan Section (V2)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.9)</b
-                      ><b> (CONF:1198-28899)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.9)</b><b> (CONF:1198-28899)</b>.
                     </li>
                   </ul>
                 </li>
@@ -474,8 +331,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Plan of Treatment
                       Section (V2)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.10)</b
-                      ><b> (CONF:1198-28901)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.10)</b><b> (CONF:1198-28901)</b>.
                     </li>
                   </ul>
                 </li>
@@ -486,8 +342,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Reason for Visit
                       Section<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.12)</b
-                      ><b> (CONF:1198-28905)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.12)</b><b> (CONF:1198-28905)</b>.
                     </li>
                   </ul>
                 </li>
@@ -499,8 +354,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] History of Present
                       Illness Section<b>
-                        (identifier: 1.3.6.1.4.1.19376.1.5.3.1.3.4)</b
-                      ><b> (CONF:1198-28907)</b>.
+                        (identifier: 1.3.6.1.4.1.19376.1.5.3.1.3.4)</b><b> (CONF:1198-28907)</b>.
                     </li>
                   </ul>
                 </li>
@@ -512,8 +366,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Physical Exam
                       Section (V3)<b>
-                        (identifier: 2.16.840.1.113883.10.20.2.10)</b
-                      ><b> (CONF:1198-28909)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.2.10)</b><b> (CONF:1198-28909)</b>.
                     </li>
                   </ul>
                 </li>
@@ -525,8 +378,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Allergies and
                       Intolerances Section (entries required) (V3)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.6.1)</b
-                      ><b> (CONF:1198-28911)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.6.1)</b><b> (CONF:1198-28911)</b>.
                     </li>
                   </ul>
                 </li>
@@ -537,8 +389,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Chief Complaint
                       Section<b>
-                        (identifier: 1.3.6.1.4.1.19376.1.5.3.1.1.13.2.1)</b
-                      ><b> (CONF:1198-28913)</b>.
+                        (identifier: 1.3.6.1.4.1.19376.1.5.3.1.1.13.2.1)</b><b> (CONF:1198-28913)</b>.
                     </li>
                   </ul>
                 </li>
@@ -549,8 +400,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Chief Complaint
                       and Reason for Visit Section<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.13)</b
-                      ><b> (CONF:1198-28916)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.13)</b><b> (CONF:1198-28916)</b>.
                     </li>
                   </ul>
                 </li>
@@ -561,8 +411,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Family History
                       Section (V3)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.15)</b
-                      ><b> (CONF:1198-28918)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.15)</b><b> (CONF:1198-28918)</b>.
                     </li>
                   </ul>
                 </li>
@@ -572,8 +421,7 @@
                   <ul>
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] General Status
-                      Section<b> (identifier: 2.16.840.1.113883.10.20.2.5)</b
-                      ><b> (CONF:1198-28920)</b>.
+                      Section<b> (identifier: 2.16.840.1.113883.10.20.2.5)</b><b> (CONF:1198-28920)</b>.
                     </li>
                   </ul>
                 </li>
@@ -584,8 +432,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Past Medical
                       History (V3)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.20)</b
-                      ><b> (CONF:1198-28922)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.20)</b><b> (CONF:1198-28922)</b>.
                     </li>
                   </ul>
                 </li>
@@ -596,8 +443,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Immunizations
                       Section (entries optional) (V3)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.2)</b
-                      ><b> (CONF:1198-28924)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.2)</b><b> (CONF:1198-28924)</b>.
                     </li>
                   </ul>
                 </li>
@@ -609,8 +455,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Medications
                       Section (entries required) (V2)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.1.1)</b
-                      ><b> (CONF:1198-28926)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.1.1)</b><b> (CONF:1198-28926)</b>.
                     </li>
                   </ul>
                 </li>
@@ -622,8 +467,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Problem Section
                       (entries required) (V3)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.5.1)</b
-                      ><b> (CONF:1198-28929)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.5.1)</b><b> (CONF:1198-28929)</b>.
                     </li>
                   </ul>
                 </li>
@@ -634,8 +478,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Procedures Section
                       (entries optional) (V2)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.7)</b
-                      ><b> (CONF:1198-28931)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.7)</b><b> (CONF:1198-28931)</b>.
                     </li>
                   </ul>
                 </li>
@@ -647,8 +490,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Results Section
                       (entries required) (V3)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.3.1)</b
-                      ><b> (CONF:1198-28933)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.3.1)</b><b> (CONF:1198-28933)</b>.
                     </li>
                   </ul>
                 </li>
@@ -659,8 +501,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Social History
                       Section (V3)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.17)</b
-                      ><b> (CONF:1198-28935)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.17)</b><b> (CONF:1198-28935)</b>.
                     </li>
                   </ul>
                 </li>
@@ -671,8 +512,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Vital Signs
                       Section (entries required) (V3)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.4.1)</b
-                      ><b> (CONF:1198-28937)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.4.1)</b><b> (CONF:1198-28937)</b>.
                     </li>
                   </ul>
                 </li>
@@ -683,8 +523,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Advance Directives
                       Section (entries optional) (V3)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.21)</b
-                      ><b> (CONF:1198-28943)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.21)</b><b> (CONF:1198-28943)</b>.
                     </li>
                   </ul>
                 </li>
@@ -695,8 +534,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Functional Status
                       Section (V2)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.14)</b
-                      ><b> (CONF:1198-28945)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.14)</b><b> (CONF:1198-28945)</b>.
                     </li>
                   </ul>
                 </li>
@@ -706,8 +544,7 @@
                   <ul>
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Review of Systems
-                      Section<b> (identifier: 1.3.6.1.4.1.19376.1.5.3.1.3.18)</b
-                      ><b> (CONF:1198-30238)</b>.
+                      Section<b> (identifier: 1.3.6.1.4.1.19376.1.5.3.1.3.18)</b><b> (CONF:1198-30238)</b>.
                     </li>
                   </ul>
                 </li>
@@ -718,8 +555,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Medical Equipment
                       Section (V2)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.23)</b
-                      ><b> (CONF:1198-30905)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.23)</b><b> (CONF:1198-30905)</b>.
                     </li>
                   </ul>
                 </li>
@@ -730,8 +566,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Mental Status
                       Section (V2)<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.56)</b
-                      ><b> (CONF:1198-30907)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.56)</b><b> (CONF:1198-30907)</b>.
                     </li>
                   </ul>
                 </li>
@@ -742,8 +577,7 @@
                     <li>
                       <b>SHALL</b> contain exactly one [1..1] Nutrition
                       Section<b>
-                        (identifier: 2.16.840.1.113883.10.20.22.2.57)</b
-                      ><b> (CONF:1198-30910)</b>.
+                        (identifier: 2.16.840.1.113883.10.20.22.2.57)</b><b> (CONF:1198-30910)</b>.
                     </li>
                   </ul>
                 </li>
@@ -791,49 +625,21 @@
           </ul>
         </li>
       </ul>
-      <br />
+      <br>
 
       <h4>Guide Examples:</h4>
-      <ul id="guide_examples">
-        <li>
-          <a
-            href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Consultation%20Note%20(V3)_2.16.840.1.113883.10.20.22.1.4/Consultation%20Note%20(V2)%20inFulfillmentOf%20Example.xml"
-            ><i class="fab fa-github"></i>&nbsp;Consultation Note (V2)
-            inFulfillmentOf Example</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Consultation%20Note%20(V3)_2.16.840.1.113883.10.20.22.1.4/Consultation%20Note%20Callback%20participant%20Example.xml"
-            ><i class="fab fa-github"></i>&nbsp;Consultation Note Callback
-            participant Example</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/HL7/C-CDA-Examples/blob/master/Guide%20Examples/Consultation%20Note%20(V3)_2.16.840.1.113883.10.20.22.1.4/Consultation%20Note%20structuredBody%20Example.xml"
-            ><i class="fab fa-github"></i>&nbsp;Consultation Note structuredBody
-            Example</a
-          >
-        </li>
-      </ul>
-      <br />
+      <ul id="guide_examples"></ul>
+      <br>
 
       <ul id="cdasearch_examples"></ul>
 
-      <hr />
-      <br />To log an issue on C-CDA Standard, go to
+      <hr>
+      <br>To log an issue on C-CDA Standard, go to
       <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a>
       To report an issue with this webpage (but not underlying standard) please
       log in
-      <a href="https://github.com/jddamore/ccda-search/issues"
-        >C-CDA Search Github Repository</a
-      ><br /><br /><img
-        class="rounded float-left"
-        style="max-width: 10%"
-        src="../img/hl7-logo.png"
-        alt="HL7 Logo"
-      />
+      <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br><br><img class="rounded float-left" style="max-width: 10%" src="../img/hl7-logo.png" alt="HL7 Logo">
     </div>
-  </body>
-</html>
+  
+
+</body></html>

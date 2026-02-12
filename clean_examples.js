@@ -20,7 +20,6 @@ const TARGET_IDS = ['guide_examples', 'cdasearch_examples'];
 const HTML_EXTENSIONS = new Set(['.html', '.htm']);
 
 async function* walk(dir) {
-  // Async recursive directory walk
   const entries = await fs.readdir(dir, { withFileTypes: true });
   for (const entry of entries) {
     const res = path.resolve(dir, entry.name);
@@ -37,14 +36,14 @@ function clearTargetContent(html) {
 
   let modified = false;
   for (const id of TARGET_IDS) {
-    const sel = `#${CSS.escape ? CSS.escape(id) : id}`;
-    const $el = $(sel);
-    if ($el.length > 0) {
-      // Only modify if there is content to clear
-      $el.each((_, el) => {
+    // Use attribute selector to avoid CSS.escape dependency
+    const sel = `[id="${id}"]`;
+    const $els = $(sel);
+    if ($els.length > 0) {
+      $els.each((_, el) => {
         const current = $(el).html();
         if (current && current.trim().length > 0) {
-          $(el).html(''); // clear inner HTML
+          $(el).html(''); // clear inner HTML, keep the tag
           modified = true;
         }
       });
@@ -63,11 +62,10 @@ async function processFile(filePath) {
 
   if (!modified) return { modified: false };
 
-  // Backup original once per run (avoid overwriting any prior .bak)
   const backupPath = `${filePath}.bak`;
   try {
     await fs.access(backupPath);
-    // backup already exists; do nothing
+    // backup exists; keep it
   } catch {
     await fs.writeFile(backupPath, original, 'utf8');
   }
@@ -96,9 +94,6 @@ async function main() {
       if (result.modified) {
         modified += 1;
         console.log(`✔ Modified: ${file}`);
-      } else {
-        // Uncomment to log untouched files:
-        // console.log(`- Unchanged: ${file}`);
       }
     } catch (err) {
       console.error(`✖ Error processing ${file}:`, err.message);
