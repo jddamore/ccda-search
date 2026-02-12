@@ -217,16 +217,23 @@
           <ul>
             <li>
               This code <b>SHALL</b> contain at least one [1..*]
-              <b>translation</b>, which <b>SHOULD</b> be selected from ValueSet
-              <b
-                >Payer
-                <a
-                  href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.3591/expansion/Latest"
-                  target="_blank"
-                  ><i class="fas fa-external-link-alt"></i>
-                  2.16.840.1.114222.4.11.3591</a
-                ></b
-              ><b> (CONF:1198-32852)</b>.
+              <b>translation (CONF:4537-32852)</b> such that it
+              <ul>
+                <li>
+                  <b>SHOULD</b> contain zero or one [0..1] @code, which SHOULD
+                  be selected from
+                  <b
+                    >Payer
+                    <a
+                      href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.3591/expansion/Latest"
+                      target="_blank"
+                    >
+                      <i class="fas fa-external-link-alt"></i>
+                      2.16.840.1.114222.4.11.3591
+                    </a> </b
+                  ><b> (CONF::4537-33066) </b>.
+                </li>
+              </ul>
             </li>
           </ul>
         </li>
@@ -530,14 +537,17 @@
                       The playingEntity, if present, <b>SHALL</b> contain
                       exactly one [1..1] <b>sdtc:birthTime</b
                       ><b> (CONF:1198-31344)</b>.
-                    </li>
-                    <li>
-                      <p>
-                        The prefix sdtc: <strong>SHALL</strong> be bound to the
-                        namespace urn:hl7-org:sdtc. The use of the namespace
-                        provides a necessary extension to CDA R2 for the use of
-                        the birthTime element (CONF:1198-31345).
-                      </p>
+                      <ul>
+                        <li>
+                          <p>
+                            The prefix sdtc: <strong>SHALL</strong> be bound to
+                            the namespace urn:hl7-org:sdtc. The use of the
+                            namespace provides a necessary extension to CDA R2
+                            for the use of the birthTime element
+                            (CONF:1198-31345).
+                          </p>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </li>

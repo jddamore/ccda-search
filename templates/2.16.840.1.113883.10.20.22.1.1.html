@@ -140,6 +140,8 @@
                 >US Realm Patient Name (PTN.US.FIELDED)</a
               ><br /><a href="2.16.840.1.113883.10.20.22.5.1.1.html"
                 >US Realm Person Name (PN.US.FIELDED)</a
+              ><br /><a href="2.16.840.1.113883.10.20.22.5.8.html"
+                >Related Person Relationship and Name Participant</a
               ><br />
             </td>
           </tr>
@@ -206,7 +208,7 @@
             <li>
               <p>
                 This id <strong>SHALL</strong> be a globally unique identifier
-                for the document (CONF:1198-9991).
+                for the document <b>(CONF:1198-9991)</b>.
               </p>
             </li>
           </ul>
@@ -219,7 +221,7 @@
               <p>
                 This code <strong>SHALL</strong> specify the particular kind of
                 document (e.g., History and Physical, Discharge Summary,
-                Progress Note) (CONF:1198-9992).
+                Progress Note) <b>(CONF:1198-9992)</b>.
               </p>
             </li>
           </ul>
@@ -228,7 +230,7 @@
               <p>
                 This code <strong>SHALL</strong> be drawn from the LOINC
                 document type ontology (LOINC codes where SCALE = DOC)
-                (CONF:1198-32948).
+                <b>(CONF:1198-32948)</b>.
               </p>
             </li>
           </ul>
@@ -374,6 +376,34 @@
                         <li>
                           <strong>MAY</strong> be precise to the minute
                           (CONF:1198-32418).
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      This patient MAY contain zero or one [0..1]
+                      sdtc:deceasedInd (CONF:4537-32990).
+                      <ul>
+                        <li>
+                          If sdtc:deceasedInd="true", then sdtc:deceasedTime
+                          SHALL be present (CONF:4537-32993).
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      This patient MAY contain zero or one [0..1]
+                      sdtc:deceasedTime (CONF:4537-32988).
+                      <ul>
+                        <li>
+                          The sdtc:deceasedTime, if present, SHOULD contain zero
+                          or one [0..1] @value (CONF:4537-32989).
+                          <ul>
+                            <li>
+                              SHALL be precise to to the year (CONF:4537-32991).
+                            </li>
+                            <li>
+                              SHOULD be precise to the day (CONF:4537-32992)
+                            </li>
+                          </ul>
                         </li>
                       </ul>
                     </li>
@@ -1404,6 +1434,13 @@
                   </ul>
                 </li>
                 <li>
+                  The performer participant represents clinicians who actually
+                  and principally carry out the serviceEvent. In a transfer of
+                  care this represents the healthcare providers involved in the
+                  current or pertinent historical care of the patient.
+                  Preferably, the patient’s key healthcare care team members
+                  would be listed, particularly their primary physician and any
+                  active consulting physicians, therapists, and counselors.<br />
                   This serviceEvent <b>SHOULD</b> contain zero or more [0..*]
                   <b>performer</b><b> (CONF:1198-14839)</b>.
                   <ul>
