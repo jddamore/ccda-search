@@ -2866,7 +2866,7 @@
           .getElementById("filter-value")
           .addEventListener("keyup", updateFilter);
 
-        let table = new Tabulator("#example-table", {
+        let table = new Tabulator("#example-table1", {
           layout: "fitColumns",
           data: tabledata, //assign data to table
           columns: [
@@ -3084,9 +3084,7 @@
       <div id="example-table">
         Loading...
         <div>
-          if this remains after several seconds, tabulator was not loaded (which
-          some companies may block). You cannot search using above search bar,
-          but basic table shown below
+          if this remains after several seconds, click <a href="/basic.html">here for a JavaScript-free</a> version of the table
         </div>
       </div>
       <br />

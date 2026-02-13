@@ -4,6 +4,8 @@ const fs = require('fs');
 const express = require('express');
 
 const index = fs.readFileSync('./index.html', 'utf-8');
+// JavaScript free version
+const basic = fs.readFileSync('./basic.html', 'utf-8');
 const app = express();
 
 let privateKey; 
@@ -22,6 +24,10 @@ app.use('/templates', express.static('templates'));
 
 app.get(['/', '/index.html'], (req, res) => {
     res.send(index);
+});
+
+app.get('/basic.html', (req, res) => {
+    res.send(basic);
 });
 
 app.get('*', (req, res) => {
