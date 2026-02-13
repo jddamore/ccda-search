@@ -9,10 +9,11 @@ const app = express();
 let privateKey; 
 let certificate;
 let credentials;
-if  (fs.existsSync('./certs/key.pem') && fs.existsSync('./certs/cert.pem')) {
-  privateKey  = fs.readFileSync('./certs/key.pem', 'utf-8');
-  certificate = fs.readFileSync('./certs/cert.pem', 'utf-8');
-  credentials = {key: privateKey, cert: certificate};
+if  (fs.existsSync('./certs/ccda.key') && fs.existsSync('./certs/ccda.crt') && fs.existsSync('./certs/ccda.ca-bundle')) {
+  privateKey  = fs.readFileSync('./certs/ccda.key', 'utf-8');
+  certificate = fs.readFileSync('./certs/ccda.crt', 'utf-8');
+  ca = fs.readFileSync('./certs/ccda.ca-bundle', 'utf-8');
+  credentials = {key: privateKey, cert: certificate, ca:ca};
 }
 
 
@@ -37,5 +38,6 @@ if (credentials) {
 httpServer.listen(80);
 if (httpsServer) {
   httpsServer.listen(443);
+  console.log('HTTPS and HTTP running...');
 }
 else console.log('HTTPS server not running...')
