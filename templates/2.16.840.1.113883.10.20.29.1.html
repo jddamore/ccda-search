@@ -1,27 +1,56 @@
-<!DOCTYPE html><html lang="en"><head>
+<!doctype html>
+<html lang="en">
+  <head>
     <title>C-CDA Online</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
     <!-- Font awesome icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      crossorigin="anonymous"
+    />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
-    <div class="jumbotron container-fluid" style="padding-bottom: 24px; padding-top: 24px">
+    <div
+      class="jumbotron container-fluid"
+      style="padding-bottom: 24px; padding-top: 24px"
+    >
       <div class="display-3 row">
         <div class="col-12">
-          <img class="rounded" style="max-width: 20%" src="../img/cda.png" alt="HL7 CDA Logo">
+          <img
+            class="rounded"
+            style="max-width: 20%"
+            src="../img/cda.png"
+            alt="HL7 CDA Logo"
+          />
           <!-- <i class="fas fa-book-medical"></i>&nbsp;<strong>C-CDA Online</strong> -->
           <div style="font-size: 0.4em; margin-bottom: 0.5%">
-            <strong style="font-weight: 500"><a href="../index.html">C-CDA Online</a></strong><span>: A navigation website for C-CDA 2.1</span>
-            <br>
+            <strong style="font-weight: 500"
+              ><a href="../index.html">C-CDA Online</a></strong
+            ><span>: A navigation website for C-CDA 2.1</span>
+            <br />
           </div>
         </div>
       </div>
@@ -33,22 +62,31 @@
             September 2022) and the C-CDA 2.1 Companion Guide (4.1.1, June
             2023). For the latest information on C-CDA, or to access the
             Supplemental Implementation Guides, please refer to the
-            <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492">HL7 C-CDA Page</a>
+            <a
+              href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492"
+              >HL7 C-CDA Page</a
+            >
             which remains the definitive source for the standards. CDA and C-CDA
             are copyright property of
             <a href="https://www.hl7.org/index.cfm">
-              Health Level Seven (HL7)</a>
+              Health Level Seven (HL7)</a
+            >
             and subject to the terms of
             <a href="http://www.HL7.org/legal/ippolicy.cfm">HL7's IP policy</a>.
           </p>
         </div>
       </div>
       <div></div>
-      <hr>
+      <hr />
       <div id="user-sign-up" style="font-size: 1rem">
         <p>HL7 encourages users to sign up for an account, which is free!</p>
         Please
-        <u><a class="btn btn-primary" href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister">sign up <i class="fas fa-user-plus"></i></a></u>
+        <u
+          ><a
+            class="btn btn-primary"
+            href="https://hl7.my.site.com/LightningMemberPortal/s/login/SelfRegister"
+            >sign up <i class="fas fa-user-plus"></i></a
+        ></u>
         if you do not have an account. C-CDA Online Navigator last updated:
         August 2023.
       </div>
@@ -57,12 +95,21 @@
     <div class="container-fluid">
       <h2 id="title">
         US Realm Header for Patient Generated Document (V2)
-        <small class="text-muted">[ClinicalDocument, 2.16.840.1.113883.10.20.29.1, release 2015-08-01,
+        <small class="text-muted"
+          >[ClinicalDocument, 2.16.840.1.113883.10.20.29.1, release 2015-08-01,
           open]
-          <a href="../pdfs/2.16.840.1.113883.10.20.29.1.pdf"><i class="fas fa-file-pdf"></i> view pdf</a><a href="https://hl7.org/cda/stds/ccda/draft1/StructureDefinition-2.16.840.1.113883.10.20.29.1.html" target="_blank" style="color: green">
-            <i class="fas fa-external-link-alt"></i> view prototype</a></small>
+          <a href="../pdfs/2.16.840.1.113883.10.20.29.1.pdf"
+            ><i class="fas fa-file-pdf"></i> view pdf</a
+          ><a
+            href="https://hl7.org/cda/us/ccda/StructureDefinition-USRealmHeaderforPatientGeneratedDocument.html"
+            target="_blank"
+            style="color: green"
+          >
+            <i class="fas fa-external-link-alt"></i> view prototype</a
+          ></small
+        >
       </h2>
-      <hr>
+      <hr />
       <h4>Description:</h4>
 
       <div id="description">
@@ -90,26 +137,39 @@
         </tbody>
       </table>
       <h4>Conformance Statements:</h4>
-      <i>HL7 Code Systems are available
-        <a href="https://terminology.hl7.org/codesystems-cda.html" target="_blank">here</a>. HL7 Value Sets are available
-        <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank">here</a>. Links to Value Set Authority Center (VSAC) are shown as hyperlinks
+      <i
+        >HL7 Code Systems are available
+        <a
+          href="https://terminology.hl7.org/codesystems-cda.html"
+          target="_blank"
+          >here</a
+        >. HL7 Value Sets are available
+        <a href="https://terminology.hl7.org/valuesets-cda.html" target="_blank"
+          >here</a
+        >. Links to Value Set Authority Center (VSAC) are shown as hyperlinks
         <i class="fas fa-external-link-alt"></i> and require
-        <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i>
+        <a href="https://uts.nlm.nih.gov/uts/" target="_blank">UMLS login</a></i
+      >
       <ul id="conformance" class="list-group">
         <li class="list-group-item">
           Conforms to US Realm Header (V3) template
           (urn:hl7ii:2.16.840.1.113883.10.20.22.1.1:2015-08-01)
         </li>
         <li class="list-group-item">
-          <b>SHALL</b> contain exactly one [1..1] <b>templateId</b><b> (CONF:1198-28458)</b> such that it
+          <b>SHALL</b> contain exactly one [1..1] <b>templateId</b
+          ><b> (CONF:1198-28458)</b> such that it
           <ul>
             <li>
-              <b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b>"2.16.840.1.113883.10.20.29.1"</b><b> (CONF:1198-28459)</b>.
+              <b>SHALL</b> contain exactly one [1..1] <b>@root</b>=<b
+                >"2.16.840.1.113883.10.20.29.1"</b
+              ><b> (CONF:1198-28459)</b>.
             </li>
           </ul>
           <ul>
             <li>
-              <b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b>"2015-08-01"</b><b> (CONF:1198-32917)</b>.
+              <b>SHALL</b> contain exactly one [1..1] <b>@extension</b>=<b
+                >"2015-08-01"</b
+              ><b> (CONF:1198-32917)</b>.
             </li>
           </ul>
           <ul>
@@ -129,12 +189,12 @@
           <p>
             The recordTarget records the patient whose health information is
             described by the clinical document; each recordTarget must contain
-            at least one patientRole element. <br>If the document receiver is
+            at least one patientRole element. <br />If the document receiver is
             interested in setting up a translator for the encounter with the
             patient, the receiver of the document will have to infer the need
             for a translator, based upon the language skills identified for the
             patient, the patient's language of preference and the predominant
-            language used by the organization receiving the CDA.<br>HL7
+            language used by the organization receiving the CDA.<br />HL7
             Vocabulary simply describes guardian as a relationship to a ward.
             This need not be a formal legal relationship. When a guardian
             relationship exists for the patient, it can be represented,
@@ -146,9 +206,10 @@
             child can be represented in the guardian role. In this case, the
             guardian/code element would encode the personal relationship of
             "daughter" or "son", or if a legal relationship existed, the
-            relationship of "legal guardian" could be encoded.<br>
+            relationship of "legal guardian" could be encoded.<br />
           </p>
-          <b>SHALL</b> contain exactly one [1..1] <b>recordTarget</b><b> (CONF:1198-28460)</b>.
+          <b>SHALL</b> contain exactly one [1..1] <b>recordTarget</b
+          ><b> (CONF:1198-28460)</b>.
           <ul>
             <li>
               This recordTarget <b>SHALL</b> contain exactly one [1..1]
@@ -174,9 +235,15 @@
                           The guardian, if present, <b>SHOULD</b> contain zero
                           or one [0..1] <b>code</b>, which <b>SHALL</b> be
                           selected from ValueSet
-                          <b>Personal And Legal Relationship Role Type
-                            <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.12.1/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i>
-                              2.16.840.1.113883.11.20.12.1</a></b><b> DYNAMIC</b><b> (CONF:1198-28473)</b>.
+                          <b
+                            >Personal And Legal Relationship Role Type
+                            <a
+                              href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.12.1/expansion/Latest"
+                              target="_blank"
+                              ><i class="fas fa-external-link-alt"></i>
+                              2.16.840.1.113883.11.20.12.1</a
+                            ></b
+                          ><b> DYNAMIC</b><b> (CONF:1198-28473)</b>.
                         </li>
                       </ul>
                     </li>
@@ -189,7 +256,8 @@
                         <li>
                           The languageCommunication, if present,
                           <b>MAY</b> contain zero or one [0..1]
-                          <b>preferenceInd</b><b> (CONF:1198-28475)</b>.<br>Note: Indicates a
+                          <b>preferenceInd</b
+                          ><b> (CONF:1198-28475)</b>.<br />Note: Indicates a
                           preference for information about care delivery and
                           treatments be communicated (or translated if needed)
                           into this language.If more than one
@@ -203,7 +271,8 @@
                 </li>
                 <li>
                   This patientRole <b>MAY</b> contain zero or one [0..1]
-                  <b>providerOrganization</b><b> (CONF:1198-28476)</b>.<br>Note: If present, this
+                  <b>providerOrganization</b
+                  ><b> (CONF:1198-28476)</b>.<br />Note: If present, this
                   organization represents the provider organization where the
                   person is claiming to be a patient.
                 </li>
@@ -215,9 +284,10 @@
           <p>
             The author element represents the creator of the clinical document.
             The author may be a device, or a person. The person is the patient
-            or the patient's advocate.<br>
+            or the patient's advocate.<br />
           </p>
-          <b>SHALL</b> contain at least one [1..*] <b>author</b><b> (CONF:1198-28477)</b>.
+          <b>SHALL</b> contain at least one [1..*] <b>author</b
+          ><b> (CONF:1198-28477)</b>.
           <ul>
             <li>
               Such authors <b>SHALL</b> contain exactly one [1..1]
@@ -235,8 +305,10 @@
                       The code, if present, <b>SHALL</b> contain exactly one
                       [1..1] <b>@code</b>, which <b>SHOULD</b> be selected from
                       ValueSet
-                      <b>Personal And Legal Relationship Role Type
-                        2.16.840.1.113883.11.20.12.1</b><b> DYNAMIC</b><b> (CONF:1198-28676)</b>.
+                      <b
+                        >Personal And Legal Relationship Role Type
+                        2.16.840.1.113883.11.20.12.1</b
+                      ><b> DYNAMIC</b><b> (CONF:1198-28676)</b>.
                     </li>
                   </ul>
                 </li>
@@ -254,9 +326,10 @@
             to the electronic system. In other words, a dataEnterer transfers
             information from one source to another (e.g., transcription from
             paper form to electronic system). If the dataEnterer is missing,
-            this role is assumed to be played by the author.<br>
+            this role is assumed to be played by the author.<br />
           </p>
-          <b>MAY</b> contain zero or one [0..1] <b>dataEnterer</b><b> (CONF:1198-28678)</b>.
+          <b>MAY</b> contain zero or one [0..1] <b>dataEnterer</b
+          ><b> (CONF:1198-28678)</b>.
           <ul>
             <li>
               The dataEnterer, if present, <b>SHALL</b> contain exactly one
@@ -265,8 +338,10 @@
                 <li>
                   This assignedEntity <b>MAY</b> contain zero or one [0..1]
                   <b>code</b>, which <b>SHOULD</b> be selected from ValueSet
-                  <b>Personal And Legal Relationship Role Type
-                    2.16.840.1.113883.11.20.12.1</b><b> DYNAMIC</b><b> (CONF:1198-28680)</b>.
+                  <b
+                    >Personal And Legal Relationship Role Type
+                    2.16.840.1.113883.11.20.12.1</b
+                  ><b> DYNAMIC</b><b> (CONF:1198-28680)</b>.
                 </li>
               </ul>
             </li>
@@ -275,26 +350,28 @@
         <li class="list-group-item">
           <p>
             The informant element describes the source of the information in a
-            medical document.<br>Assigned health care providers may be a
+            medical document.<br />Assigned health care providers may be a
             source of information when a document is created. (e.g., a nurse's
             aide who provides information about a recent significant health care
             event that occurred within an acute care facility.) In these cases,
-            the assignedEntity element is used.<br>When the informant is a
+            the assignedEntity element is used.<br />When the informant is a
             personal relation, that informant is represented in the
             relatedEntity element, even if the personal relation is a medical
             professional. The code element of the relatedEntity describes the
             relationship between the informant and the patient. The relationship
             between the informant and the patient needs to be described to help
             the receiver of the clinical document understand the information in
-            the document. <br>Each informant can be either an assignedEntity
+            the document. <br />Each informant can be either an assignedEntity
             (a clinician serving the patient) OR a relatedEntity (a person with
             a personal or legal relationship with the patient). The constraints
-            here apply to relatedEntity.<br>
+            here apply to relatedEntity.<br />
           </p>
-          <b>MAY</b> contain zero or more [0..*] <b>informant</b><b> (CONF:1198-28681)</b> such that it
+          <b>MAY</b> contain zero or more [0..*] <b>informant</b
+          ><b> (CONF:1198-28681)</b> such that it
           <ul>
             <li>
-              <b>SHALL</b> contain exactly one [1..1] <b>relatedEntity</b><b> (CONF:1198-28682)</b>.
+              <b>SHALL</b> contain exactly one [1..1] <b>relatedEntity</b
+              ><b> (CONF:1198-28682)</b>.
               <ul>
                 <li>
                   This relatedEntity <b>MAY</b> contain zero or one [0..1]
@@ -304,8 +381,10 @@
                       The code, if present, <b>SHOULD</b> contain zero or one
                       [0..1] <b>@code</b>, which <b>SHOULD</b> be selected from
                       ValueSet
-                      <b>Personal And Legal Relationship Role Type
-                        2.16.840.1.113883.11.20.12.1</b><b> DYNAMIC</b><b> (CONF:1198-28684)</b>.
+                      <b
+                        >Personal And Legal Relationship Role Type
+                        2.16.840.1.113883.11.20.12.1</b
+                      ><b> DYNAMIC</b><b> (CONF:1198-28684)</b>.
                     </li>
                   </ul>
                 </li>
@@ -326,9 +405,10 @@
             The custodian may be the document originator, a health information
             exchange, or other responsible party. Also, the custodian may be the
             patient or an organization acting on behalf of the patient, such as
-            a PHR organization.<br>
+            a PHR organization.<br />
           </p>
-          <b>SHALL</b> contain exactly one [1..1] <b>custodian</b><b> (CONF:1198-28685)</b>.
+          <b>SHALL</b> contain exactly one [1..1] <b>custodian</b
+          ><b> (CONF:1198-28685)</b>.
           <ul>
             <li>
               This custodian <b>SHALL</b> contain exactly one [1..1]
@@ -336,7 +416,8 @@
               <ul>
                 <li>
                   This assignedCustodian <b>SHALL</b> contain exactly one [1..1]
-                  <b>representedCustodianOrganization</b><b> (CONF:1198-28687)</b>.
+                  <b>representedCustodianOrganization</b
+                  ><b> (CONF:1198-28687)</b>.
                   <ul>
                     <li>
                       This representedCustodianOrganization <b>SHALL</b> contain
@@ -354,9 +435,10 @@
             the information at the time the document is created. For example, in
             cases where the intended recipient of the document is the patient's
             health chart, set the receivedOrganization to be the scoping
-            organization for that chart.<br>
+            organization for that chart.<br />
           </p>
-          <b>MAY</b> contain zero or more [0..*] <b>informationRecipient</b><b> (CONF:1198-28690)</b>.
+          <b>MAY</b> contain zero or more [0..*] <b>informationRecipient</b
+          ><b> (CONF:1198-28690)</b>.
           <ul>
             <li>
               The informationRecipient, if present, <b>SHALL</b> contain exactly
@@ -382,21 +464,22 @@
             the single person legally responsible for the document and must be
             present if the document has been legally authenticated. (Note that
             per the following section, there may also be one or more document
-            authenticators.) <br>Based on local practice, patient authored
+            authenticators.) <br />Based on local practice, patient authored
             documents may be provided without legal authentication. This implies
             that a patient authored document that does not contain this element
-            has not been legally authenticated.<br>The act of legal
+            has not been legally authenticated.<br />The act of legal
             authentication requires a certain privilege be granted to the legal
             authenticator depending upon local policy. All patient documents
             have the potential for legal authentication, given the appropriate
-            legal authority.<br>Local policies MAY choose to delegate the
+            legal authority.<br />Local policies MAY choose to delegate the
             function of legal authentication to a device or system that
             generates the document. In these cases, the legal authenticator is
             the person accepting responsibility for the document, not the
-            generating device or system.<br>Note that the legal authenticator,
-            if present, must be a person.<br><br>
+            generating device or system.<br />Note that the legal authenticator,
+            if present, must be a person.<br /><br />
           </p>
-          <b>MAY</b> contain zero or one [0..1] <b>legalAuthenticator</b><b> (CONF:1198-28694)</b>.
+          <b>MAY</b> contain zero or one [0..1] <b>legalAuthenticator</b
+          ><b> (CONF:1198-28694)</b>.
           <ul>
             <li>
               The legalAuthenticator, if present, <b>SHALL</b> contain exactly
@@ -414,8 +497,10 @@
                       The code, if present, <b>MAY</b> contain zero or one
                       [0..1] <b>@code</b>, which <b>SHOULD</b> be selected from
                       ValueSet
-                      <b>Personal And Legal Relationship Role Type
-                        2.16.840.1.113883.11.20.12.1</b><b> DYNAMIC</b><b> (CONF:1198-28698)</b>.
+                      <b
+                        >Personal And Legal Relationship Role Type
+                        2.16.840.1.113883.11.20.12.1</b
+                      ><b> DYNAMIC</b><b> (CONF:1198-28698)</b>.
                     </li>
                   </ul>
                 </li>
@@ -424,7 +509,8 @@
           </ul>
         </li>
         <li class="list-group-item">
-          <b>MAY</b> contain zero or more [0..*] <b>authenticator</b><b> (CONF:1198-28699)</b>.
+          <b>MAY</b> contain zero or more [0..*] <b>authenticator</b
+          ><b> (CONF:1198-28699)</b>.
           <ul>
             <li>
               The authenticator, if present, <b>SHALL</b> contain exactly one
@@ -437,8 +523,10 @@
                 <li>
                   This assignedEntity <b>SHOULD</b> contain zero or one [0..1]
                   <b>code</b>, which <b>SHOULD</b> be selected from ValueSet
-                  <b>Personal And Legal Relationship Role Type
-                    2.16.840.1.113883.11.20.12.1</b><b> DYNAMIC</b><b> (CONF:1198-28702)</b>.
+                  <b
+                    >Personal And Legal Relationship Role Type
+                    2.16.840.1.113883.11.20.12.1</b
+                  ><b> DYNAMIC</b><b> (CONF:1198-28702)</b>.
                 </li>
               </ul>
             </li>
@@ -455,12 +543,13 @@
             The participant element identifies other supporting participants,
             including parents, relatives, caregivers, insurance policyholders,
             guarantors, and other participants related in some way to the
-            patient. <br>A supporting person or organization is an individual
+            patient. <br />A supporting person or organization is an individual
             or an organization with a relationship to the patient. A supporting
             person who is playing multiple roles would be recorded in multiple
-            participants (e.g., emergency contact and next-of-kin)<br><br>
+            participants (e.g., emergency contact and next-of-kin)<br /><br />
           </p>
-          <b>MAY</b> contain zero or more [0..*] <b>participant</b><b> (CONF:1198-28703)</b>.
+          <b>MAY</b> contain zero or more [0..*] <b>participant</b
+          ><b> (CONF:1198-28703)</b>.
           <ul>
             <li>
               The participant, if present, <b>SHALL</b> contain exactly one
@@ -473,29 +562,34 @@
                 <li>
                   This associatedEntity <b>SHOULD</b> contain zero or one [0..1]
                   <b>code</b>, which <b>SHOULD</b> be selected from ValueSet
-                  <b>Personal And Legal Relationship Role Type
-                    2.16.840.1.113883.11.20.12.1</b><b> DYNAMIC</b><b> (CONF:1198-28706)</b>.
+                  <b
+                    >Personal And Legal Relationship Role Type
+                    2.16.840.1.113883.11.20.12.1</b
+                  ><b> DYNAMIC</b><b> (CONF:1198-28706)</b>.
                 </li>
               </ul>
             </li>
           </ul>
         </li>
         <li class="list-group-item">
-          <b>MAY</b> contain zero or more [0..*] <b>inFulfillmentOf</b><b> (CONF:1198-28707)</b>.
+          <b>MAY</b> contain zero or more [0..*] <b>inFulfillmentOf</b
+          ><b> (CONF:1198-28707)</b>.
           <ul>
             <li>
               The inFulfillmentOf, if present, <b>SHALL</b> contain exactly one
               [1..1] <b>order</b><b> (CONF:1198-28708)</b>.
               <ul>
                 <li>
-                  This order <b>SHALL</b> contain at least one [1..*] <b>id</b><b> (CONF:1198-28709)</b>.
+                  This order <b>SHALL</b> contain at least one [1..*] <b>id</b
+                  ><b> (CONF:1198-28709)</b>.
                 </li>
               </ul>
             </li>
           </ul>
         </li>
         <li class="list-group-item">
-          <b>MAY</b> contain zero or more [0..*] <b>documentationOf</b><b> (CONF:1198-28710)</b>.
+          <b>MAY</b> contain zero or more [0..*] <b>documentationOf</b
+          ><b> (CONF:1198-28710)</b>.
           <ul>
             <li>
               The documentationOf, if present, <b>SHALL</b> contain exactly one
@@ -512,13 +606,19 @@
                     <li>
                       When indicating the performer was the primary care
                       physician, implementers should indicate "PCP" as the
-                      functionCode. <br>
+                      functionCode. <br />
                       The performer, if present, <b>MAY</b> contain zero or one
                       [0..1] functionCode, which <b>SHALL</b> be selected from
                       ValueSet
-                      <b>ParticipationFunction
-                        <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.10267/expansion/Latest" target="_blank"><i class="fas fa-external-link-alt"></i>
-                          2.16.840.1.113883.1.11.10267</a></b>
+                      <b
+                        >ParticipationFunction
+                        <a
+                          href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.1.11.10267/expansion/Latest"
+                          target="_blank"
+                          ><i class="fas fa-external-link-alt"></i>
+                          2.16.840.1.113883.1.11.10267</a
+                        ></b
+                      >
                       <b>DYNAMIC (CONF:1198-28714)</b>.
                     </li>
                     <li>
@@ -533,8 +633,10 @@
                           This assignedEntity <b>MAY</b> contain zero or one
                           [0..1] <b>code</b>, which <b>SHOULD</b> be selected
                           from ValueSet
-                          <b>Personal And Legal Relationship Role Type
-                            2.16.840.1.113883.11.20.12.1</b><b> DYNAMIC</b><b> (CONF:1198-28718)</b>.
+                          <b
+                            >Personal And Legal Relationship Role Type
+                            2.16.840.1.113883.11.20.12.1</b
+                          ><b> DYNAMIC</b><b> (CONF:1198-28718)</b>.
                         </li>
                       </ul>
                     </li>
@@ -545,24 +647,39 @@
           </ul>
         </li>
       </ul>
-      <br>
+      <br />
 
       <h4>Guide Examples:</h4>
       <ul id="guide_examples">
-  <li><a href="https://hl7.org/cda/us/ccda/Binary-patient-generated-document-informationrecipient.html" file="2.16.840.1.113883.10.20.29.1.html">patient-generated-document-informationrecipient</a></li>
-</ul>
-      <br>
+        <li>
+          <a
+            href="https://hl7.org/cda/us/ccda/Binary-patient-generated-document-informationrecipient.html"
+            file="2.16.840.1.113883.10.20.29.1.html"
+            >patient-generated-document-informationrecipient</a
+          >
+        </li>
+      </ul>
+      <br />
 
       <h4 id="cdasearch">CDA Search Examples</h4>
-      <ul id="cdasearch_examples"></ul><a href="https://build.fhir.org/ig/HL7/CDA-Examples/">Additional C-CDA Examples Available here</a>
+      <ul id="cdasearch_examples"></ul>
+      <a href="https://build.fhir.org/ig/HL7/CDA-Examples/"
+        >Additional C-CDA Examples Available here</a
+      >
 
-      <hr>
-      <br>To log an issue on C-CDA Standard, go to
+      <hr />
+      <br />To log an issue on C-CDA Standard, go to
       <a href="https://jira.hl7.org/projects/CDA/issues/">HL7 JIRA Tracker</a>
       To report an issue with this webpage (but not underlying standard) please
       log in
-      <a href="https://github.com/jddamore/ccda-search/issues">C-CDA Search Github Repository</a><br><br><img class="rounded float-left" style="max-width: 10%" src="../img/hl7-logo.png" alt="HL7 Logo">
+      <a href="https://github.com/jddamore/ccda-search/issues"
+        >C-CDA Search Github Repository</a
+      ><br /><br /><img
+        class="rounded float-left"
+        style="max-width: 10%"
+        src="../img/hl7-logo.png"
+        alt="HL7 Logo"
+      />
     </div>
-  
-
-</body></html>
+  </body>
+</html>
