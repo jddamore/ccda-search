@@ -27,7 +27,7 @@ app.get(['/', '/index.html'], (req, res) => {
     res.send(index);
 });
 
-app.get('/basic.html', (req, res) => {
+app.get(['/basic.html', '/basic'], (req, res) => {
     res.send(basic);
 });
 
